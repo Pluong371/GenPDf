@@ -231,41 +231,41 @@
             <div class="company-name-en">{{companyEnName}}</div>
 
         </div>
-        <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px; margin-top: 20px;">
+        <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px; margin-top: 20px">
             <tr>
                 <!-- Cột trái: CONTACT -->
-                <td style="width: 50%; vertical-align: top; padding-right: 15px;">
+                <td style="width: 50%; vertical-align: top; padding-right: 15px">
                     <div class="text_h2_blue">CONTACT</div>
 
-                    <table style="width: 100%; border-collapse: collapse;">
+                    <table style="width: 100%; border-collapse: collapse">
                         <tr class="contact-item">
-                            <td style="width: 30px; vertical-align: top; padding-bottom: 10px;">📍</td>
+                            <td style="width: 30px; vertical-align: top; padding-bottom: 10px; font-weight: bold">📍</td>
                             <td style="vertical-align: top; padding-bottom: 10px;">{{address}}</td>
                         </tr>
                         <tr class="contact-item">
-                            <td style="width: 30px; vertical-align: top; padding-bottom: 10px;">📞</td>
+                            <td style="width: 30px; vertical-align: top; padding-bottom: 10px; font-weight: bold">📞</td>
                             <td style="vertical-align: top; padding-bottom: 10px;">{{phoneNumber}}</td>
                         </tr>
                         <tr class="contact-item">
-                            <td style="width: 30px; vertical-align: top; padding-bottom: 10px;">🏢</td>
+                            <td style="width: 30px; vertical-align: top; padding-bottom: 10px; font-weight: bold">🏢</td>
                             <td style="vertical-align: top; padding-bottom: 10px;">{{fax}}</td>
                         </tr>
                         <tr class="contact-item">
-                            <td style="width: 30px; vertical-align: top; padding-bottom: 10px;">📧</td>
+                            <td style="width: 30px; vertical-align: top; padding-bottom: 10px; font-weight: bold">📧</td>
                             <td style="vertical-align: top; padding-bottom: 10px;">{{email}}</td>
                         </tr>
                         <tr class="contact-item">
-                            <td style="width: 30px; vertical-align: top; padding-bottom: 10px;">🌐</td>
-                            <td style="vertical-align: top; padding-bottom: 10px;">{{webSite}}</td>
+                            <td style="width: 30px; vertical-align: top; padding-bottom: 10px; font-weight: bold">🌐</td>
+                            <td style="vertical-align: top; padding-bottom: 10px">{{webSite}}</td>
                         </tr>
                     </table>
                 </td>
 
                 <!-- Cột phải: REGISTERED BUSINESS ACTIVITIES -->
-                <td style="width: 50%; vertical-align: top; padding-left: 15px; ">
+                <td style="width: 50%; vertical-align: top; padding-left: 15px">
                     <div class="text_h2_blue">REGISTERED BUSINESS ACTIVITIES</div>
 
-                    <table style="width: 100%; border-collapse: collapse;">
+                    <table style="width: 100%; border-collapse: collapse">
                         <tr class="contact-item">
                             <td>
                                 {{#if VsicInfoArray.length}} {{#each VsicInfoArray}} {{#unless @last}} • {{this}}<br>
@@ -278,97 +278,80 @@
                 </td>
             </tr>
         </table>
+        <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px; margin-top: 20px">
+            <tr>
+                <!-- Cột trái: CONTACT -->
+                <td style="width: 50%; vertical-align: top; padding-right: 15px">
+                    <div class="text_h2_blue">COMPANY PROFILE</div>
 
-
-        <div class="profile-section">
-
-            <div class="text_h2_blue">COMPANY PROFILE</div>
-
-            <div class="profile-grid">
-                <div class="contact-left">
-                    <table>
-                        <tr class="contact-left-item-table">
-                            <td>RegistrationCode</td>
-                            <td>3702637282</td>
+                    <table style="width: 100%; border-collapse: collapse">
+                        <tr class="contact-item">
+                            <td style="vertical-align: top; padding-bottom: 10px">Registration Code</td>
+                            <td style="vertical-align: top; padding-bottom: 10px">{{registrationCode}}</td>
                         </tr>
-                        <tr class="contact-left-item-table">
-                            <td>IncorporatedDate</td>
-                            <td>23/01/2018</td>
+                        <tr class="contact-item">
+                            <td style="vertical-align: top; padding-bottom: 10px">Incorporated Date</td>
+                            <td style="vertical-align: top; padding-bottom: 10px">{{incorporatedDate}}</td>
                         </tr>
-                        <tr class="contact-left-item-table">
-                            <td>Legal Form</td>
-                            <td>Joint Stock Company</td>
+                        <tr class="contact-item">
+                            <td style="vertical-align: top; padding-bottom: 10px">Legal Form</td>
+                            <td style="vertical-align: top; padding-bottom: 10px">{{legalForm}}</td>
                         </tr>
-                        <tr class="contact-left-item-table">
-                            <td>OperationStatus</td>
-                            <td>Active</td>
+                        <tr class="contact-item">
+                            <td style="vertical-align: top; padding-bottom: 10px">Operation Status</td>
+                            <td style="vertical-align: top; padding-bottom: 10px">{{operationStatus}}</td>
                         </tr>
-                        <tr class="contact-left-item-table">
-                            <td>BusinessSize</td>
-                            <td>Medium-sized Enterprise</td>
+                        <tr class="contact-item">
+                            <td style=" vertical-align: top; padding-bottom: 10px">Business Size</td>
+                            <td style="vertical-align: top; padding-bottom: 10px">{{businessSize}}</td>
                         </tr>
-                        <tr class="contact-left-item-table">
-                            <td>Legal Representative</td>
-                            <td>
-                                <div class="representative-details">
-                                    - Name: LI TING<br> - Nationality<br> - ID No./Passport No: EH1129692<br> - YOB:
-                                </div>
-                            </td>
+                        <tr class="contact-item">
+                            <td style=" vertical-align: top; padding-bottom: 10px">Legal Representative</td>
+                            <td style="vertical-align: top; padding-bottom: 10px">{{representativeName}}</td>
                         </tr>
                     </table>
+                </td>
 
 
-                </div>
+                <td style="width: 50%; vertical-align: top; padding-left: 15px">
 
 
-                <div class="contract-right">
-                    <div class="profile-item">
-                        <div class="metric-item">
-                            <div class="metric-icon">🏆</div>
-                            <div>
-                                <div class="metric-title">Rank:</div>
-                            </div>
-                        </div>
-                    </div>
+                    <table style="width: 100%; border-collapse: collapse">
+                        <tr class="contact-item">
+                            <td style="width: 50%; vertical-align: top; padding-right: 15px">
 
 
+                                <table style="width: 100%; border-collapse: collapse">
+                                    <tr class="contact-item">
+                                        <!-- logo rank -->
+                                        <td style="vertical-align: top; padding-bottom: 10px">aaa</td>
+                                        <td style="vertical-align: top; padding-bottom: 10px; font-weight: bold">Rank: {{rank}}</td>
+                                    </tr>
+                                    <tr class="contact-item">
+                                        <!-- logo employee -->
+                                        <td style="vertical-align: top; padding-bottom: 10px">aaa</td>
+                                        <td style="vertical-align: top; padding-bottom: 10px; font-weight: bold">{{noOfEmployee}} employees</td>
+                                    </tr>
+                                    <tr class="contact-item">
+                                        <!-- logo $ -->
+                                        <td style="vertical-align: top; padding-bottom: 10px">aaaa</td>
+                                        <td style="vertical-align: top; padding-bottom: 10px; font-weight: bold">Charter Capital(VND)<br>{{netRevenue}}</td>
+                                    </tr>
+                                    <tr class="contact-item">
+                                        <td style="vertical-align: top; padding-bottom: 10px">aaaa</td>
+                                        <td style="vertical-align: top; padding-bottom: 10px; font-weight: bold">Latest Update<br> {{latestUpdate}}</td>
+                                    </tr>
 
-                    <div class="profile-item">
-                        <div class="metric-item">
-                            <div class="metric-icon">👥</div>
-                            <div>
-                                <div class="metric-title">20 employees</div>
-                            </div>
-                        </div>
-                    </div>
+                                </table>
+                            </td>
+
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
 
 
-                    <div class="profile-item">
-                        <div class="metric-item">
-                            <div class="metric-icon">💲</div>
-                            <div>
-                                <div class="metric-title">Charter capital (VNĐ)</div>
-                                <div>17.177.967.067.136,00</div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="profile-item">
-                        <div class="metric-item">
-                            <div class="metric-icon">🕒</div>
-                            <div>
-                                <div class="metric-title">Latest Update</div>
-                                <div>31/12/2024</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
     </div>
     </div>
 
@@ -381,7 +364,7 @@
         <div>
             <h3 class="text_h2_blue">Corporate Hold</h3>
             <div class="card_content">
-                {ownershipStructureResponse.corporateHold && ownershipStructureResponse.corporateHold.length ? (
+                {OwnershipStructureResponseResponse.corporateHold && OwnershipStructureResponseResponse.corporateHold.length ? (
                 <div class="table-custom">
                     <Table>
                         <thead>
@@ -396,7 +379,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {ownershipStructureResponse.corporateHold.map( (props, index) => { return (
+                            {OwnershipStructureResponseResponse.corporateHold.map( (props, index) => { return (
                             <tr key={index}>
                                 <td class="text_left width-col-300">
                                     {" "} {props.name ? props.name : ""}
@@ -431,7 +414,7 @@
             <div class="card-item ">
                 <div class="card-title text_left">Private Hold</div>
                 <div class="card_content">
-                    {ownershipStructureResponse.privateHold && ownershipStructureResponse.privateHold.length ? (
+                    {OwnershipStructureResponseResponse.privateHold && OwnershipStructureResponseResponse.privateHold.length ? (
                     <div class="table-custom">
                         <Table responsive>
                             <thead>
@@ -446,7 +429,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                {ownershipStructureResponse.privateHold.map( (props, index) => { return (
+                                {OwnershipStructureResponseResponse.privateHold.map( (props, index) => { return (
                                 <tr key={index}>
                                     <td class="text_left width-col-300">
                                         {" "} {props.name ? props.name : ""}
@@ -480,7 +463,7 @@
             <div class="card-item ">
                 <div class="card-title text_left">Foreign Hold</div>
                 <div class="card_content">
-                    {ownershipStructureResponse.foreignHold && ownershipStructureResponse.foreignHold.length ? (
+                    {OwnershipStructureResponseResponse.foreignHold && OwnershipStructureResponseResponse.foreignHold.length ? (
                     <div class="table-custom">
                         <Table responsive>
                             <thead>
@@ -495,7 +478,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                {ownershipStructureResponse.foreignHold.map( (props, index) => { return (
+                                {OwnershipStructureResponseResponse.foreignHold.map( (props, index) => { return (
                                 <tr key={index}>
                                     <td class="text_left width-col-300">
                                         {" "} {props.name ? props.name : ""}
@@ -530,7 +513,7 @@
 
     {/* Trang cấu trúc sở hữu - Ownership Structure Chart*/}
     <div class="background_page">
-        {ownershipStructureResponse ? (
+        {OwnershipStructureResponseResponse ? (
         <div>
             {/* Ownership Structure Chart */}
             <div class="row mb-3 mt-2">
@@ -541,10 +524,10 @@
                         </div>
                         <div class="card_content">
                             <div class="col-xl-12">
-                                {ownershipStructureResponse && ownershipStructureResponse.ownershipStructureCharts && ownershipStructureResponse.ownershipStructureCharts .length > 0 ? (
+                                {OwnershipStructureResponseResponse && OwnershipStructureResponseResponse.OwnershipStructureCharts && OwnershipStructureResponseResponse.OwnershipStructureCharts .length > 0 ? (
                                 <div class="chart-law">
                                     <div class="cover-pie-chart">
-                                        <PieChartOwner customFontColor="#0953a8" labelFontSize={16} showSourceEn={true} dataChartStructure={this.formatPieCharts( ownershipStructureResponse.ownershipStructureCharts )} />
+                                        <PieChartOwner customFontColor="#0953a8" labelFontSize={16} showSourceEn={true} dataChartStructure={this.formatPieCharts( OwnershipStructureResponseResponse.OwnershipStructureCharts )} />
                                     </div>
                                 </div>
                                 ) : ( "" )}

@@ -5,8 +5,8 @@ export interface VsicInfo {
 }
 
 export interface CompanyProfile {
-  generalInformation: generalInformationResponse;
-  ownershipStructure: ownershipStructureResponse;
+  GeneralInformationResponse: GeneralInformationResponseResponse;
+  OwnershipStructureResponse: OwnershipStructureResponseResponse;
   companyProfileResponse: companyProfileResponse;
   companyImportExportResponse: companyImportExportResponse;
   industryDataModel: industryDataModel[];
@@ -41,14 +41,14 @@ export interface CorporateHold {
   updateDate: string;
 }
 
-export interface OwnershipStructureChart {
+export interface OwnershipStructureResponseChart {
   otherData: number;
   label: string;
   enLabel: string;
   y: number;
 }
 
-export interface generalInformationResponse {
+export interface GeneralInformationResponseResponse {
   companyId: string;
   companyEnName: string;
   companyName: string;
@@ -91,13 +91,13 @@ export interface Affliate {
   vsicEnInfo: string;
 }
 
-export interface ownershipStructureResponse {
+export interface OwnershipStructureResponseResponse {
   corporateHold: CorporateHold[];
   privateHold: Ownership[];
   //chưa có
   foreignHold: Ownership[];
 
-  ownershipStructureCharts: OwnershipStructureChart[];
+  OwnershipStructureCharts: OwnershipStructureResponseChart[];
 }
 export interface companyProfileResponse {
   branches: Branch[][];

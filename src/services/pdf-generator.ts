@@ -15,8 +15,8 @@ export const generatePDF = async (profile: CompanyProfile): Promise<string> => {
 
  
 
-  if (profile.generalInformation.VsicInfo && typeof profile.generalInformation.VsicInfo === 'object') {
-    vsicInfoArray = Object.values(profile.generalInformation.VsicInfo)
+  if (profile.GeneralInformationResponse.VsicInfo && typeof profile.GeneralInformationResponse.VsicInfo === 'object') {
+    vsicInfoArray = Object.values(profile.GeneralInformationResponse.VsicInfo)
       .filter((value): value is { name: string; code: string; NameEn: string } =>
         !!value && typeof value === 'object' && 'NameEn' in value && typeof value.NameEn === 'string'
       )
@@ -26,34 +26,36 @@ export const generatePDF = async (profile: CompanyProfile): Promise<string> => {
   const document = {
     html: html,
     data: {
-      companyId: profile.generalInformation.companyId,
-      companyEnName: profile.generalInformation.companyEnName,
-      companyName: profile.generalInformation.companyName,
-      address: profile.generalInformation.address,
-      phoneNumber: profile.generalInformation.phoneNumber,
-      email: profile.generalInformation.email,
-      fax: profile.generalInformation.fax,
+      companyId: profile.GeneralInformationResponse.companyId,
+      companyEnName: profile.GeneralInformationResponse.companyEnName,
+      companyName: profile.GeneralInformationResponse.companyName,
+      address: profile.GeneralInformationResponse.address,
+      phoneNumber: profile.GeneralInformationResponse.phoneNumber,
+      email: profile.GeneralInformationResponse.email,
+      fax: profile.GeneralInformationResponse.fax,
       VsicInfoArray: vsicInfoArray,
-      webSite: profile.generalInformation.webSite,
-      registrationCode: profile.generalInformation.registrationCode,
-      incorporatedDate: profile.generalInformation.incorporatedDate,
-      legalForm: profile.generalInformation.legalForm,
-      operationStatus: profile.generalInformation.operationStatus,
-      businessSize: profile.generalInformation.businessSize,
-      representativeName: profile.generalInformation.representativeName,
-      charterCapital: profile.generalInformation.charterCapital,
-      noOfEmployee: profile.generalInformation.noOfEmployee,
-      latestUpdate: profile.generalInformation.latestUpdate,
-      netRevenue: profile.generalInformation.netRevenue,
+      webSite: profile.GeneralInformationResponse.webSite,
+      registrationCode: profile.GeneralInformationResponse.registrationCode,
+      incorporatedDate: profile.GeneralInformationResponse.incorporatedDate,
+      legalForm: profile.GeneralInformationResponse.legalForm,
+      operationStatus: profile.GeneralInformationResponse.operationStatus,
+      businessSize: profile.GeneralInformationResponse.businessSize,
+      representativeName: profile.GeneralInformationResponse.representativeName,
+      charterCapital: profile.GeneralInformationResponse.charterCapital,
+      noOfEmployee: profile.GeneralInformationResponse.noOfEmployee,
+      latestUpdate: profile.GeneralInformationResponse.latestUpdate,
+      netRevenue: profile.GeneralInformationResponse.netRevenue,
       ownershipChartUrl: generateChart(
-        profile.ownershipStructure.ownershipStructureCharts
-      )
+        profile.OwnershipStructureResponse.OwnershipStructureCharts
+      ),
+
+      rank: 1,
       
     },
-    path: `./output/${profile.generalInformation.companyId}.pdf`,
+    path: `./output/${profile.GeneralInformationResponse.companyId}.pdf`,
     type: "pdf",
-  }; console.log('VsicInfo type:', typeof profile.generalInformation.VsicInfo.map((activity) => activity.NameEn));
-  console.log('VsicInfo value:', JSON.stringify(profile.generalInformation.VsicInfo.map((activity) => activity.NameEn)));
+  }; console.log('VsicInfo type:', typeof profile.GeneralInformationResponse.VsicInfo.map((activity) => activity.NameEn));
+  console.log('VsicInfo value:', JSON.stringify(profile.GeneralInformationResponse.VsicInfo.map((activity) => activity.NameEn)));
   const options = {
     format: "A4",
     border: "0mm",
@@ -69,6 +71,6 @@ export const generatePDF = async (profile: CompanyProfile): Promise<string> => {
 
   await pdf.create(document, options);
 
-  const fileName = `${profile.generalInformation.companyId}.pdf`;
+  const fileName = `${profile.GeneralInformationResponse.companyId}.pdf`;
   return fileName;
 };
