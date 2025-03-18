@@ -54,6 +54,11 @@
             gap: 10000px;
         }
         
+        .text-danger {
+            color: red;
+            margin-bottom: 15px;
+        }
+        
         .contact-right {
             display: flex;
             flex-direction: column;
@@ -143,7 +148,7 @@
         }
         
         .contact-item td {
-            padding: 10px 0;
+            padding: 15px 0;
             color: #0047AB;
             border-bottom: 1px solid #e9e9ec;
         }
@@ -221,6 +226,18 @@
             border: none;
             clear: both;
         }
+        
+        .asset-breakdown-section {
+            margin: 0;
+            padding: 15px;
+        }
+        
+        .chart-container {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
     </style>
 </head>
 
@@ -280,7 +297,7 @@
         </table>
         <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px; margin-top: 20px">
             <tr>
-                <!-- Cột trái: CONTACT -->
+
                 <td style="width: 50%; vertical-align: top; padding-right: 15px">
                     <div class="text_h2_blue">COMPANY PROFILE</div>
 
@@ -307,17 +324,21 @@
                         </tr>
                         <tr class="contact-item">
                             <td style=" vertical-align: top; padding-bottom: 10px">Legal Representative</td>
-                            <td style="vertical-align: top; padding-bottom: 10px">{{representativeName}}</td>
+                            <td style="vertical-align: top; padding-bottom: 10px">-{{representativeName}}
+                                <br>-Nationality: {{nationality}}
+                                <br>-ID No./Passport No.: {{IdPerson}}
+                                <br>-Date of birth: {{DOB}}
+                            </td>
                         </tr>
                     </table>
                 </td>
 
 
-                <td style="width: 50%; vertical-align: top; padding-left: 15px">
+                <td style="width: 50%; vertical-align: top; padding-left: 15px; padding-top: 30px">
 
 
-                    <table style="width: 100%; border-collapse: collapse">
-                        <tr class="contact-item">
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <tr>
                             <td style="width: 50%; vertical-align: top; padding-right: 15px">
 
 
@@ -354,7 +375,7 @@
 
     </div>
     </div>
-
+    <div class="page-break-before"></div>
 
     <div>
         <div class="page_title">
@@ -362,1212 +383,1079 @@
         </div>
 
         <div>
-            <h3 class="text_h2_blue">Corporate Hold</h3>
+            <h3 class="text_h2_blue" style="margin-top: 10px">Corporate Hold</h3>
             <div class="card_content">
-                {OwnershipStructureResponseResponse.corporateHold && OwnershipStructureResponseResponse.corporateHold.length ? (
+                {{#if corporateHold.length}}
                 <div class="table-custom">
-                    <Table>
+                    <table class="corporate-table" style="width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 14px;">
                         <thead>
-                            <tr>
-                                <th class="text_left">Name</th>
-                                <th class="text_right">
-                                    Amount (VND million)
-                                </th>
-
-                                <th class="text_right">Ownership (%)</th>
-                                <th class="text_right">Update Date</th>
+                            <tr style="background-color: #0047AB; color: white;">
+                                <th class="text_left" style="padding: 12px 15px; border: 1px solid #ddd;">Name</th>
+                                <th class="text_right" style="padding: 12px 15px; border: 1px solid #ddd;">Amount(VND million)</th>
+                                <th class="text_right" style="padding: 12px 15px; border: 1px solid #ddd;">Ownership(%)</th>
+                                <th class="text_right" style="padding: 12px 15px; border: 1px solid #ddd;">UpdateDate</th>
                             </tr>
                         </thead>
                         <tbody>
-                            {OwnershipStructureResponseResponse.corporateHold.map( (props, index) => { return (
-                            <tr key={index}>
-                                <td class="text_left width-col-300">
-                                    {" "} {props.name ? props.name : ""}
-                                </td>
-                                <td class="text_right">
-                                    {props.amount !== null && props.amount !== "" ? formatMoney_2( parseInt(props.amount, 10), 2 ) : ""}
-                                </td>
-                                <td class="text_right">
-                                    {" "} {props.ownership ? formatMoney_2( parseInt(props.ownership, 10), 2 ) : ""}
-                                </td>
-                                <td class="text_right">
-                                    {" "} {props.updateDate ? moment(props.updateDate).format( "DD/MM/YYYY" ) : ""}
-                                </td>
+                            {{#each corporateHold}}
+                            <tr>
+                                <td class="text_left width-col-300" style="padding: 12px 15px; border: 1px solid #ddd;">{{this.Name}}</td>
+                                <td class="text_right" style="padding: 12px 15px; border: 1px solid #ddd;">{{this.Amount}}</td>
+                                <td class="text_right" style="padding: 12px 15px; border: 1px solid #ddd;">{{this.Ownership}}</td>
+                                <td class="text_right" style="padding: 12px 15px; border: 1px solid #ddd;">{{this.UpdateDate}}</td>
                             </tr>
-                            ); } )}
+                            {{/each}}
                         </tbody>
-                    </Table>
+                    </table>
                 </div>
-                ) : (
-                <div class="text-danger text-left text_italic mt-3 ml-3">
-                    The company’s ownership structure has not been updated.
+                {{else}}
+                <div class="text-danger">
+                    The company's ownership structure has not been updated.
                 </div>
-                )}
+                {{/if}}
             </div>
         </div>
     </div>
     </div>
 
-    {/* Private Hold */}
+
     <div class="row mb-3">
         <div class="col-lg-12 col-xl-12 mb-2">
             <div class="card-item ">
-                <div class="card-title text_left">Private Hold</div>
+                <h3 class="text_h2_blue">Private Hold</h3>
                 <div class="card_content">
-                    {OwnershipStructureResponseResponse.privateHold && OwnershipStructureResponseResponse.privateHold.length ? (
+                    {{#if privateHold.length}}
                     <div class="table-custom">
-                        <Table responsive>
+                        <table class="corporate-table" style="width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 14px;">
                             <thead>
-                                <tr>
-                                    <th class="text_left">Name</th>
-                                    <th class="text_right">
-                                        Amount (VND million)
-                                    </th>
-
-                                    <th class="text_right">Ownership (%)</th>
-                                    <th class="text_right">Update Date</th>
+                                <tr style="background-color: #0047AB; color: white;">
+                                    <th class="text_left" style="padding: 12px 15px; border: 1px solid #ddd;">Name</th>
+                                    <th class="text_right" style="padding: 12px 15px; border: 1px solid #ddd;">Amount(VND million)</th>
+                                    <th class="text_right" style="padding: 12px 15px; border: 1px solid #ddd;">Ownership(%)</th>
+                                    <th class="text_right" style="padding: 12px 15px; border: 1px solid #ddd;">UpdateDate</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                {OwnershipStructureResponseResponse.privateHold.map( (props, index) => { return (
-                                <tr key={index}>
-                                    <td class="text_left width-col-300">
-                                        {" "} {props.name ? props.name : ""}
-                                    </td>
-                                    <td class="text_right">
-                                        {" "} {props.amount !== null && props.amount !== "" ? formatMoney_2( parseInt(props.amount, 10), 2 ) : ""}
-                                    </td>
-                                    <td class="text_right">
-                                        {" "} {props.ownership ? formatMoney_2( parseInt(props.ownership, 10), 2 ) : ""}
-                                    </td>
-                                    <td class="text_right">
-                                        {" "} {props.updateDate ? moment(props.updateDate).format( "DD/MM/YYYY" ) : ""}
-                                    </td>
+                                {{#each privateHold}}
+                                <tr>
+                                    <td class="text_left width-col-300" style="padding: 12px 15px; border: 1px solid #ddd;">{{this.name}}</td>
+                                    <td class="text_right" style="padding: 12px 15px; border: 1px solid #ddd;">{{this.amount}}</td>
+                                    <td class="text_right" style="padding: 12px 15px; border: 1px solid #ddd;">{{this.ownership}}</td>
+                                    <td class="text_right" style="padding: 12px 15px; border: 1px solid #ddd;">{{this.updateDate}}</td>
                                 </tr>
-                                ); } )}
+                                {{/each}}
                             </tbody>
-                        </Table>
+                        </table>
                     </div>
-                    ) : (
-                    <div class="text-danger text_left text_italic mt-3 ml-3">
-                        The company’s ownership structure has not been updated.
+                    {{else}}
+                    <div class="text-danger text_italic mt-3 ml-3">
+                        The company's ownership structure has not been updated.
                     </div>
-                    )}
+                    {{/if}}
                 </div>
             </div>
         </div>
     </div>
-    {/* Foreign Hold */}
+
     <div class="row mb-3">
         <div class="col-lg-12 col-xl-12 mb-2">
             <div class="card-item ">
-                <div class="card-title text_left">Foreign Hold</div>
+                <h3 class="text_h2_blue">Foreign Hold</h3>
                 <div class="card_content">
-                    {OwnershipStructureResponseResponse.foreignHold && OwnershipStructureResponseResponse.foreignHold.length ? (
+                    {{#if foreignHold.length}}
                     <div class="table-custom">
-                        <Table responsive>
+                        <table class="corporate-table" style="width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 14px;">
                             <thead>
-                                <tr>
-                                    <th class="text_left">Name</th>
-                                    <th class="text_right">
-                                        Amount (VND million)
-                                    </th>
-
-                                    <th class="text_right">Ownership (%)</th>
-                                    <th class="text_right">Update Date</th>
+                                <tr style="background-color: #0047AB; color: white;">
+                                    <th class="text_left" style="padding: 12px 15px; border: 1px solid #ddd;">Name</th>
+                                    <th class="text_right" style="padding: 12px 15px; border: 1px solid #ddd;">Amount(VND million)</th>
+                                    <th class="text_right" style="padding: 12px 15px; border: 1px solid #ddd;">Ownership(%)</th>
+                                    <th class="text_right" style="padding: 12px 15px; border: 1px solid #ddd;">UpdateDate</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                {OwnershipStructureResponseResponse.foreignHold.map( (props, index) => { return (
-                                <tr key={index}>
-                                    <td class="text_left width-col-300">
-                                        {" "} {props.name ? props.name : ""}
-                                    </td>
-                                    <td class="text_right">
-                                        {" "} {props.amount !== null && props.amount !== "" ? formatMoney_2( parseInt(props.amount, 10), 2 ) : ""}
-                                    </td>
-                                    <td class="text_right">
-                                        {" "} {props.ownership ? formatMoney_2( parseInt(props.ownership, 10), 2 ) : ""}
-                                    </td>
-                                    <td class="text_right">
-                                        {" "} {props.updateDate ? moment(props.updateDate).format( "DD/MM/YYYY" ) : ""}
-                                    </td>
+                                {{#each foreignHold}}
+                                <tr>
+                                    <td class="text_left width-col-300" style="padding: 12px 15px; border: 1px solid #ddd;">{{this.name}}</td>
+                                    <td class="text_right" style="padding: 12px 15px; border: 1px solid #ddd;">{{this.amount}}</td>
+                                    <td class="text_right" style="padding: 12px 15px; border: 1px solid #ddd;">{{this.ownership}}</td>
+                                    <td class="text_right" style="padding: 12px 15px; border: 1px solid #ddd;">{{this.updateDate}}</td>
                                 </tr>
-                                ); } )}
+                                {{/each}}
                             </tbody>
-                        </Table>
+                        </table>
                     </div>
-                    ) : (
-                    <div class="text-danger text_italic text_left mt-3 ml-3">
-                        The company’s ownership structure has not been updated.
+                    {{else}}
+                    <div class="text-danger">
+                        The company's ownership structure has not been updated.
                     </div>
-                    )}
+                    {{/if}}
                 </div>
             </div>
         </div>
     </div>
-    </div>
-    ) : (
-    <span class="text-danger text_italic mt-3 ml-3">No Data</span> )}
-    </div>
+    <div class="page-break-before"></div>
 
-    {/* Trang cấu trúc sở hữu - Ownership Structure Chart*/}
+
     <div class="background_page">
-        {OwnershipStructureResponseResponse ? (
+        <h3 class="text_h2_blue">Ownership Structure Chart</h3>
+        {{#if ownershipChartUrl}}
         <div>
-            {/* Ownership Structure Chart */}
-            <div class="row mb-3 mt-2">
-                <div class="col-lg-12 col-xl-12 mb-2">
-                    <div class="card-item ">
-                        <div class="text_center text-bold font-s-20 mb-3">
-                            {" "} Ownership Structure Chart
-                        </div>
-                        <div class="card_content">
-                            <div class="col-xl-12">
-                                {OwnershipStructureResponseResponse && OwnershipStructureResponseResponse.OwnershipStructureCharts && OwnershipStructureResponseResponse.OwnershipStructureCharts .length > 0 ? (
-                                <div class="chart-law">
-                                    <div class="cover-pie-chart">
-                                        <PieChartOwner customFontColor="#0953a8" labelFontSize={16} showSourceEn={true} dataChartStructure={this.formatPieCharts( OwnershipStructureResponseResponse.OwnershipStructureCharts )} />
-                                    </div>
-                                </div>
-                                ) : ( "" )}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <img src="{{ownershipChartUrl}}">
         </div>
-        ) : (
-        <span class="text-danger text_italic mt-3 ml-3">No Data</span> )}
-    </div>
+        {{else}}
+        <p class="no-data">Không có dữ liệu tài chính</p>
+        {{/if}}
 
-    {/* COMPANY PROFILE - BRANCHES/REPRESENTATIVE OFFICES */} {companyProfileResponse && companyProfileResponse.branches && companyProfileResponse.branches.length ? (
+    </div>
+    <div class="page-break-before"></div>
     <div>
-        {companyProfileResponse && companyProfileResponse.branches && companyProfileResponse.branches.length && companyProfileResponse.branches.map((page, pageIndex) => { return (
         <div key={pageIndex} class="background_page">
-            {pageIndex === 0 && (
+
             <div class="page_title">
                 <h1 class="text_h1_blue">COMPANY PROFILE</h1>
             </div>
-            )}
+
 
             <div class="row mb-3">
                 <div class="col-lg-12 col-xl-12 mb-2">
                     <div class="card-item ">
-                        {pageIndex === 0 && (
                         <h3 class="text_h2_blue">
                             BRANCHES/REPRESENTATIVE OFFICES
                         </h3>
-                        )}
+
 
                         <div class="card_content">
-                            {page && page.length ? (
+                            {{#if Branches.length}}
                             <div class="table-custom">
-                                <table class="custom-table">
+                                <table class="corporate-table" style="width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 14px;">
                                     <thead>
-                                        <tr>
-                                            <th class="text_left">No</th>
-                                            <th class="text_left">Tax Code</th>
-                                            <th class="text_left">Name</th>
-                                            <th class="text_left">Address</th>
+                                        <tr style="background-color: #0047AB; color: white;">
+                                            <th style="padding: 12px 15px; border: 1px solid #ddd; text-align: left; width: 50px;">No</th>
+                                            <th style="padding: 12px 15px; border: 1px solid #ddd; text-align: left;">Tax Code</th>
+                                            <th style="padding: 12px 15px; border: 1px solid #ddd; text-align: left;">Name</th>
+                                            <th style="padding: 12px 15px; border: 1px solid #ddd; text-align: left;">Address</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-
+                                        {{#each Branches}}
+                                        <tr>
+                                            <td style="padding: 12px 15px; border: 1px solid #ddd; text-align: left;">{{this.index}}</td>
+                                            <td style="padding: 12px 15px; border: 1px solid #ddd; text-align: left;">{{this.TaxCode}}</td>
+                                            <td style="padding: 12px 15px; border: 1px solid #ddd; text-align: left;">{{this.Name}}</td>
+                                            <td style="padding: 12px 15px; border: 1px solid #ddd; text-align: left;">{{this.Address}}</td>
+                                        </tr>
+                                        {{/each}}
                                     </tbody>
                                 </table>
                             </div>
-                            ) : (
-                            <div class="text-danger text-left text_italic mt-3 ml-3">
-                                The company has no branches/representative offices.
+                            {{else}}
+                            <div class="text-danger text_italic mt-3 ml-3">
+                                The company's ownership structure has not been updated.
                             </div>
-                            )}
+                            {{/if}}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        ); })}
+
     </div>
-    ) : ( "" )} {/* COMPANY PROFILE - SUBSIDIARIES */} {companyProfileResponse && companyProfileResponse.subsidiaries && companyProfileResponse.subsidiaries.length ? (
+    <div class="page-break-before"></div>
     <div>
-        {companyProfileResponse && companyProfileResponse.subsidiaries && companyProfileResponse.subsidiaries.length && companyProfileResponse.subsidiaries.map((page, pageIndex) => { return (
-        <div key={pageIndex} class="background_page">
-            {pageIndex === 0 && (
-            <div class="title_content mb-2 mt-2">
-                COMPANY PROFILE
-            </div>
-            )}
-
-            <div class="row mb-3">
-                <div class="col-lg-12 col-xl-12 mb-2">
-                    <div class="card-item ">
-                        {pageIndex === 0 && (
-                        <div class="card-title text_left">
-                            SUBSIDIARIES
-                        </div>
-                        )}
-
-                        <div class="card_content">
-                            {page && page.length ? (
-                            <div class="table-custom">
-                                <Table responsive>
-                                    {pageIndex === 0 && (
-                                    <thead>
-                                        <tr>
-                                            <th class="text_center">No</th>
-                                            <th class="text_left">
-                                                Tax Code
-                                            </th>
-                                            <th class="text_left">Name</th>
-
-                                            <th class="text_right">
-                                                Ownership (%)
-                                            </th>
-                                            <th class="text_left">
-                                                Registered Business Activities
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                    )}
-
-                                    <tbody>
-                                        {page.map((item, index) => { return (
-                                        <tr key={index}>
-                                            <td class="text_center">
-                                                {pageIndex * 10 + index + 1}
-                                            </td>
-                                            <td class="text_left width-col-300">
-                                                {" "} {item.taxCode ? item.taxCode : ""}
-                                            </td>
-                                            <td class="text_left width-col-300">
-                                                {" "} {item.nameEn ? item.nameEn : ""}
-                                            </td>
-                                            <td class="text_right">
-                                                {" "} {item.ownership ? formatMoney_2( item.ownership, 2 ) : ""}
-                                            </td>
-                                            <td class="text_left width-col-300">
-                                                {" "} {item.vsicEnInfo ? item.vsicEnInfo : ""}
-                                            </td>
-                                        </tr>
-                                        ); })}
-                                    </tbody>
-                                </Table>
-                            </div>
-                            ) : (
-                            <div class="text-danger text-left text_italic mt-3 ml-3">
-                                The company has no subsidiaries.
-                            </div>
-                            )}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        ); })}
-    </div>
-    ) : ( "" )} {/* COMPANY PROFILE - AFFILIATES */} {companyProfileResponse && companyProfileResponse.affiliates && companyProfileResponse.affiliates.length ? (
-    <div>
-        {companyProfileResponse && companyProfileResponse.affiliates && companyProfileResponse.affiliates.length && companyProfileResponse.affiliates.map((page, pageIndex) => { return (
-        <div key={pageIndex} class="background_page">
-            {pageIndex === 0 && (
-            <div class="title_content mb-2 mt-2">
-                COMPANY PROFILE
-            </div>
-            )}
-
-            <div class="row mb-3">
-                <div class="col-lg-12 col-xl-12 mb-2">
-                    <div class="card-item ">
-                        {pageIndex === 0 && (
-                        <div class="card-title text_left">
-                            AFFILIATES
-                        </div>
-                        )}
-
-                        <div class="card_content">
-                            {page && page.length ? (
-                            <div class="table-custom">
-                                <Table responsive>
-                                    {pageIndex === 0 && (
-                                    <thead>
-                                        <tr>
-                                            <th class="text_center">No</th>
-                                            <th class="text_left">
-                                                Tax Code
-                                            </th>
-                                            <th class="text_left">Name</th>
-
-                                            <th class="text_right">
-                                                Ownership (%)
-                                            </th>
-                                            <th class="text_left">
-                                                Registered Business Activities
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                    )}
-
-                                    <tbody>
-                                        {page.map((item, index) => { return (
-                                        <tr key={index}>
-                                            <td class="text_center">
-                                                {pageIndex * 10 + index + 1}
-                                            </td>
-                                            <td class="text_left width-col-300">
-                                                {" "} {item.taxCode ? item.taxCode : ""}
-                                            </td>
-                                            <td class="text_left width-col-300">
-                                                {" "} {item.nameEn ? item.nameEn : ""}
-                                            </td>
-                                            <td class="text_right">
-                                                {" "} {item.ownership ? formatMoney_2( item.ownership, 2 ) : ""}
-                                            </td>
-                                            <td class="text_left width-col-300">
-                                                {" "} {item.vsicEnInfo ? item.vsicEnInfo : ""}
-                                            </td>
-                                        </tr>
-                                        ); })}
-                                    </tbody>
-                                </Table>
-                            </div>
-                            ) : (
-                            <div class="text-danger text-left text_italic mt-3 ml-3">
-                                The company has no subsidiaries.
-                            </div>
-                            )}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        ); })}
-    </div>
-    ) : ( "" )} {/* Trang Export - Import*/}
-    <div class="background_page">
-        <div class="title_content mb-2 mt-2">Export - Import</div>
-        {companyImportExportResponse ? (
         <div>
-            {/* Total Import and Export Chart */}
-            <div class="row mb-3">
-                <div class="col-lg-12 col-xl-12 mb-2">
-                    <div class="card-item ">
-                        <div class="text_center text-bold font-s-20 mb-3 title-color">
-                            {companyImportExportResponse.importAndExportData && companyImportExportResponse.importAndExportData.enTitle ? companyImportExportResponse.importAndExportData .enTitle : "Total Import - Export Value"}
-                        </div>
-                        <div class="card_content">
-                            <div class="col-xl-12">
-                                {companyImportExportResponse.importAndExportData ? (
-                                <div class="chart-info chart-multi">
-                                    <MultiColumnImportExport xTypeLabel={true} dataImport={this.getDataImportExportChart( companyImportExportResponse .importAndExportData.chartModels, "Import" )} dataExport={this.getDataImportExportChart( companyImportExportResponse .importAndExportData.chartModels,
-                                        "Export" )} suffix=" USD" showValueInColumn={true} showSourceEn={true} customFontColor="#0953a8" customValueInColumnColor="#000000" backgroundColor={ "#fff"} tickColor={ "rgba(144, 155, 175, 0.3)"} enabledToolTip={ roles &&
-                                        (roles===_ Standard_ || roles===_ Premium_) } roles={roles} noTranslate={true} />
-                                </div>
-                                ) : (
-                                <span class="text-danger text_italic mt-3 ml-3">
-                              No Data
-                            </span> )}
-                            </div>
-                        </div>
-                    </div>
+            <div class="background_page">
+
+                <div class="page_title">
+                    <h1 class="text_h1_blue">COMPANY PROFILE</h1>
                 </div>
-            </div>
 
-            {/* Import/Export Chart */}
-            <div class="row mb-3">
-                {/* Export */}
-                <div class="col-lg-6 col-xl-6 mb-2 title-color">
-                    <div class="card-item ">
-                        <div class="card-title text_left mb-3">Export</div>
 
-                        <div class="text_center text-bold font-s-18 mb-3">
-                            {companyImportExportResponse.exportShareWeightRatioData && companyImportExportResponse.exportShareWeightRatioData .enTitle ? companyImportExportResponse .exportShareWeightRatioData.enTitle : "Share of export value by country"}
-                        </div>
-                        <div class="card_content">
-                            <div class="col-xl-12">
-                                {companyImportExportResponse.exportShareWeightRatioData && companyImportExportResponse.exportShareWeightRatioData .dataChart && companyImportExportResponse.exportShareWeightRatioData .dataChart.length ? (
-                                <div class="chart-law">
-                                    <div class="cover-pie-chart">
-                                        <PieChartOwner customFontColor="#0953a8" labelFontSize={16} showSourceEn={true} dataChartStructure={this.formatPieCharts( companyImportExportResponse .exportShareWeightRatioData.dataChart )} />
-                                    </div>
-                                </div>
-                                ) : (
-                                <span class="text-danger text_italic mt-3 ml-3">
-                              No Data
-                            </span> )}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {/* Import */}
-                <div class="col-lg-6 col-xl-6 pl-0 mb-2 title-color">
-                    <div class="card-item ">
-                        <div class="card-title text_left mb-3">Import</div>
+                <div class="row mb-3">
+                    <div class="col-lg-12 col-xl-12 mb-2">
+                        <div class="card-item ">
+                            <h3 class="text_h2_blue">
+                                SUBSIDIARIES
+                            </h3>
 
-                        <div class="text_left text-bold font-s-18 mb-3 ">
-                            {companyImportExportResponse.importShareWeightRatioData && companyImportExportResponse.importShareWeightRatioData .enTitle ? companyImportExportResponse .importShareWeightRatioData.enTitle : "Share of import value by country"}
-                        </div>
-                        <div class="card_content">
-                            <div class="col-xl-12">
-                                {companyImportExportResponse.importShareWeightRatioData && companyImportExportResponse.importShareWeightRatioData .dataChart && companyImportExportResponse.importShareWeightRatioData .dataChart.length ? (
-                                <div class="chart-law">
-                                    <div class="cover-pie-chart">
-                                        <PieChartOwner customFontColor="#0953a8" labelFontSize={16} showSourceEn={true} dataChartStructure={this.formatPieCharts( companyImportExportResponse .importShareWeightRatioData.dataChart )} />
-                                    </div>
-                                </div>
-                                ) : (
-                                <span class="text-danger text_italic mt-3 ml-3">
-                              No Data
-                            </span> )}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        ) : (
-        <span class="text-danger text_italic mt-3 ml-3">No Data</span> )}
-    </div>
 
-    {/* Trang Financial Statements - Balance Sheet */} {financialReportResponse && financialReportResponse.listBalanceSheet && financialReportResponse.listBalanceSheet.length ? (
-    <div>
-        {financialReportResponse && financialReportResponse.listBalanceSheet && financialReportResponse.listBalanceSheet.length && financialReportResponse.listBalanceSheet.map( (page, pageIndex) => { return (
-        <div key={pageIndex} class="background_page">
-            {pageIndex === 0 && (
-            <div class="title_content mb-2 mt-2">
-                Financial Statements
-            </div>
-            )}
-
-            <div class="row mb-3">
-                <div class="col-lg-12 col-xl-12 mb-2">
-                    <div class="card-item ">
-                        {pageIndex === 0 && (
-                        <div class="card-title text_left">
-                            BALANCE SHEET
-                        </div>
-                        )}
-
-                        <div class="card_content">
-                            {page && page.length ? (
-                            <div class="table-custom">
-                                <Table responsive>
-                                    {pageIndex === 0 && (
-                                    <thead>
-                                        <tr>
-                                            <th class="text_left"></th>
-                                            {page[0] && page[0].listValues.length && page[0].listValues.map( (item, index) => { return (
-                                            <th key={index} class="text_right width-col-140">
-                                                {item.name}
-                                            </th>
-                                            ); } )}
-                                        </tr>
-                                    </thead>
-                                    )}
-
-                                    <tbody>
-                                        {page.map((item, index) => { return (
-                                        <tr key={index}>
-                                            <td class={`text_left width-col-300 ${ item.level==="1" || item.level==="2" ? "text-w-600" : "" }`}>
-                                                {" "} {item.enTitle ? item.enTitle : ""}
-                                            </td>
-                                            {item.listValues.map( (itemValue, index) => { return (
-                                            <td key={index} class="text_right width-col-140">
-                                                {itemValue.value !== null ? formatMoney_2( itemValue.value, 2 ) : ""}
-                                            </td>
-                                            ); } )}
-                                        </tr>
-                                        ); })}
-                                    </tbody>
-                                </Table>
-                            </div>
-                            ) : ( "" )}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        ); } )}
-    </div>
-    ) : ( "" )} {/* Trang Financial Statements - Income Statement */} {financialReportResponse && financialReportResponse.listIncomeStatement && financialReportResponse.listIncomeStatement.length ? (
-    <div>
-        {financialReportResponse && financialReportResponse.listIncomeStatement && financialReportResponse.listIncomeStatement.length && financialReportResponse.listIncomeStatement.map( (page, pageIndex) => { return (
-        <div key={pageIndex} class="background_page">
-            {pageIndex === 0 && (
-            <div class="title_content mb-2 mt-2">
-                Financial Statements
-            </div>
-            )}
-
-            <div class="row mb-3">
-                <div class="col-lg-12 col-xl-12 mb-2">
-                    <div class="card-item ">
-                        {pageIndex === 0 && (
-                        <div class="card-title text_left text-no-tranform">
-                            INCOME STATEMENT (Unit:VND)
-                        </div>
-                        )}
-
-                        <div class="card_content">
-                            {page && page.length ? (
-                            <div class="table-custom">
-                                <Table responsive>
-                                    {pageIndex === 0 && (
-                                    <thead>
-                                        <tr>
-                                            <th class="text_left"></th>
-                                            {page[0] && page[0].listValues && page[0].listValues.map( (item, index) => { return (
-                                            <th key={index} class="text_right">
-                                                {item.name}
-                                            </th>
-                                            ); } )}
-                                        </tr>
-                                    </thead>
-                                    )}
-
-                                    <tbody>
-                                        {page.map((item, index) => { return (
-                                        <tr key={index}>
-                                            <td class={`text_left width-col-300 ${ item.level==="1" || item.level==="2" ? "text-w-600" : "" }`}>
-                                                {" "} {item.enTitle ? item.enTitle : ""}
-                                            </td>
-                                            {item.listValues.map( (itemValue, index) => { return (
-                                            <td key={index} class="text_right width-col-140">
-                                                {" "} {itemValue.value !== null ? formatMoney_2( itemValue.value, 2 ) : ""}
-                                            </td>
-                                            ); } )}
-                                        </tr>
-                                        ); })}
-                                    </tbody>
-                                </Table>
-                            </div>
-                            ) : ( "" )}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        ); } )}
-    </div>
-    ) : ( "" )} {/* Trang Financial Statements - Cash Flow Statement - */} {financialReportResponse && financialReportResponse.cashFlowStatement && (financialReportResponse.cashFlowStatement.listDirectMethod || financialReportResponse.cashFlowStatement.listIndirectMethod)
-    ? (
-    <div>
-        {dataCashFlowStatement && dataCashFlowStatement.length && dataCashFlowStatement.map((page, pageIndex) => { return (
-        <div key={pageIndex} class="background_page">
-            {pageIndex === 0 && (
-            <div class="title_content mb-2 mt-2">
-                Financial Statements
-            </div>
-            )}
-
-            <div class="row mb-3">
-                <div class="col-lg-12 col-xl-12 mb-2">
-                    <div class="card-item ">
-                        {pageIndex === 0 && (
-                        <div class="card-title text_left">
-                            CASH FLOW STATEMENT (Unit: VND)
-                        </div>
-                        )}
-
-                        <div class="card_content">
-                            <div class="table-custom">
-                                <Table responsive>
-                                    {pageIndex === 0 && (
-                                    <thead>
-                                        <tr>
-                                            <th class="text_left ma">
-                                                {isDirectStatement ? "Direct Method" : "Indirect Method"}
-                                            </th>
-                                            {page[0] && page[0].listValues && page[0].listValues.length && page[0].listValues.map((item, i) => { return (
-                                            <th key={i} class="text_right width-col-140">
-                                                {item.name}
-                                            </th>
-                                            ); })}
-                                        </tr>
-                                    </thead>
-                                    )}
-
-                                    <tbody>
-                                        {page && page.length && page.map((item, index) => { return (
-                                        <tr key={index}>
-                                            <td class={`text_left width-col-300 ${ item.level==="1" || item.level==="2" ? "text-w-600" : "" }`}>
-                                                {" "} {item.enTitle ? item.enTitle : ""}
-                                            </td>
-                                            {item.listValues.map( (itemValue, index) => { return (
-                                            <td key={index} class="text_right width-col-140">
-                                                {itemValue.value !== null ? formatMoney_2( itemValue.value, 2 ) : ""}
-                                            </td>
-                                            ); } )}
-                                        </tr>
-                                        ); })}
-                                    </tbody>
-                                </Table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        ); })}
-    </div>
-    ) : ( "" )} {/* Financial Highlight - Trang 1*/}
-    <div class="background_page">
-        <div class="title_content mb-2 mt-2">Financial Highlight</div>
-        {financialReportResponse && financialReportResponse.financialHighlight ? (
-        <div>
-            <div class="row mb-3">
-                {/* Financial Highlight general */}
-                <div class="col-lg-6 col-xl-6 mb-2">
-                    <div class="card-item ">
-                        <div class="card_content">
-                            {/* Contributed capital */}
-                            <div class="item">
-                                <div class="item_label only_text">
-                                    Contributed capital
-                                </div>
-                                <div class="item_value text-right">
-                                    {financialReportResponse.financialHighlight .contributedCapital !== null ? formatMoney_2( financialReportResponse.financialHighlight .contributedCapital, 2 ) + " VND" : ""}
-                                </div>
-                            </div>
-
-                            {/* Net revenue */}
-                            <div class="item">
-                                <div class="item_label only_text">
-                                    Net revenue
-                                </div>
-                                <div class="item_value text-right">
-                                    {financialReportResponse.financialHighlight .netRevenue !== null ? formatMoney_2( financialReportResponse.financialHighlight .netRevenue, 2 ) + " VND" : ""}
-                                </div>
-                            </div>
-                            {/* Net profit */}
-                            <div class="item">
-                                <div class="item_label only_text">Net profit</div>
-                                <div class="item_value text-right">
-                                    {financialReportResponse.financialHighlight .netProfit !== null ? formatMoney_2( financialReportResponse.financialHighlight .netProfit, 2 ) + " VND" : ""}
-                                </div>
-                            </div>
-                            {/* Total assets */}
-                            <div class="item">
-                                <div class="item_label only_text">
-                                    Total assets
-                                </div>
-                                <div class="item_value text-right">
-                                    {financialReportResponse.financialHighlight .totalAssets !== null ? formatMoney_2( financialReportResponse.financialHighlight .totalAssets, 2 ) + " VND" : ""}
-                                </div>
-                            </div>
-                            {/*Owner's equity */}
-                            <div class="item">
-                                <div class="item_label only_text">
-                                    Owner's equity
-                                </div>
-                                <div class="item_value text-right">
-                                    {financialReportResponse.financialHighlight .ownerEquity !== null ? formatMoney_2( financialReportResponse.financialHighlight .ownerEquity, 2 ) + " VND" : ""}
-                                </div>
-                            </div>
-                            {/*ROE */}
-                            <div class="item">
-                                <div class="item_label only_text">ROE</div>
-                                <div>
-                                    {financialReportResponse.financialHighlight.roe !== null ? formatMoney_2( financialReportResponse.financialHighlight .roe, 2 ) + " %" : ""}
-                                </div>
-                            </div>
-                            {/*ROA */}
-                            <div class="item">
-                                <div class="item_label only_text">ROA</div>
-                                <div>
-                                    {financialReportResponse.financialHighlight.roa !== null ? formatMoney_2( financialReportResponse.financialHighlight .roa, 2 ) + " %" : ""}
-                                </div>
-                            </div>
-                            {/*Update period */}
-                            <div class="item">
-                                <div class="item_label only_text">
-                                    Update period
-                                </div>
-                                <div class="item_value text-right">
-                                    {financialReportResponse.financialHighlight .updatePeriod !== null ? financialReportResponse.financialHighlight .updatePeriod : ""}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {/* Company Perfomance Review */} {financialReportResponse.financialHighlight .companyPerformanceReview !== null ? (
-                <div class="col-lg-6 col-xl-6 mb-2">
-                    <div class="card-item ">
-                        <div class="text_left text-bold font-s-18 title-color mb-3">
-                            Company Perfomance Review
-                        </div>
-                        <div class="card_content">
-                            {financialReportResponse.financialHighlight .companyPerformanceReview && financialReportResponse.financialHighlight .companyPerformanceReview.length ? (
-                            <div class="chart-info chart-multi">
-                                <ParetoChartTabRatio customFontColor="#0953a8" sourceEn={true} yLabel_1_suffix={ " Million VND"} yLabel_2_suffix={ "%"} xType="label" labelEnglish={true} roles={roles} dataColumn_1={this.returnDataChart( financialReportResponse.financialHighlight .companyPerformanceReview,
-                                    "Net revenue" )} dataColumn_2={this.returnDataChart( financialReportResponse.financialHighlight .companyPerformanceReview, "Cost of goods sold" )} dataColumn_3={this.returnDataChart( financialReportResponse.financialHighlight .companyPerformanceReview,
-                                    "Gross profit" )} dataLine_1={this.returnDataChart( financialReportResponse.financialHighlight .companyPerformanceReview, "Net profit margin" )} backgroundColor={ "#fff"} tickColor={ "rgba(144, 155, 175, 0.3)"} dataChartDefault={ financialReportResponse.financialHighlight
-                                    .companyPerformanceReview } enabledToolTip={ roles && (roles===_ Standard_ || roles===_ Premium_) } />
-                            </div>
-                            ) : (
-                            <div class="text-danger text_italic text_left mt-3 ml-3">
-                                No data.
-                            </div>
-                            )}
-                        </div>
-                    </div>
-                </div>
-                ) : ( "" )}
-            </div>
-        </div>
-        ) : (
-        <span class="text-danger text_italic mt-3 ml-3">No Data</span> )}
-    </div>
-    {/* Financial Highlight - Trang 2*/} {financialReportResponse && financialReportResponse.financialHighlight && financialReportResponse.financialHighlight.assetBreakdown !== null && (
-    <div class="background_page">
-        {/* Asset Breakdown */}
-
-        <div class="row mb-3">
-            <div class="col-lg-12 col-xl-12">
-                <div class="card-item ">
-                    <div class="text_left text-bold font-s-18 title-color mb-2">
-                        Asset Breakdown
-                    </div>
-                    <div class="card_content">
-                        <div class="row">
-                            {financialReportResponse.financialHighlight .assetBreakdown && financialReportResponse.financialHighlight .assetBreakdown.length ? ( financialReportResponse.financialHighlight.assetBreakdown.map( (props, index) => { return (
-                            <div key={index} class="col-lg-12 col-xl-12 font-s-18 mb-3">
-                                <div class="text_center text-color-blue">
-                                    {props.enTitle}
-                                </div>
-                                <div class="chart-law">
-                                    <div class="cover-pie-chart">
-                                        <PieChartOwner customFontColor="#0953a8" showSourceEn={true} labelFontSize={16} noSource={ index !=f inancialReportResponse .financialHighlight.assetBreakdown .length - 1 ? true : false } dataChartStructure={this.formatPieCharts( props.dataChart )} />
-                                    </div>
-                                </div>
-                            </div>
-                            ); } ) ) : (
-                            <div class="text-danger text_italic text_left mt-3 ml-3">
-                                No data.
-                            </div>
-                            )}
-                        </div>
-                    </div>
-                </div>{" "}
-            </div>
-        </div>
-    </div>
-    )} {/* Financial Highlight - Trang 3*/} {financialReportResponse && financialReportResponse.financialHighlight && financialReportResponse.financialHighlight.expenseBreakdown !== null && (
-    <div class="background_page">
-        {/* Expense Breakdown */}
-
-        <div class="row mb-3">
-            <div class="col-lg-12 col-xl-12">
-                <div class="card-item ">
-                    <div class="text_left text-bold font-s-18 title-color mb-2">
-                        Expense Breakdown
-                    </div>
-                    <div class="card_content">
-                        <div class="row">
-                            {financialReportResponse.financialHighlight .expenseBreakdown && financialReportResponse.financialHighlight .expenseBreakdown.length ? ( financialReportResponse.financialHighlight.expenseBreakdown.map( (props, index) => { return (
-                            <div key={index} class="col-lg-12 col-xl-12 font-s-18 mb-3">
-                                <div class="text_center text-color-blue">
-                                    {props.enTitle}
-                                </div>
-                                <div class="chart-law">
-                                    <div class="cover-pie-chart">
-                                        <PieChartOwner customFontColor="#0953a8" labelFontSize={16} showSourceEn={true} noSource={ index !==f inancialReportResponse .financialHighlight .expenseBreakdown.length - 1 ? true : false } dataChartStructure={this.formatPieCharts( props.dataChart )}
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                            ); } ) ) : (
-                            <div class="text-danger text_italic text_left mt-3 ml-3">
-                                No data.
-                            </div>
-                            )}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    )} {/* Financial Analysis - Financial Health Ratios + Management Efficiency Ratios*/}
-    <div class="background_page">
-        <div class="title_content mb-2 mt-2">Financial Analysis</div>
-        {financialReportResponse && financialReportResponse.financialAnalysis ? (
-        <div>
-            {/* Financial Health Ratios */} {financialReportResponse.financialAnalysis .financialHealthRatios !== null ? (
-            <div class="row mb-3">
-                <div class="col-lg-12 col-xl-12">
-                    <div class="card-item ">
-                        <div class="text_left text-bold font-s-18 title-color mb-3">
-                            Financial Health Ratios
-                        </div>
-                        <div class="card_content">
-                            {financialReportResponse.financialAnalysis && financialReportResponse.financialAnalysis .financialHealthRatios && financialReportResponse.financialAnalysis .financialHealthRatios.length ? (
-                            <div class="row">
-                                <div class="col-lg-6 col-xl-6">
-                                    <div class="table-custom">
-                                        <Table responsive>
-                                            <thead>
-                                                <tr>
-                                                    <th class="text_left">Year</th>
-                                                    {financialReportResponse.financialAnalysis.financialHealthRatios[0].dataChart.map( (props, index) => { return (
-                                                    <th key={index} class="text_right">
-                                                        {props.label ? props.label : ""}
-                                                    </th>
-                                                    ); } )}
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                {financialReportResponse.financialAnalysis.financialHealthRatios.map( (props, index) => { return (
-                                                <tr key={index}>
-                                                    <td class="text_left width-col-300">
-                                                        {" "} {props.enTitle ? props.enTitle : ""}
-                                                    </td>
-                                                    {props.dataChart.map( (subProps, index) => { return (
-                                                    <td key={index} class="text_right">
-                                                        {subProps.y !== null && subProps.y !== "" ? formatMoney_2( subProps.y, 2 ) : ""}
-                                                    </td>
-                                                    ); } )}
-                                                </tr>
-                                                ); } )}
-                                            </tbody>
-                                        </Table>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6 col-xl-6">
-                                    <div class="chart-info chart-multi">
-                                        <LinechartTabRatio customFontColor="#0953a8" backgroundColor={ "#fff"} title={ ""} xType="label" suf={true} percent={true} dataChart={this.formatDataCharts( financialReportResponse.financialAnalysis .financialHealthRatios )} dataSuf="%" enabledToolTip={
-                                            roles && (roles===_ Standard_ || roles===_ Premium_) } sourceEn={true} />
-                                    </div>
-                                </div>
-                            </div>
-                            ) : (
-                            <div class="text-danger text_italic text_left mt-3 ml-3">
-                                No data.
-                            </div>
-                            )}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            ) : ( "" )} {/* Management Efficiency Ratios */}
-            <div class="row mb-3">
-                <div class="col-lg-12 col-xl-12">
-                    <div class="card-item ">
-                        <div class="text_left text-bold font-s-18 title-color mb-3">
-                            Management Efficiency Ratios
-                        </div>
-                        <div class="card_content">
-                            {financialReportResponse && financialReportResponse.financialAnalysis && financialReportResponse.financialAnalysis .managementEfficiencyRatios && financialReportResponse.financialAnalysis .managementEfficiencyRatios.length ? (
-                            <div class="row">
-                                <div class="col-lg-6 col-xl-6">
-                                    <div class="table-custom">
-                                        <Table responsive>
-                                            <thead>
-                                                <tr>
-                                                    <th class="text_left">Year</th>
-                                                    {financialReportResponse.financialAnalysis.managementEfficiencyRatios[0].dataChart.map( (props, index) => { return (
-                                                    <td key={index} class="text_right">
-                                                        {props.label ? props.label : ""}
-                                                    </td>
-                                                    ); } )}
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                {financialReportResponse.financialAnalysis.managementEfficiencyRatios.map( (props, index) => { return (
-                                                <tr key={index}>
-                                                    <td class="text_left width-col-300">
-                                                        {" "} {props.enTitle ? props.enTitle : ""}
-                                                    </td>
-                                                    {props.dataChart.map( (subProps, index) => { return (
-                                                    <td key={index} class="text_right">
-                                                        {subProps.y !== null && subProps.y !== "" ? formatMoney_2( subProps.y, 2 ) : ""}
-                                                    </td>
-                                                    ); } )}
-                                                </tr>
-                                                ); } )}
-                                            </tbody>
-                                        </Table>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6 col-xl-6">
-                                    <div class="chart-info chart-multi">
-                                        <ParetoChartTabRatio customFontColor="#0953a8" sourceEn={true} labelEnglish={true} yLabel_2_suffix={ "%"} xType="label" roles={roles} dataColumn_1={this.returnDataChart( this.formatDataCharts( financialReportResponse.financialAnalysis .managementEfficiencyRatios
-                                            ), "EBIT (Mil VND)" )} dataLine_1={this.returnDataChart( this.formatDataCharts( financialReportResponse.financialAnalysis .managementEfficiencyRatios ), "ROE (%)" )} dataLine_2={this.returnDataChart( this.formatDataCharts(
-                                            financialReportResponse.financialAnalysis .managementEfficiencyRatios ), "ROA (%)" )} backgroundColor={ "#fff"} tickColor={ "rgba(144, 155, 175, 0.3)"} dataChartDefault={ financialReportResponse.financialAnalysis
-                                            .managementEfficiencyRatios } enabledToolTip={ roles && (roles===_ Standard_ || roles===_ Premium_) } />
-                                    </div>
-                                </div>
-                            </div>
-                            ) : (
-                            <div class="text-danger text_italic text_left mt-3 ml-3">
-                                No data.
-                            </div>
-                            )}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        ) : (
-        <span class="text-danger text_italic mt-3 ml-3">No Data</span> )}
-    </div>
-    {/* Financial Analysis - Profitability Ratios + Growth Ratios*/} {financialReportResponse && financialReportResponse.financialAnalysis && (financialReportResponse.financialAnalysis.profitabilityRatios !== null || financialReportResponse.financialAnalysis.growthRatios
-    !== null) && (
-    <div class="background_page">
-        {/* Profitability Ratios */} {financialReportResponse && financialReportResponse.financialAnalysis && financialReportResponse.financialAnalysis .profitabilityRatios !== null ? (
-        <div class="row mb-3">
-            <div class="col-lg-12 col-xl-12">
-                <div class="card-item ">
-                    <div class="text_left text-bold font-s-18 title-color mb-3">
-                        Profitability Ratios
-                    </div>
-                    <div class="card_content">
-                        {financialReportResponse && financialReportResponse.financialAnalysis && financialReportResponse.financialAnalysis .profitabilityRatios && financialReportResponse.financialAnalysis .profitabilityRatios.length ? (
-                        <div class="row">
-                            <div class="col-lg-6 col-xl-6">
+                            <div class="card_content">
+                                {{#if Subsidiaries.length}}
                                 <div class="table-custom">
-                                    <Table responsive>
+                                    <table class="corporate-table" style="width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 14px;">
                                         <thead>
-                                            <tr>
-                                                <th class="text_left">Year</th>
-                                                {financialReportResponse.financialAnalysis.profitabilityRatios[0].dataChart.map( (props, index) => { return (
-                                                <th key={index} class="text_right">
-                                                    {props.label ? props.label : ""}
-                                                </th>
-                                                ); } )}
+                                            <tr style="background-color: #0047AB; color: white;">
+                                                <th style="padding: 12px 15px; border: 1px solid #ddd; text-align: left; width: 8%;">No</th>
+                                                <th style="padding: 12px 15px; border: 1px solid #ddd; text-align: left;; width: 17%;">Tax Code</th>
+                                                <th style="padding: 12px 15px; border: 1px solid #ddd; text-align: left;; width: 30%;">Name</th>
+                                                <th style="padding: 12px 15px; border: 1px solid #ddd; text-align: left;; width: 10%;">Ownership</th>
+                                                <th style="padding: 12px 15px; border: 1px solid #ddd; text-align: left;; width: 35%;">RegisteredBusinessActivities</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            {financialReportResponse.financialAnalysis.profitabilityRatios.map( (props, index) => { return (
-                                            <tr key={index}>
-                                                <td class="text_left width-col-300">
-                                                    {" "} {props.enTitle ? props.enTitle : ""}
-                                                </td>
-
-                                                {props.dataChart.map( (subProps, index) => { return (
-                                                <td key={index} class="text_right">
-                                                    {subProps.y !== null && subProps.y !== "" ? formatMoney_2( subProps.y, 2 ) : ""}
-                                                </td>
-                                                ); } )}
+                                            {{#each Subsidiaries}}
+                                            <tr>
+                                                <td style="padding: 12px 15px; border: 1px solid #ddd; text-align: left;">{{this.index}}</td>
+                                                <td style="padding: 12px 15px; border: 1px solid #ddd; text-align: left;">{{this.TaxCode}}</td>
+                                                <td style="padding: 12px 15px; border: 1px solid #ddd; text-align: left;">{{this.NameEn}}</td>
+                                                <td style="padding: 12px 15px; border: 1px solid #ddd; text-align: center;">{{this.Ownership}}</td>
+                                                <td style="padding: 12px 15px; border: 1px solid #ddd; text-align: left;">{{this.VsicEnInfo}}</td>
                                             </tr>
-                                            ); } )}
+                                            {{/each}}
                                         </tbody>
-                                    </Table>
+                                    </table>
                                 </div>
-                            </div>
-
-                            <div class="col-lg-6 col-xl-6">
-                                <div class="chart-info chart-multi">
-                                    <LinechartTabRatio customFontColor="#0953a8" backgroundColor={ "#fff"} title={ ""} xType="label" suf={true} percent={true} dataChart={this.formatDataCharts( financialReportResponse.financialAnalysis .profitabilityRatios )} dataSuf="%" enabledToolTip={
-                                        roles && (roles===_ Standard_ || roles===_ Premium_) } sourceEn={true} />
+                                {{else}}
+                                <div class="text-danger text_italic mt-3 ml-3">
+                                    The company's ownership structure has not been updated.
                                 </div>
+                                {{/if}}
                             </div>
                         </div>
-                        ) : (
-                        <div class="text-danger text_italic text_left mt-3 ml-3">
-                            No data.
-                        </div>
-                        )}
                     </div>
                 </div>
             </div>
+
         </div>
-        ) : ( "" )} {/* Growth Ratios */} {financialReportResponse && financialReportResponse.financialAnalysis && financialReportResponse.financialAnalysis.growthRatios !== null ? (
-        <div class="row mb-3">
-            <div class="col-lg-12 col-xl-12">
-                <div class="card-item ">
-                    <div class="text_left text-bold font-s-18 title-color mb-3">
-                        Growth Ratios
-                    </div>
-                    <div class="card_content">
-                        {financialReportResponse && financialReportResponse.financialAnalysis && financialReportResponse.financialAnalysis .growthRatios && financialReportResponse.financialAnalysis.growthRatios .length ? (
-                        <div class="row">
-                            <div class="col-lg-6 col-xl-6">
+
+
+
+
+    </div>
+    <div class="page-break-before"></div>
+    <div>
+        <div>
+            <div class="background_page">
+
+                <div class="page_title">
+                    <h1 class="text_h1_blue">COMPANY PROFILE</h1>
+                </div>
+
+
+                <div class="row mb-3">
+                    <div class="col-lg-12 col-xl-12 mb-2">
+                        <div class="card-item ">
+                            <h3 class="text_h2_blue">
+                                Affiliates
+                            </h3>
+
+
+                            <div class="card_content">
+                                {{#if Affiliates.length}}
                                 <div class="table-custom">
-                                    <Table responsive>
+                                    <table class="corporate-table" style="width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 14px;">
                                         <thead>
-                                            <tr>
-                                                <th class="text_left">Year</th>
-                                                {financialReportResponse.financialAnalysis.growthRatios[0].dataChart.map( (props, index) => { return (
-                                                <th key={index} class="text_right">
-                                                    {props.label ? props.label : ""}
-                                                </th>
-                                                ); } )}
+                                            <tr style="background-color: #0047AB; color: white;">
+                                                <th style="padding: 12px 15px; border: 1px solid #ddd; text-align: left; width: 8%;">No</th>
+                                                <th style="padding: 12px 15px; border: 1px solid #ddd; text-align: left;; width: 17%;">Tax Code</th>
+                                                <th style="padding: 12px 15px; border: 1px solid #ddd; text-align: left;; width: 30%;">Name</th>
+                                                <th style="padding: 12px 15px; border: 1px solid #ddd; text-align: left;; width: 10%;">Ownership</th>
+                                                <th style="padding: 12px 15px; border: 1px solid #ddd; text-align: left;; width: 35%;">RegisteredBusinessActivities</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            {financialReportResponse.financialAnalysis.growthRatios.map( (props, index) => { return (
-                                            <tr key={index}>
-                                                <td class="text_left width-col-300">
-                                                    {" "} {props.enTitle ? props.enTitle : ""}
-                                                </td>
-                                                {props.dataChart.map( (subProps, index) => { return (
-                                                <td key={index} class="text_right">
-                                                    {subProps.y !== null && subProps.y !== "" ? formatMoney_2( subProps.y, 2 ) : ""}
-                                                </td>
-                                                ); } )}
+                                            {{#each Affiliates}}
+                                            <tr>
+                                                <td style="padding: 12px 15px; border: 1px solid #ddd; text-align: left;">{{this.index}}</td>
+                                                <td style="padding: 12px 15px; border: 1px solid #ddd; text-align: left;">{{this.TaxCode}}</td>
+                                                <td style="padding: 12px 15px; border: 1px solid #ddd; text-align: left;">{{this.NameEn}}</td>
+                                                <td style="padding: 12px 15px; border: 1px solid #ddd; text-align: center;">{{this.Ownership}}</td>
+                                                <td style="padding: 12px 15px; border: 1px solid #ddd; text-align: left;">{{this.VsicEnInfo}}</td>
                                             </tr>
-                                            ); } )}
+                                            {{/each}}
                                         </tbody>
-                                    </Table>
+                                    </table>
                                 </div>
-                            </div>
-
-                            <div class="col-lg-6 col-xl-6">
-                                <div class="chart-info chart-multi">
-                                    <LinechartTabRatio customFontColor="#0953a8" backgroundColor={ "#fff"} title={ ""} xType="label" suf={true} percent={true} dataChart={this.formatDataCharts( financialReportResponse.financialAnalysis .growthRatios )} dataSuf="%" enabledToolTip={ roles
-                                        && (roles===_ Standard_ || roles===_ Premium_) } sourceEn={true} />
+                                {{else}}
+                                <div class="text-danger text_italic mt-3 ml-3">
+                                    The company's ownership structure has not been updated.
                                 </div>
+                                {{/if}}
                             </div>
                         </div>
-                        ) : (
-                        <div class="text-danger text_italic text_left mt-3 ml-3">
-                            No data.
-                        </div>
-                        )}
                     </div>
                 </div>
             </div>
+
         </div>
-        ) : ( "" )}
+
+
+
+
     </div>
-    )} {/* Trang Chỉ số ngành - Industry Indicators */}
     <div class="background_page">
-        <div class="row mb-3">
-            <div class="col-lg-12 col-xl-12 mb-2">
-                <div class="card-item ">
-                    <div class="text_left text-bold font-s-18 title-color mb-3">
-                        Industry Indicators
-                    </div>
-                    <div class="card_content">
-                        {industryDataModel && industryDataModel.length ? (
-                        <div class="table-custom">
-                            <Table responsive>
-                                <thead>
-                                    <tr>
-                                        <th class="text_left">Industry Data</th>
-                                        <th class="text_right">CAGR (%)</th>
-                                        {industryDataModel[0] && industryDataModel[0].industryValues && industryDataModel[0].industryValues.map( (item, i) => { return (
-                                        <th key={i} class="text_right">
-                                            {item.years}
-                                        </th>
-                                        ); } )}
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {industryDataModel.map((item, index) => { return (
-                                    <tr key={index}>
-                                        <td class="text_left width-col-300">
-                                            {" "} {item.enTitle ? item.enTitle : ""}
-                                        </td>
-                                        <td class="text_right">
-                                            {item.cagr !== null ? formatMoney_2(item.cagr, 2) : ""}
-                                        </td>
 
-                                        {item.industryValues.map( (itemValue, index) => { return (
-                                        <td key={index} class="text_right">
-                                            {itemValue.value !== null ? formatMoney_2(itemValue.value, 2) : ""}
-                                        </td>
-                                        ); } )}
-                                    </tr>
-                                    ); })}
-                                </tbody>
-                            </Table>
-                        </div>
-                        ) : (
-                        <div class="text-danger text_italic text_left mt-3 ml-3">
-                            No data.
-                        </div>
-                        )}
-                    </div>
-                </div>
-            </div>
+        <div class="page_title">
+            <h1 class="text_h1_blue">Export - Import</h1>
         </div>
-    </div>
 
-    <div class="background_page">
-        <div class="row mb-3">
-            <div class="col-lg-12 col-xl-12 mb-2">
-                <div class="card-item ">
-                    <div class="text_left text-bold font-s-18 title-color mb-3">
-                        Key Players Analysis
-                    </div>
-                    <div class="card_content">
-                        {topCompanyByNetRevenueModel && topCompanyByNetRevenueModel.length ? (
-                        <div class="table-custom">
-                            <Table responsive>
-                                <thead>
-                                    <tr>
-                                        <th class="text_left width-col-300">
-                                            Company Name
-                                        </th>
-                                        <th class="text_right">
-                                            Sales volume <br></br> (VND billion)
-                                        </th>
-                                        <th class="text_right">
-                                            Net income <br></br> (VND billion)
-                                        </th>
-                                        <th class="text_right">
-                                            ROA <br></br> (%)
-                                        </th>
-                                        <th class="text_right">
-                                            ROE <br></br>(%)
-                                        </th>
-                                        <th class="text_right pr-2">
-                                            Liability to Equity <br></br> (%)
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {topCompanyByNetRevenueModel.map((item, index) => { return (
-                                    <tr key={index}>
-                                        <td class="text_left width-col-300">
-                                            {" "} {item.companyEnName ? item.companyEnName : item.companyName ? item.companyName : ""}
-                                        </td>
-                                        <td class="text_right">
-                                            {item.netRevenue !== null ? formatMoney_2( parseFloat(item.netRevenue, 10), 2 ) : ""}
-                                        </td>
-                                        <td class="text_right">
-                                            {item.netIncome !== null ? formatMoney_2( parseFloat(item.netIncome, 10), 2 ) : ""}
-                                        </td>
-
-                                        <td class="text_right">
-                                            {item.roa !== null ? formatMoney_2(item.roa, 2) : ""}
-                                        </td>
-                                        <td class="text_right">
-                                            {item.roe !== null ? numberFormat(item.roe, 2) : ""}
-                                        </td>
-                                        <td class="text_right pr-2">
-                                            {item.liability !== null ? formatMoney_2(item.liability, 2) : ""}
-                                        </td>
-                                    </tr>
-                                    ); })}
-                                </tbody>
-                            </Table>
-                        </div>
-                        ) : (
-                        <div class="text-danger text_italic text_left mt-3 ml-3">
-                            No data.
-                        </div>
-                        )}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    {/* 30/12/24 */}
-    <div id="loading" class="loading-download">
         <div>
-            <Loader active size="huge" inline="centered" />
-            <span class="mt-2">
-                {language === "vi"
-                  ? "Hệ thống đang tạo báo cáo, vui lòng không đóng trình duyệt!"
-                  : "System is generating report, please do not close this tab!"}
-              </span>
+
+            <div class="background_page">
+                <h3 class="text_h2_blue" style="margin-top: 10px; text-align: center; text-transform: capitalize;">
+                    Total Import - Export Value (2019 - 2023)
+                </h3>
+
+                {{#if TotalImportExportValue}}
+                <img src="{{TotalImportExportValue}}" alt="Total Import - Export Value (2019 - 2023)" style="width: 100%; height: 100%;"> {{else}}
+                <div class="text-danger">No data available for Import - Export Value</div>
+                {{/if}}
+
+                <table style="width: 100%; border-collapse: collapse;">
+                    <tr>
+                        <!-- Cột trái: IMPORT -->
+                        <td style="width: 50%; vertical-align: top; padding-right: 15px">
+                            <div class="text_h2_blue">Import</div>
+
+                            {{#if ImportChart}}
+                            <img src="{{ImportChart}}" style="width: 100%; height: 100%;"> {{else}}
+                            <div class="text-danger">No data available for Import</div>
+                            {{/if}}
+                        </td>
+
+                        <!-- Cột phải: EXPORT -->
+                        <td style="width: 50%; vertical-align: top; padding-left: 15px">
+                            <div class="text_h2_blue">Export</div>
+
+                            {{#if ExportChart}}
+                            <img src="{{ExportChart}}" style="width: 100%; height: 100%;"> {{else}}
+                            <div class="text-danger">No data available for Export</div>
+                            {{/if}}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
         </div>
-    </div> -->
+        <div class="page-break-before"></div>
+        <div>
+            <div class="background_page">
+
+                <div class="page_title">
+                    <h1 class="text_h1_blue">Financial Statements</h1>
+                </div>
+
+
+                <div class="row mb-3">
+                    <div class="col-lg-12 col-xl-12 mb-2">
+                        <div class="card-item ">
+
+                            <h3 class="text_h2_blue" style="margin-top: 20px;">
+                                BALANCE SHEET
+                            </h3>
+
+
+                            <div class="card_content">
+                                {{#if ListBalanceSheet.length}}
+                                <div class="table-custom">
+                                    <table class="corporate-table" style="width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 14px;">
+                                        <thead>
+                                            <tr style="background-color: #0047AB; color: white;">
+                                                <th style="padding: 12px 15px; border: 1px solid #ddd; text-align: left; width: 40%;">Title</th>
+                                                <th style="padding: 12px 15px; border: 1px solid #ddd; text-align: right; width: 20%;">31/12/2023</th>
+                                                <th style="padding: 12px 15px; border: 1px solid #ddd; text-align: right; width: 20%;">31/12/2022</th>
+                                                <th style="padding: 12px 15px; border: 1px solid #ddd; text-align: right; width: 20%;">31/12/2021</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {{#each ListBalanceSheet}}
+                                            <tr>
+                                                <td style="padding: 12px 15px; border: 1px solid #ddd; text-align: left; 
+                                                {{#if (eq this.Level '0')}}color: #0047AB;{{/if}}
+                                                {{#if (eq this.Level '1')}}font-weight: bold; color: #0047AB;{{/if}}
+                                                {{#if (eq this.Level '2')}}padding-left: 30px; color: #0047AB;{{/if}}">
+                                                    {{this.EnTitle}}
+                                                </td>
+                                                <td style="padding: 12px 15px; border: 1px solid #ddd; text-align: right;">
+                                                    {{formatMoney this.ListValues.0.Value}}
+                                                </td>
+                                                <td style="padding: 12px 15px; border: 1px solid #ddd; text-align: right;">
+                                                    {{formatMoney this.ListValues.1.Value}}
+                                                </td>
+                                                <td style="padding: 12px 15px; border: 1px solid #ddd; text-align: right;">
+                                                    {{formatMoney this.ListValues.2.Value}}
+                                                </td>
+                                            </tr>
+                                            {{/each}}
+                                        </tbody>
+                                    </table>
+                                </div>
+                                {{else}}
+                                <div class="text-danger text_italic mt-3 ml-3 ">
+                                    The company's financial data has not been updated.
+                                </div>
+                                {{/if}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="background_page">
+
+                <div class="page_title">
+                    <h1 class="text_h1_blue">Financial Statements</h1>
+                </div>
+
+
+                <div class="row mb-3">
+                    <div class="col-lg-12 col-xl-12 mb-2">
+                        <div class="card-item ">
+
+                            <h3 class="text_h2_blue" style="margin-top: 20px;">
+                                BALANCE SHEET
+                            </h3>
+
+
+                            <div class="card_content">
+                                {{#if ListBalanceSheet.length}}
+                                <div class="table-custom">
+                                    <table class="corporate-table" style="width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 14px;">
+                                        <thead>
+                                            <tr style="background-color: #0047AB; color: white;">
+                                                <th style="padding: 12px 15px; border: 1px solid #ddd; text-align: left; width: 40%;">Title</th>
+                                                <th style="padding: 12px 15px; border: 1px solid #ddd; text-align: right; width: 20%;">31/12/2023</th>
+                                                <th style="padding: 12px 15px; border: 1px solid #ddd; text-align: right; width: 20%;">31/12/2022</th>
+                                                <th style="padding: 12px 15px; border: 1px solid #ddd; text-align: right; width: 20%;">31/12/2021</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {{#each ListBalanceSheet}}
+                                            <tr>
+                                                <td style="padding: 12px 15px; border: 1px solid #ddd; text-align: left; 
+                                                {{#if (eq this.Level '0')}}color: #0047AB;{{/if}}
+                                                {{#if (eq this.Level '1')}}font-weight: bold; color: #0047AB;{{/if}}
+                                                {{#if (eq this.Level '2')}}padding-left: 30px; color: #0047AB;{{/if}}">
+                                                    {{this.EnTitle}}
+                                                </td>
+                                                <td style="padding: 12px 15px; border: 1px solid #ddd; text-align: right;">
+                                                    {{formatMoney this.ListValues.0.Value}}
+                                                </td>
+                                                <td style="padding: 12px 15px; border: 1px solid #ddd; text-align: right;">
+                                                    {{formatMoney this.ListValues.1.Value}}
+                                                </td>
+                                                <td style="padding: 12px 15px; border: 1px solid #ddd; text-align: right;">
+                                                    {{formatMoney this.ListValues.2.Value}}
+                                                </td>
+                                            </tr>
+                                            {{/each}}
+                                        </tbody>
+                                    </table>
+                                </div>
+                                {{else}}
+                                <div class="text-danger text_italic mt-3 ml-3 ">
+                                    The company's financial data has not been updated.
+                                </div>
+                                {{/if}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-break-before"></div>
+        <div>
+            <div class="background_page">
+
+                <div class="page_title">
+                    <h1 class="text_h1_blue">Financial Statements</h1>
+                </div>
+
+
+                <div class="row mb-3">
+                    <div class="col-lg-12 col-xl-12 mb-2">
+                        <div class="card-item ">
+
+                            <h3 class="text_h2_blue" style="margin-top: 14px;">
+                                INCOME STATEMENT(Unit:VND)
+                            </h3>
+
+
+                            <div class="card_content">
+                                {{#if ListIncomeStatement.length}}
+                                <div class="table-custom">
+                                    <table class="corporate-table" style="width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 14px;">
+                                        <thead>
+                                            <tr style="background-color: #0047AB; color: white;">
+                                                <th style="padding: 10px 13px; border: 1px solid #ddd; text-align: left; width: 40%;">Title</th>
+                                                <th style="padding: 10px 13px; border: 1px solid #ddd; text-align: right; width: 20%;">31/12/2023</th>
+                                                <th style="padding: 10px 13px; border: 1px solid #ddd; text-align: right; width: 20%;">31/12/2022</th>
+                                                <th style="padding: 10px 13px; border: 1px solid #ddd; text-align: right; width: 20%;">31/12/2021</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {{#each ListIncomeStatement}}
+                                            <tr>
+                                                <td style="padding: 10px 13px; border: 1px solid #ddd; text-align: left; 
+                                                {{#if (eq this.Level '0')}}color: #0047AB;{{/if}}
+                                                {{#if (eq this.Level '1')}}font-weight: bold; color: #0047AB;{{/if}}
+                                                {{#if (eq this.Level '2')}}padding-left: 30px; color: #0047AB;{{/if}}">
+                                                    {{this.EnTitle}}
+                                                </td>
+                                                <td style="padding: 10px 13px; border: 1px solid #ddd; text-align: right;">
+                                                    {{formatMoney this.ListValues.0.Value}}
+                                                </td>
+                                                <td style="padding: 10px 13px; border: 1px solid #ddd; text-align: right;">
+                                                    {{formatMoney this.ListValues.1.Value}}
+                                                </td>
+                                                <td style="padding: 12px 15px; border: 1px solid #ddd; text-align: right;">
+                                                    {{formatMoney this.ListValues.2.Value}}
+                                                </td>
+                                            </tr>
+                                            {{/each}}
+                                        </tbody>
+                                    </table>
+                                </div>
+                                {{else}}
+                                <div class="text-danger text_italic mt-3 ml-3 ">
+                                    The company's financial data has not been updated.
+                                </div>
+                                {{/if}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="page-break-before"></div>
+
+
+
+
+        <div>
+            <div class="background_page">
+
+                <div class="page_title">
+                    <h1 class="text_h1_blue">Financial Statements</h1>
+                </div>
+
+
+                <div class="row mb-3">
+                    <div class="col-lg-12 col-xl-12 mb-2">
+                        <div class="card-item ">
+
+                            <h3 class="text_h2_blue" style="margin-top: 14px;">
+                                CASH FLOW STATEMENT(UNIT: VND)
+                            </h3>
+
+
+                            <div class="card_content">
+                                {{#if ListIndirectMethod.length}}
+                                <div class="table-custom">
+                                    <table class="corporate-table" style="width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 14px;">
+                                        <thead>
+                                            <tr style="background-color: #0047AB; color: white;">
+                                                <th style="padding: 10px 13px; border: 1px solid #ddd; text-align: left; width: 40%;">Title</th>
+                                                <th style="padding: 10px 13px; border: 1px solid #ddd; text-align: right; width: 20%;">31/12/2023</th>
+                                                <th style="padding: 10px 13px; border: 1px solid #ddd; text-align: right; width: 20%;">31/12/2022</th>
+                                                <th style="padding: 10px 13px; border: 1px solid #ddd; text-align: right; width: 20%;">31/12/2021</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {{#each ListIndirectMethod}}
+                                            <tr>
+                                                <td style="padding: 10px 13px; border: 1px solid #ddd; text-align: left; 
+                                                {{#if (eq this.Level '0')}}color: #0047AB;{{/if}}
+                                                {{#if (eq this.Level '1')}}font-weight: bold; color: #0047AB;{{/if}}
+                                                {{#if (eq this.Level '2')}}padding-left: 30px; color: #0047AB;{{/if}}">
+                                                    {{this.EnTitle}}
+                                                </td>
+                                                <td style="padding: 10px 13px; border: 1px solid #ddd; text-align: right;">
+                                                    {{formatMoney this.ListValues.0.Value}}
+                                                </td>
+                                                <td style="padding: 10px 13px; border: 1px solid #ddd; text-align: right;">
+                                                    {{formatMoney this.ListValues.1.Value}}
+                                                </td>
+                                                <td style="padding: 12px 15px; border: 1px solid #ddd; text-align: right;">
+                                                    {{formatMoney this.ListValues.2.Value}}
+                                                </td>
+                                            </tr>
+                                            {{/each}}
+                                        </tbody>
+                                    </table>
+                                </div>
+                                {{else}}
+                                <div class="text-danger text_italic mt-3 ml-3 ">
+                                    The company's financial data has not been updated.
+                                </div>
+                                {{/if}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="page-break-before"></div>
+
+        <div class="background_page ">
+            <div class="title_content mb-2 mt-2 ">Financial Highlight</div>
+            {financialReportResponse && financialReportResponse.financialHighlight ? (
+            <div>
+                <div class="row mb-3 ">
+                    {/* Financial Highlight general */}
+                    <div class="col-lg-6 col-xl-6 mb-2 ">
+                        <div class="card-item ">
+                            <div class="card_content ">
+                                {/* Contributed capital */}
+                                <div class="item ">
+                                    <div class="item_label only_text ">
+                                        Contributed capital
+                                    </div>
+                                    <div class="item_value text-right ">
+                                        {financialReportResponse.financialHighlight .contributedCapital !== null ? formatMoney( financialReportResponse.financialHighlight .contributedCapital, 2 ) + " VND " : " "}
+                                    </div>
+                                </div>
+
+                                {/* Net revenue */}
+                                <div class="item ">
+                                    <div class="item_label only_text ">
+                                        Net revenue
+                                    </div>
+                                    <div class="item_value text-right ">
+                                        {financialReportResponse.financialHighlight .netRevenue !== null ? formatMoney( financialReportResponse.financialHighlight .netRevenue, 2 ) + " VND " : " "}
+                                    </div>
+                                </div>
+                                {/* Net profit */}
+                                <div class="item ">
+                                    <div class="item_label only_text ">Net profit</div>
+                                    <div class="item_value text-right ">
+                                        {financialReportResponse.financialHighlight .netProfit !== null ? formatMoney( financialReportResponse.financialHighlight .netProfit, 2 ) + " VND " : " "}
+                                    </div>
+                                </div>
+                                {/* Total assets */}
+                                <div class="item ">
+                                    <div class="item_label only_text ">
+                                        Total assets
+                                    </div>
+                                    <div class="item_value text-right ">
+                                        {financialReportResponse.financialHighlight .totalAssets !== null ? formatMoney( financialReportResponse.financialHighlight .totalAssets, 2 ) + " VND " : " "}
+                                    </div>
+                                </div>
+                                {/*Owner's equity */}
+                                <div class="item ">
+                                    <div class="item_label only_text ">
+                                        Owner's equity
+                                    </div>
+                                    <div class="item_value text-right ">
+                                        {financialReportResponse.financialHighlight .ownerEquity !== null ? formatMoney( financialReportResponse.financialHighlight .ownerEquity, 2 ) + " VND " : " "}
+                                    </div>
+                                </div>
+                                {/*ROE */}
+                                <div class="item ">
+                                    <div class="item_label only_text ">ROE</div>
+                                    <div>
+                                        {financialReportResponse.financialHighlight.roe !== null ? formatMoney( financialReportResponse.financialHighlight .roe, 2 ) + " % " : " "}
+                                    </div>
+                                </div>
+                                {/*ROA */}
+                                <div class="item ">
+                                    <div class="item_label only_text ">ROA</div>
+                                    <div>
+                                        {financialReportResponse.financialHighlight.roa !== null ? formatMoney( financialReportResponse.financialHighlight .roa, 2 ) + " % " : " "}
+                                    </div>
+                                </div>
+                                {/*Update period */}
+                                <div class="item ">
+                                    <div class="item_label only_text ">
+                                        Update period
+                                    </div>
+                                    <div class="item_value text-right ">
+                                        {financialReportResponse.financialHighlight .updatePeriod !== null ? financialReportResponse.financialHighlight .updatePeriod : " "}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {/* Company Perfomance Review */} {financialReportResponse.financialHighlight .companyPerformanceReview !== null ? (
+                    <div class="col-lg-6 col-xl-6 mb-2 ">
+                        <div class="card-item ">
+                            <div class="text_left text-bold font-s-18 title-color mb-3 ">
+                                Company Perfomance Review
+                            </div>
+                            <div class="card_content ">
+                                {financialReportResponse.financialHighlight .companyPerformanceReview && financialReportResponse.financialHighlight .companyPerformanceReview.length ? (
+                                <div class="chart-info chart-multi ">
+                                    <ParetoChartTabRatio customFontColor="#0953a8 " sourceEn={true} yLabel_1_suffix={ " Million VND "} yLabel_2_suffix={ "% "} xType="label " labelEnglish={true} roles={roles} dataColumn_1={this.returnDataChart( financialReportResponse.financialHighlight
+                                        .companyPerformanceReview, "Net revenue " )} dataColumn_2={this.returnDataChart( financialReportResponse.financialHighlight .companyPerformanceReview, "Cost of goods sold " )} dataColumn_3={this.returnDataChart( financialReportResponse.financialHighlight
+                                        .companyPerformanceReview, "Gross profit " )} dataLine_1={this.returnDataChart( financialReportResponse.financialHighlight .companyPerformanceReview, "Net profit margin " )} backgroundColor={ "#fff "} tickColor={
+                                        "rgba(144, 155, 175, 0.3) "} dataChartDefault={ financialReportResponse.financialHighlight .companyPerformanceReview } enabledToolTip={ roles && (roles===_ Standard_ || roles===_ Premium_) } />
+                                </div>
+                                ) : (
+                                <div class="text-danger text_italic text_left mt-3 ml-3 ">
+                                    No data.
+                                </div>
+                                )}
+                            </div>
+                        </div>
+                    </div>
+                    ) : ( " " )}
+                </div>
+            </div>
+            ) : (
+            <span class="text-danger text_italic mt-3 ml-3 ">No Data</span> )}
+        </div>
+        {/* Financial Highlight - Trang 2*/} {financialReportResponse && financialReportResponse.financialHighlight && financialReportResponse.financialHighlight.assetBreakdown !== null && (
+        <div class="background_page asset-breakdown-section">
+            <h3 class="text_h2_blue" style="margin-bottom: 10px;">Asset Breakdown</h3>
+
+            {{#if AssetBreakdownChart}}
+            <div class="chart-container" style="margin-top: 0; padding-top: 0;">
+                <img src="{{AssetBreakdownChart}}" alt="Asset Breakdown" style="width: 100%; max-width: 400px; margin: 0 auto;">
+            </div>
+            {{else}}
+            <div class="text-danger">No data available for Asset Breakdown</div>
+            {{/if}}
+        </div>
+        <div class="page-break-before"></div>
+
+        )} {/* Financial Highlight - Trang 3*/} {financialReportResponse && financialReportResponse.financialHighlight && financialReportResponse.financialHighlight.expenseBreakdown !== null && (
+        <div class="background_page ">
+            {/* Expense Breakdown */}
+
+            <div class="row mb-3 ">
+                <div class="col-lg-12 col-xl-12 ">
+                    <div class="card-item ">
+                        <div class="text_left text-bold font-s-18 title-color mb-2 ">
+                            Expense Breakdown
+                        </div>
+                        <div class="card_content ">
+                            <div class="row ">
+                                {financialReportResponse.financialHighlight .expenseBreakdown && financialReportResponse.financialHighlight .expenseBreakdown.length ? ( financialReportResponse.financialHighlight.expenseBreakdown.map( (props, index) => { return (
+                                <div key={index} class="col-lg-12 col-xl-12 font-s-18 mb-3 ">
+                                    <div class="text_center text-color-blue ">
+                                        {props.enTitle}
+                                    </div>
+                                    <div class="chart-law ">
+                                        <div class="cover-pie-chart ">
+                                            <PieChartOwner customFontColor="#0953a8 " labelFontSize={16} showSourceEn={true} noSource={ index !==f inancialReportResponse .financialHighlight .expenseBreakdown.length - 1 ? true : false } dataChartStructure={this.formatPieCharts( props.dataChart )}
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                                ); } ) ) : (
+                                <div class="text-danger text_italic text_left mt-3 ml-3 ">
+                                    No data.
+                                </div>
+                                )}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        )} {/* Financial Analysis - Financial Health Ratios + Management Efficiency Ratios*/}
+        <div class="background_page ">
+            <div class="title_content mb-2 mt-2 ">Financial Analysis</div>
+            {financialReportResponse && financialReportResponse.financialAnalysis ? (
+            <div>
+                {/* Financial Health Ratios */} {financialReportResponse.financialAnalysis .financialHealthRatios !== null ? (
+                <div class="row mb-3 ">
+                    <div class="col-lg-12 col-xl-12 ">
+                        <div class="card-item ">
+                            <div class="text_left text-bold font-s-18 title-color mb-3 ">
+                                Financial Health Ratios
+                            </div>
+                            <div class="card_content ">
+                                {financialReportResponse.financialAnalysis && financialReportResponse.financialAnalysis .financialHealthRatios && financialReportResponse.financialAnalysis .financialHealthRatios.length ? (
+                                <div class="row ">
+                                    <div class="col-lg-6 col-xl-6 ">
+                                        <div class="table-custom ">
+                                            <Table responsive>
+                                                <thead>
+                                                    <tr>
+                                                        <th class="text_left ">Year</th>
+                                                        {financialReportResponse.financialAnalysis.financialHealthRatios[0].dataChart.map( (props, index) => { return (
+                                                        <th key={index} class="text_right ">
+                                                            {props.label ? props.label : " "}
+                                                        </th>
+                                                        ); } )}
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    {financialReportResponse.financialAnalysis.financialHealthRatios.map( (props, index) => { return (
+                                                    <tr key={index}>
+                                                        <td class="text_left width-col-300 ">
+                                                            {" "} {props.enTitle ? props.enTitle : " "}
+                                                        </td>
+                                                        {props.dataChart.map( (subProps, index) => { return (
+                                                        <td key={index} class="text_right ">
+                                                            {subProps.y !== null && subProps.y !== " " ? formatMoney( subProps.y, 2 ) : " "}
+                                                        </td>
+                                                        ); } )}
+                                                    </tr>
+                                                    ); } )}
+                                                </tbody>
+                                            </Table>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-xl-6 ">
+                                        <div class="chart-info chart-multi ">
+                                            <LinechartTabRatio customFontColor="#0953a8 " backgroundColor={ "#fff "} title={ " "} xType="label
+                                                " suf={true} percent={true} dataChart={this.formatDataCharts( financialReportResponse.financialAnalysis .financialHealthRatios )} dataSuf="% " enabledToolTip={ roles && (roles===_ Standard_ || roles===_
+                                                Premium_) } sourceEn={true} />
+                                        </div>
+                                    </div>
+                                </div>
+                                ) : (
+                                <div class="text-danger text_italic text_left mt-3 ml-3 ">
+                                    No data.
+                                </div>
+                                )}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                ) : ( " " )} {/* Management Efficiency Ratios */}
+                <div class="row mb-3 ">
+                    <div class="col-lg-12 col-xl-12 ">
+                        <div class="card-item ">
+                            <div class="text_left text-bold font-s-18 title-color mb-3 ">
+                                Management Efficiency Ratios
+                            </div>
+                            <div class="card_content ">
+                                {financialReportResponse && financialReportResponse.financialAnalysis && financialReportResponse.financialAnalysis .managementEfficiencyRatios && financialReportResponse.financialAnalysis .managementEfficiencyRatios.length ? (
+                                <div class="row ">
+                                    <div class="col-lg-6 col-xl-6 ">
+                                        <div class="table-custom ">
+                                            <Table responsive>
+                                                <thead>
+                                                    <tr>
+                                                        <th class="text_left ">Year</th>
+                                                        {financialReportResponse.financialAnalysis.managementEfficiencyRatios[0].dataChart.map( (props, index) => { return (
+                                                        <td key={index} class="text_right ">
+                                                            {props.label ? props.label : " "}
+                                                        </td>
+                                                        ); } )}
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    {financialReportResponse.financialAnalysis.managementEfficiencyRatios.map( (props, index) => { return (
+                                                    <tr key={index}>
+                                                        <td class="text_left width-col-300 ">
+                                                            {" "} {props.enTitle ? props.enTitle : " "}
+                                                        </td>
+                                                        {props.dataChart.map( (subProps, index) => { return (
+                                                        <td key={index} class="text_right ">
+                                                            {subProps.y !== null && subProps.y !== " " ? formatMoney( subProps.y, 2 ) : " "}
+                                                        </td>
+                                                        ); } )}
+                                                    </tr>
+                                                    ); } )}
+                                                </tbody>
+                                            </Table>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-xl-6 ">
+                                        <div class="chart-info chart-multi ">
+                                            <ParetoChartTabRatio customFontColor="#0953a8 " sourceEn={true} labelEnglish={true} yLabel_2_suffix={ "% "} xType="label " roles={roles} dataColumn_1={this.returnDataChart( this.formatDataCharts( financialReportResponse.financialAnalysis .managementEfficiencyRatios
+                                                ), "EBIT (Mil VND) " )} dataLine_1={this.returnDataChart( this.formatDataCharts( financialReportResponse.financialAnalysis .managementEfficiencyRatios ), "ROE (%) " )} dataLine_2={this.returnDataChart( this.formatDataCharts(
+                                                financialReportResponse.financialAnalysis .managementEfficiencyRatios ), "ROA (%) " )} backgroundColor={ "#fff "} tickColor={ "rgba(144, 155, 175, 0.3) "} dataChartDefault={ financialReportResponse.financialAnalysis
+                                                .managementEfficiencyRatios } enabledToolTip={ roles && (roles===_ Standard_ || roles===_ Premium_) } />
+                                        </div>
+                                    </div>
+                                </div>
+                                ) : (
+                                <div class="text-danger text_italic text_left mt-3 ml-3 ">
+                                    No data.
+                                </div>
+                                )}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            ) : (
+            <span class="text-danger text_italic mt-3 ml-3 ">No Data</span> )}
+        </div>
+
+        <div class="background_page ">
+            <!-- //lam -->
+
+            <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px; margin-top: 20px">
+                <tr>
+
+                    <td style="width: 50%; vertical-align: top; padding-right: 15px">
+                        <div class="text_h2_blue">CONTACT</div>
+                        <div class="card_content">
+                            {{#if foreignHold.length}}
+                            <div class="table-custom">
+                                <table class="corporate-table" style="width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 14px;">
+                                    <thead>
+                                        <tr style="background-color: #0047AB; color: white;">
+                                            <th class="text_left" style="padding: 12px 15px; border: 1px solid #ddd;">Name</th>
+                                            <th class="text_right" style="padding: 12px 15px; border: 1px solid #ddd;">Amount(VND million)</th>
+                                            <th class="text_right" style="padding: 12px 15px; border: 1px solid #ddd;">Ownership(%)</th>
+                                            <th class="text_right" style="padding: 12px 15px; border: 1px solid #ddd;">UpdateDate</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {{#each foreignHold}}
+                                        <tr>
+                                            <td class="text_left width-col-300" style="padding: 12px 15px; border: 1px solid #ddd;">{{this.name}}</td>
+                                            <td class="text_right" style="padding: 12px 15px; border: 1px solid #ddd;">{{this.amount}}</td>
+                                            <td class="text_right" style="padding: 12px 15px; border: 1px solid #ddd;">{{this.ownership}}</td>
+                                            <td class="text_right" style="padding: 12px 15px; border: 1px solid #ddd;">{{this.updateDate}}</td>
+                                        </tr>
+                                        {{/each}}
+                                    </tbody>
+                                </table>
+                            </div>
+                            {{else}}
+                            <div class="text-danger">
+                                The company's ownership structure has not been updated.
+                            </div>
+                            {{/if}}
+                        </div>
+
+                    </td>
+
+
+                    <td style="width: 50%; vertical-align: top; padding-left: 15px">
+                        <div class="text_h2_blue">REGISTERED BUSINESS ACTIVITIES</div>
+
+                        <table style="width: 100%; border-collapse: collapse">
+                            <tr class="contact-item">
+                                <td>
+                                    {{#if VsicInfoArray.length}} {{#each VsicInfoArray}} {{#unless @last}} • {{this}}<br>
+                                    <div style="border-bottom: 1px solid #ddd; margin-top: 15px; margin-bottom: 15px"></div>
+                                    {{else}} • {{this}} {{/unless}} {{/each}} {{else}} No registered business activities {{/if}}
+                                </td>
+
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="background_page ">
+            <div class="row mb-3">
+                <div class="col-lg-12 col-xl-12 mb-2">
+                    <div class="card-item ">
+
+                        <h3 class="text_h2_blue" style="margin-top: 14px;">
+                            Industry Indicators
+                        </h3>
+
+
+                        <div class="card_content">
+                            {{#if IndustryData.length}}
+                            <div class="table-custom">
+                                <table class="corporate-table" style="width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 14px;">
+                                    <thead>
+                                        <tr style="background-color: #0047AB; color: white;">
+                                            <th style="padding: 10px 13px; border: 1px solid #ddd; text-align: left; width: 30%;">Industry Data</th>
+                                            <th style="padding: 10px 13px; border: 1px solid #ddd; text-align: right; width: 10%;">CAGR(%)</th>
+                                            <th style="padding: 10px 13px; border: 1px solid #ddd; text-align: right; width: 20%;">2023</th>
+                                            <th style="padding: 10px 13px; border: 1px solid #ddd; text-align: right; width: 20%;">2022</th>
+                                            <th style="padding: 10px 13px; border: 1px solid #ddd; text-align: right; width: 20%;">2021</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {{#each IndustryData}}
+                                        <tr>
+                                            <td style="padding: 10px 13px; border: 1px solid #ddd; text-align: left; ">
+                                                {{this.EnTitle}}
+                                            </td>
+                                            <td style="padding: 10px 13px; border: 1px solid #ddd; text-align: right;">
+                                                {{this.Cagr}}
+                                            </td>
+                                            <td style="padding: 10px 13px; border: 1px solid #ddd; text-align: right;">
+                                                {{formatMoney this.values.year2023}}
+                                            </td>
+                                            <td style="padding: 10px 13px; border: 1px solid #ddd; text-align: right;">
+                                                {{formatMoney this.values.year2022}}
+                                            </td>
+                                            <td style="padding: 10px 13px; border: 1px solid #ddd; text-align: right;">
+                                                {{formatMoney this.values.year2021}}
+                                            </td>
+                                        </tr>
+                                        {{/each}}
+                                    </tbody>
+                                </table>
+                            </div>
+                            {{else}}
+                            <div class="text-danger text_italic mt-3 ml-3 ">
+                                The company's financial data has not been updated.
+                            </div>
+                            {{/if}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-break-before"></div>
+
+
+        <div class="background_page ">
+            <div class="row mb-3">
+                <div class="col-lg-12 col-xl-12 mb-2">
+                    <div class="card-item ">
+
+                        <h3 class="text_h2_blue" style="margin-top: 14px;">
+                            Key Player Analysis
+                        </h3>
+
+
+                        <div class="card_content">
+                            {{#if TopCompanyByNetRevenueModel.length}}
+                            <div class="table-custom">
+                                <table class="corporate-table" style="width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 14px;">
+                                    <thead>
+                                        <tr style="background-color: #0047AB; color: white;">
+                                            <th style="padding: 10px 13px; border: 1px solid #ddd; text-align: left; width: 35%;">Company Name</th>
+                                            <th style="padding: 10px 13px; border: 1px solid #ddd; text-align: right; width: 15%;">Sales volume<br>(VND billion)</th>
+                                            <th style="padding: 10px 13px; border: 1px solid #ddd; text-align: right; width: 15%;">Net income<br>(VND billion)</th>
+                                            <th style="padding: 10px 13px; border: 1px solid #ddd; text-align: right; width: 10%;">ROA<br>(%)</th>
+                                            <th style="padding: 10px 13px; border: 1px solid #ddd; text-align: right; width: 10%;">ROE<br>(%)</th>
+                                            <th style="padding: 10px 13px; border: 1px solid #ddd; text-align: right; width: 15%;">Liability to Equity<br>(%)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {{#each TopCompanyByNetRevenueModel}}
+                                        <tr>
+                                            <td style="padding: 10px 13px; border: 1px solid #ddd; text-align: left; color: #0047AB;">
+                                                {{this.CompanyEnName}}
+                                            </td>
+                                            <td style="padding: 10px 13px; border: 1px solid #ddd; text-align: right; color: #0047AB">
+                                                {{formatMoney this.NetRevenue}}
+                                            </td>
+                                            <td style="padding: 10px 13px; border: 1px solid #ddd; text-align: right; color: #0047AB">
+                                                {{formatMoney this.NetIncome}}
+                                            </td>
+                                            <td style="padding: 10px 13px; border: 1px solid #ddd; text-align: right; color: #0047AB">
+                                                {{this.ROA}}
+                                            </td>
+                                            <td style="padding: 10px 13px; border: 1px solid #ddd; text-align: right; color: #0047AB">
+                                                {{this.ROE}}
+                                            </td>
+                                            <td style="padding: 10px 13px; border: 1px solid #ddd; text-align: right; color: #0047AB">
+                                                {{this.Liability}}
+                                            </td>
+                                        </tr>
+                                        {{/each}}
+                                    </tbody>
+                                </table>
+                            </div>
+                            {{else}}
+                            <div class="text-danger text_italic mt-3 ml-3 ">
+                                The company's financial data has not been updated.
+                            </div>
+                            {{/if}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
 
 
 </body>

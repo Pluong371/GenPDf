@@ -9,7 +9,7 @@ import type { CompanyProfile } from '../models/pdf.model';
 export const generatePdf = async (req: Request, res: Response) => {
     try {
         const data = req.body;
-        console.log(data);
+        // console.log(data);
     
         if (!data) {
      
@@ -49,7 +49,7 @@ export const generatePdf = async (req: Request, res: Response) => {
             }
             
            
-            // fs.unlinkSync(filePath);
+            fs.unlinkSync(filePath);
         });
     } catch (error) {
        

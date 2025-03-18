@@ -1,29 +1,25 @@
 export interface VsicInfo {
-  name: string;
+  Name: string;
   NameEn: string;
-  code: string;
+  Code: string;
 }
 
 export interface CompanyProfile {
-  GeneralInformationResponse: GeneralInformationResponseResponse;
-  OwnershipStructureResponse: OwnershipStructureResponseResponse;
-  companyProfileResponse: companyProfileResponse;
-  companyImportExportResponse: companyImportExportResponse;
-  industryDataModel: industryDataModel[];
-  topCompanyByNetRevenueModel: topCompanyByNetRevenueModel[];
-  financialReportResponse: financialReportResponse;
+  GeneralInformationResponse: GeneralInformationResponse;
+  OwnershipStructureResponse: OwnershipStructureResponse;
+  CompanyProfileResponse: CompanyProfileResponse;
+  CompanyImportExportResponse: CompanyImportExportResponse;
+  IndustryDataModel: IndustryDataModel[];
+  TopCompanyByNetRevenueModel: TopCompanyByNetRevenueModel[];
+  FinancialReportResponse: FinancialReportResponse;
 }
 
-
-
-
-
-export interface Branch {
-  companyId: string;
-  taxCode: string;
-  name: string;
-  nameEn: string;
-  address: string;
+export interface Branches {
+  CompanyId: string;
+  TaxCode: string;
+  Name: string;
+  NameEn: string;
+  Address: string;
 }
 
 export interface Ownership {
@@ -35,167 +31,174 @@ export interface Ownership {
 
 //chưa có
 export interface CorporateHold {
-  name: string;
-  amount: number;
-  ownership: number;
-  updateDate: string;
+  Name: string;
+  Amount: number;
+  Ownership: number;
+  UpdateDate: string;
 }
 
-export interface OwnershipStructureResponseChart {
-  otherData: number;
-  label: string;
-  enLabel: string;
-  y: number;
+export interface OwnershipStructureCharts {
+  OtherData: number;
+  Label: string;
+  EnLabel: string;
+  Y: number;
 }
 
-export interface GeneralInformationResponseResponse {
-  companyId: string;
-  companyEnName: string;
-  companyName: string;
+export interface GeneralInformationResponse {
+  CompanyId: string;
+  CompanyEnName: string;
+  CompanyName: string;
   VsicInfo: VsicInfo[];
-  address: string;
-  phoneNumber: string;
-  email: string;
-  fax: string;
-  webSite: string;
-  registrationCode: string;
-  incorporatedDate: string;
-  legalForm: string;
-  operationStatus: boolean;
-  businessSize: string;
-  representativeName: string;
-  charterCapital: string;
-  noOfEmployee: number;
-  latestUpdate: string;
-  netRevenue: number;
+  Address: string;
+  PhoneNumber: string;
+  Email: string;
+  Fax: string;
+  WebSite: string;
+  RegistrationCode: string;
+  IncorporatedDate: string;
+  LegalForm: string;
+  OperationStatus: boolean;
+  BusinessSize: string;
+  RepresentativeName: string;
+  Nationality: string;
+  DOB: string;
+  IdPerson: string;
+  Rank: string;
+
+  CharterCapital: string;
+  NoOfEmployee: number;
+  LatestUpdate: string;
+  NetRevenue: number;
 }
 
-export interface Subsidiary {
-  companyId: string;
-  taxCode: string;
-  name: string;
-  nameEn: string;
-  ownership: number;
-  vsicInfo: string;
-  vsicEnInfo: string;
-  companyLinkStatus: string;
-  companyLinkStatusId: number;
+export interface Subsidiaries {
+  CompanyId: string;
+  TaxCode: string;
+  Name: string;
+  NameEn: string;
+  Ownership: number;
+  VsicInfo: string;
+  VsicEnInfo: string;
+  CompanyLinkStatus: string;
+  CompanyLinkStatusId: number;
 }
-export interface Affliate {
-  companyId: string;
-  taxCode: string;
-  name: string;
-  nameEn: string;
-  ownership: number;
-  vsicInfo: string;
-  vsicEnInfo: string;
+export interface Affiliates {
+  CompanyId: string;
+  TaxCode: string;
+  Name: string;
+  NameEn: string;
+  Ownership: number;
+  VsicInfo: string;
+  VsicEnInfo: string;
 }
 
-export interface OwnershipStructureResponseResponse {
-  corporateHold: CorporateHold[];
-  privateHold: Ownership[];
+export interface OwnershipStructureResponse {
+  CorporateHold: CorporateHold[];
+  PrivateHold: Ownership[];
   //chưa có
-  foreignHold: Ownership[];
+  ForeignHold: Ownership[];
 
-  OwnershipStructureCharts: OwnershipStructureResponseChart[];
+  OwnershipStructureCharts: OwnershipStructureCharts[];
 }
-export interface companyProfileResponse {
-  branches: Branch[][];
-  subsidiaries: Subsidiary[][];
-  affiliates: Affliate[][];
+export interface CompanyProfileResponse {
+  Branches: Branches[];
+  Subsidiaries: Subsidiaries[];
+  Affiliates: Affiliates[];
 }
 export interface DataChart {
-  otherData: number;
-  label: string;
-  enLabel: string;
-  y: number;
+  OtherData: number;
+  Label: string;
+  EnLabel: string;
+  Y: number;
 }
-export interface ChartModel {
-  dataChart: DataChart[];
-  title: string;
-  enTitle: string;
-  chartType: string;
+export interface ChartModels {
+  DataChart: DataChart[];
+  Title: string;
+  EnTitle: string;
+  ChartType: string;
 }
 export interface ImportAndExportData {
-  title: string;
-  enTitle: string;
-  chartModels: ChartModel[];
+  Title: string;
+  EnTitle: string;
+  ChartModels: ChartModels[];
 }
 export interface ImportShareWeightRatioData {
-  dataChart: DataChart[];
-  title: string;
-  enTitle: string;
-  chartType: string;
+  DataChart: DataChart[];
+  Title: string;
+  EnTitle: string;
+  ChartType: string;
 }
 export interface ExportShareWeightRatioData {
-  dataChart: DataChart[];
-  title: string;
-  enTitle: string;
-  chartType: string;
+  DataChart: DataChart[];
+  Title: string;
+  EnTitle: string;
+  ChartType: string;
 }
-export interface companyImportExportResponse {
-  importAndExportData: ImportAndExportData;
-  importShareWeightRatioData: ImportShareWeightRatioData;
-  exportShareWeightRatioData: ExportShareWeightRatioData;
+
+export interface CompanyImportExportResponse {
+  ImportAndExportData: ImportAndExportData;
+  ImportShareWeightRatioData: ImportShareWeightRatioData;
+  ExportShareWeightRatioData: ExportShareWeightRatioData;
 }
-export interface topCompanyByNetRevenueModel {
+export interface TopCompanyByNetRevenueModel {
   companyId: string;
   companyName: string;
   companyEnName: string;
-  netRevenue: number;
-  netIncome: number;
+  netRevenue: string;
+  netIncome: string;
   roa: number;
   roe: number;
   liability: number;
 }
-export interface IndustryValue {
-  years: string;
-  value: number;
+export interface IndustryValues {
+  Years: string;
+  Value: number;
 }
-export interface industryDataModel {
-  title: string;
-  enTitle: string;
-  cagr: number;
-  industryValues: IndustryValue[];
+export interface IndustryDataModel {
+  Title: string;
+  EnTitle: string;
+  Cagr: number;
+  IndustryValues: IndustryValues[];
 }
-export interface BalanceSheet {
-  title: string;
-  enTitle: string;
-  code: string;
-  level: string;
-  listValues: Value[];
-}
-export interface Value {
-  name: string;
-  nameEn: string;
-  value: number;
-}
-export interface IncomeStatement {
-  title: string;
-  enTitle: string;
-  code: string;
-  level: string;
-  listValues: Value[];
+
+export interface ListIncomeStatement {
+  Title: string;
+  EnTitle: string;
+  Code: string;
+  Level: string;
+  ListValues: Value[];
 }
 export interface CashFlowStatement {
-    //chưa có
-  listDirectMethod: string;
-  listIndirectMethod: listIndirectMethod[];
+  //chưa có
+  ListDirectMethod: string;
+  ListIndirectMethod: ListIndirectMethod[][];
 }
-export interface listIndirectMethod {
-  title: string;
-  enTitle: string;
-  code: string;
-  level: string;
-  listValues: Value[];
+export interface ListIndirectMethod {
+  Title: string;
+  EnTitle: string;
+  Code: string;
+  Level: string;
+  ListValues: Value[];
 }
-export interface financialReportResponse {
-  set: number;
-  listBalanceSheet: BalanceSheet[];
-  listIncomeStatement: IncomeStatement[];
-  cashFlowStatement: CashFlowStatement[];
-  financialHighlight:financialHighlight;
-  financialAnalysis:financialAnalysis;
+export interface FinancialReportResponse {
+  Set: number;
+  ListBalanceSheet: ListBalanceSheet[][];
+  ListIncomeStatement: ListIncomeStatement[][];
+  CashFlowStatement: CashFlowStatement;
+  FinancialHighlight: FinancialHighlight;
+  financialAnalysis: financialAnalysis;
+}
+export interface ListBalanceSheet {
+  Title: string;
+  EnTitle: string;
+  Code: string;
+  Level: string;
+  ListValues: Value[];
+}
+export interface Value {
+  Name: string;
+  NameEn: string;
+  Value: number;
 }
 export interface financialAnalysis {
   financialHealthRatios: FinancialHealthRatios[];
@@ -227,34 +230,34 @@ export interface ProfitabilityRatios {
   enTitle: string;
   chartType: string;
 }
-export interface financialHighlight {
-  contributedCapital: number;
-  netRevenue: number;
-  netProfit: number;
-  totalAssets: number;
-  ownerEquity: number;
-  roe: number;
-  roa: number;
-  updatePeriod: string;
-  companyPerformanceReview: CompanyPerformanceReview[];
-  assetBreakdown: AssetBreakdown[];
-  expenseBreakdown: ExpenseBreakdown[];
+export interface FinancialHighlight {
+  ContributedCapital: number;
+  NetRevenue: number;
+  NetProfit: number;
+  TotalAssets: number;
+  OwnerEquity: number;
+  ROE: number;
+  ROA: number;
+  UpdatePeriod: string;
+  CompanyPerformanceReview: CompanyPerformanceReview[];
+  AssetBreakdown: AssetBreakdown[];
+  ExpenseBreakdown: ExpenseBreakdown[];
 }
 export interface ExpenseBreakdown {
-  dataChart: DataChart[];
-  title: string;
-  enTitle: string;
-  chartType: string;
+  DataChart: DataChart[];
+  Title: string;
+  EnTitle: string;
+  ChartType: string;
 }
 export interface AssetBreakdown {
-  dataChart: DataChart[];
-  title: string;
-  enTitle: string;
-  chartType: string;
+  DataChart: DataChart[];
+  Title: string;
+  EnTitle: string;
+  ChartType: string;
 }
 export interface CompanyPerformanceReview {
-    dataChart: DataChart[];
-    title: string;
-    enTitle: string;
-    chartType: string;
+  DataChart: DataChart[];
+  Title: string;
+  EnTitle: string;
+  ChartType: string;
 }

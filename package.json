@@ -1,22 +1,21 @@
 {
-  "name": "genpdf",
-  "module": "index.ts",
-  "type": "module",
-  "private": true,
-  "devDependencies": {
-    "@types/bun": "latest",
-    "@types/express": "^5.0.0",
-    "typescript": "^5.8.2"
-  },
-  "peerDependencies": {
-    "typescript": "^5"
-  },
-  "dependencies": {
-    "chart.js": "^4.4.8",
-    "dotenv": "^16.4.7",
-    "dotnet": "^1.1.4",
-    "express": "^4.21.2",
-    "pdf-creator-node": "^2.3.5",
-    "quickchart-js": "^3.1.3"
-  }
+    "name": "genpdf",
+    "module": "index.ts",
+    "type": "module",
+    "private": true,
+    "devDependencies": {
+        "@types/bun": "latest",
+        "@types/express": "^5.0.0"
+    },
+    "peerDependencies": {
+        "typescript": "^5"
+    },
+    "dependencies": {
+        "express": "^4.18.2",
+        "pdf-creator-node": "^2.3.5"
+    },
+    "scripts": {
+        "start": "bun run index.ts",
+        "dev": "bun run --watch index.ts"
+    }
 }

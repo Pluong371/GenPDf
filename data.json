@@ -1,0 +1,4831 @@
+{
+    "GeneralInformationResponse": {
+        "CompanyId": "3b92de9f-10b6-409f-91b9-49ab76e6c5d2",
+        "CompanyEnName": "FLC BISCOM CRUISE - GOLF COURSE INVESTMENT COMPANY LIMITED",
+        "CompanyName": "CÔNG TY TNHH ĐẦU TƯ DU THUYỀN - SÂN GOLF FLC BISCOM",
+        "VsicInfo": [{
+                "Name": "Hoạt động của các cơ sở thể thao",
+                "NameEn": "Operation of sports facilities",
+                "Code": "9311"
+            },
+            {
+                "Name": "Khai thác quặng kim loại khác không chứa sắt",
+                "NameEn": "Mining of other non-ferrous metal ores",
+                "Code": "0722"
+            },
+            {
+                "Name": "Khai thác quặng kim loại quí hiếm",
+                "NameEn": "Mining of precious metals ores",
+                "Code": "0730"
+            },
+            {
+                "Name": "Khai thác đá, cát, sỏi, đất sét",
+                "NameEn": "Quarrying of stone, sand and clay",
+                "Code": "0810"
+            },
+            {
+                "Name": "Hoạt động dịch vụ hỗ trợ khai thác mỏ và quặng khác",
+                "NameEn": "Support activities for other mining and quarrying",
+                "Code": "0990"
+            }
+        ],
+        "Address": "Tòa nhà FLC Landmark, ngõ 5 đường Lê Đức Thọ, Phường Mỹ Đình 2, Quận Nam Từ Liêm, Hà Nội",
+        "PhoneNumber": "02436463999",
+        "Email": null,
+        "Fax": null,
+        "WebSite": null,
+        "RegistrationCode": "0108725989",
+        "IncorporatedDate": "2019-05-04T00:00:00",
+        "LegalForm": "One member limited liability company",
+        "OperationStatus": true,
+        "BusinessSize": "Medium-sized Enterprise",
+        "RepresentativeName": "ĐỖ VIỆT HÙNG",
+        "Nationality": null,
+        "DOB": null,
+        "IdPerson": "001080028341",
+        "Rank": null,
+        "CharterCapital": "499999997952.00",
+        "NoOfEmployee": 40.0,
+        "LatestUpdate": "2024-12-31T00:00:00",
+        "NetRevenue": 282671590020.0
+    },
+    "OwnershipStructureResponse": {
+        "CorporateHold": [{
+            "Name": "CÔNG TY CỔ PHẦN ĐẦU TƯ KINH DOANH PHÁT TRIỂN BẤT ĐỘNG SẢN FLCHOMES",
+            "Amount": 49999999.8,
+            "Ownership": 100.0,
+            "UpdateDate": "2024-12-31T00:00:00"
+        }],
+        "PrivateHold": [],
+        "ForeignHold": [],
+        "OwnershipStructureCharts": [{
+                "OtherData": 100.0,
+                "Label": "Doanh nghiệp",
+                "EnLabel": "Corporate Hold",
+                "Y": 100.0
+            },
+            {
+                "OtherData": 0.0,
+                "Label": "Cá nhân",
+                "EnLabel": "Private Hold",
+                "Y": 0.0
+            },
+            {
+                "OtherData": 0.0,
+                "Label": "Nước ngoài",
+                "EnLabel": "Foreign Hold",
+                "Y": 0.0
+            },
+            {
+                "OtherData": 0.0,
+                "Label": "Khác",
+                "EnLabel": "Others",
+                "Y": 0.0
+            }
+        ]
+    },
+    "CompanyProfileResponse": {
+        "Branches": [{
+                "CompanyId": "a5b40028-7446-4550-a4cb-0d37e27d3304",
+                "TaxCode": "0108725989-003",
+                "Name": "CHI NHÁNH CÔNG TY TNHH ĐẦU TƯ DU THUYỀN - SÂN GOLF FLC BISCOM TẠI TỈNH BÌNH ĐỊNH",
+                "NameEn": "BRANCH OF FLC BISCOM CRUISE - GOLF COURSE INVESTMENT COMPANY LIMITED IN BINH DINH PROVINCE",
+                "Address": "Khu số 4, Khu du lịch biển Nhơn Lý-Cát Tiến, Xã Nhơn Lý, Thành phố Quy Nhơn, Bình Định"
+            },
+            {
+                "CompanyId": "9a65407a-b687-4ff7-823c-2bfaa9c8f521",
+                "TaxCode": "0108725989-004",
+                "Name": "CHI NHÁNH CÔNG TY TNHH ĐẦU TƯ DU THUYỀN - SÂN GOLF FLC BISCOM TẠI TỈNH QUẢNG BÌNH",
+                "NameEn": "BRANCH OF FLC BISCOM CRUISE - GOLF COURSE INVESTMENT COMPANY LIMITED IN QUANG BINH PROVINCE",
+                "Address": "Thôn Tân Hải, Xã Hải Ninh, Huyện Quảng Ninh, Quảng Bình"
+            },
+            {
+                "CompanyId": "5488308f-b8c7-4aac-959e-6613472e024b",
+                "TaxCode": "0108725989-002",
+                "Name": "CHI NHÁNH CÔNG TY TNHH ĐẦU TƯ DU THUYỀN - SÂN GOLF FLC BISCOM TẠI TỈNH QUẢNG NINH",
+                "NameEn": "BRANCH OF FLC BISCOM CRUISE - GOLF COURSE INVESTMENT COMPANY LIMITED IN QUANG NINH PROVINCE",
+                "Address": "FLC Hạ Long, đường Nguyễn Văn Cừ , Phường Hồng Hải, Thành phố Hạ Long, Quảng Ninh"
+            },
+            {
+                "CompanyId": "063dd77c-a769-4a6f-ac31-8b515e0e53fe",
+                "TaxCode": "0108725989-001",
+                "Name": "CHI NHÁNH CÔNG TY TNHH ĐẦU TƯ DU THUYỀN - SÂN GOLF FLC BISCOM TẠI TỈNH THANH HÓA",
+                "NameEn": "BRANCH OF FLC BISCOM CRUISE - GOLF COURSE INVESTMENT COMPANY LIMITED IN THANH HOA PROVINCE",
+                "Address": "FLC SamSon Golf Links, đường Thanh Niên, Phường Quảng Cư, Thành Phố Sầm Sơn, Thanh Hóa"
+            }
+        ],
+        "Subsidiaries": [],
+        "Affiliates": []
+    },
+    "CompanyImportExportResponse": {
+        "ImportAndExportData": {
+            "Title": "Kim ngạch xuất - nhập khẩu (2019 - 2023)",
+            "EnTitle": "Total Import - Export Value (2019 - 2023)",
+            "ChartModels": [{
+                    "DataChart": [{
+                            "OtherData": null,
+                            "Label": "2019",
+                            "EnLabel": "2019",
+                            "Y": 0.0
+                        },
+                        {
+                            "OtherData": null,
+                            "Label": "2020",
+                            "EnLabel": "2020",
+                            "Y": 0.0
+                        },
+                        {
+                            "OtherData": null,
+                            "Label": "2021",
+                            "EnLabel": "2021",
+                            "Y": 0.0
+                        },
+                        {
+                            "OtherData": null,
+                            "Label": "2022",
+                            "EnLabel": "2022",
+                            "Y": 0.0
+                        },
+                        {
+                            "OtherData": null,
+                            "Label": "2023",
+                            "EnLabel": "2023",
+                            "Y": 0.0
+                        }
+                    ],
+                    "Title": "Nhập khẩu",
+                    "EnTitle": "Import",
+                    "ChartType": "N/A"
+                },
+                {
+                    "DataChart": [{
+                            "OtherData": null,
+                            "Label": "2019",
+                            "EnLabel": "2019",
+                            "Y": 0.0
+                        },
+                        {
+                            "OtherData": null,
+                            "Label": "2020",
+                            "EnLabel": "2020",
+                            "Y": 0.0
+                        },
+                        {
+                            "OtherData": null,
+                            "Label": "2021",
+                            "EnLabel": "2021",
+                            "Y": 0.0
+                        },
+                        {
+                            "OtherData": null,
+                            "Label": "2022",
+                            "EnLabel": "2022",
+                            "Y": 0.0
+                        },
+                        {
+                            "OtherData": null,
+                            "Label": "2023",
+                            "EnLabel": "2023",
+                            "Y": 0.0
+                        }
+                    ],
+                    "Title": "Xuất khẩu",
+                    "EnTitle": "Export",
+                    "ChartType": "N/A"
+                }
+            ]
+        },
+        "ImportShareWeightRatioData": {
+            "DataChart": [],
+            "Title": "Tỷ trọng kim ngạch nhập khẩu theo quốc gia (2023)",
+            "EnTitle": "Share of import value by country (2023)",
+            "ChartType": "N/A"
+        },
+        "ExportShareWeightRatioData": {
+            "DataChart": [],
+            "Title": "Tỷ trọng kim ngạch xuất khẩu theo quốc gia (2023)",
+            "EnTitle": "Share of export value by country (2023)",
+            "ChartType": "N/A"
+        }
+    },
+    "TopCompanyByNetRevenueModel": [{
+            "CompanyId": "085368c4-8423-405b-b587-55d2cd188fd4",
+            "CompanyName": "CÔNG TY CỔ PHẦN ĐẦU TƯ VÀ KINH DOANH GOLF LONG THÀNH",
+            "CompanyEnName": "LONG THANH GOLF INVESTMENT AND TRADING JOINT - STOCK COMPANY",
+            "NetRevenue": "658358030529",
+            "NetIncome": "37788478435",
+            "ROA": 0.15,
+            "ROE": 0.47,
+            "Liability": null
+        },
+        {
+            "CompanyId": "3c5d08fd-4e75-457b-9d31-e7824a56c313",
+            "CompanyName": "CÔNG TY TNHH FLC SAMSON GOLF & RESORT",
+            "CompanyEnName": "FLC SAMSON GOLF & RESORT LIMITED COMPANY",
+            "NetRevenue": "265762420625",
+            "NetIncome": "-106820884973",
+            "ROA": -98.66,
+            "ROE": 20.98,
+            "Liability": null
+        },
+        {
+            "CompanyId": "913faf84-90dc-4afd-86ff-99d33c125c2c",
+            "CompanyName": "CÔNG TY XÂY DỰNG VIỆT ĐỨC - (TNHH)",
+            "CompanyEnName": null,
+            "NetRevenue": "253715089147",
+            "NetIncome": "-2357745075",
+            "ROA": 0.09,
+            "ROE": 0.13,
+            "Liability": null
+        },
+        {
+            "CompanyId": "35af5a48-cd6f-4a50-9639-449370a4318b",
+            "CompanyName": "CÔNG TY TNHH THUY NGOC SERVICES",
+            "CompanyEnName": "THUY NGOC SERVICES COMPANY LIMITED",
+            "NetRevenue": "219440300008",
+            "NetIncome": "-4978867461",
+            "ROA": -5.21,
+            "ROE": -22.23,
+            "Liability": null
+        },
+        {
+            "CompanyId": "e7d25ee8-77cc-4c3e-bdc5-272d01a7f344",
+            "CompanyName": "CÔNG TY TNHH ĐẦU TƯ VÀ PHÁT TRIỂN FLC HẠ LONG",
+            "CompanyEnName": "FLC HALONG INVESTMENT AND DEVELOPMENT LIMITED COMPANY",
+            "NetRevenue": "216043349849",
+            "NetIncome": "-204688259506",
+            "ROA": -19.57,
+            "ROE": 92.88,
+            "Liability": null
+        },
+        {
+            "CompanyId": "ae65a808-d6f6-4b2c-9913-eff503ca33b1",
+            "CompanyName": "CÔNG TY CỔ PHẦN DK ENC VIỆT NAM",
+            "CompanyEnName": "DK ENC VIETNAM JOINT STOCK COMPANY",
+            "NetRevenue": "181904550074",
+            "NetIncome": "-8830202305",
+            "ROA": -0.52,
+            "ROE": -3.69,
+            "Liability": null
+        },
+        {
+            "CompanyId": "4c8a7944-1f19-45ba-9463-74972d68d0bd",
+            "CompanyName": "CÔNG TY CỔ PHẦN CÂU LẠC BỘ BÓNG ĐÁ BECAMEX BÌNH DƯƠNG",
+            "CompanyEnName": "BECAMEX BINH DUONG FOOTBALL CLUB JOINT STOCK COMPANY",
+            "NetRevenue": "148490857218",
+            "NetIncome": "205819845",
+            "ROA": 0.12,
+            "ROE": -2.21,
+            "Liability": null
+        },
+        {
+            "CompanyId": "56c60032-51da-4743-8fd3-34b7582b9b80",
+            "CompanyName": "CÔNG TY CỔ PHẦN ĐẦU TƯ NNP",
+            "CompanyEnName": "NNP INVESTMENT JOINT STOCK COMPANY",
+            "NetRevenue": "141488139677",
+            "NetIncome": "6525047473",
+            "ROA": 1.09,
+            "ROE": 1.44,
+            "Liability": null
+        },
+        {
+            "CompanyId": "fdac8013-4bfd-4d16-9a5f-12cd740ced59",
+            "CompanyName": "CÔNG TY TNHH JEONGSAN VINA",
+            "CompanyEnName": "JEONGSAN VINA CO.,LTD",
+            "NetRevenue": "135575390862",
+            "NetIncome": "12290567946",
+            "ROA": 1.41,
+            "ROE": 1.88,
+            "Liability": null
+        },
+        {
+            "CompanyId": "4e078737-254f-4eba-bfe5-c30a3037129c",
+            "CompanyName": "CÔNG TY CỔ PHẦN SÂN GÔN ĐẠI LẢI",
+            "CompanyEnName": "GOLF DAILAI JOINT STOCK COMPANY",
+            "NetRevenue": "130186961969",
+            "NetIncome": "8645349475",
+            "ROA": 1.78,
+            "ROE": 1.81,
+            "Liability": null
+        }
+    ],
+    "IndustryDataModel": [{
+            "Title": "Doanh thu ngành (triệu VND)",
+            "EnTitle": "Industry revenue (VND million)",
+            "Cagr": 106.23,
+            "IndustryValues": [{
+                    "Years": "2023",
+                    "Value": 3593171330402.0
+                },
+                {
+                    "Years": "2022",
+                    "Value": 992992581960.0
+                },
+                {
+                    "Years": "2021",
+                    "Value": 844836102003.0
+                }
+            ]
+        },
+        {
+            "Title": "Số lượng công ty",
+            "EnTitle": "Number of companies",
+            "Cagr": 64.89,
+            "IndustryValues": [{
+                    "Years": "2023",
+                    "Value": 1664.0
+                },
+                {
+                    "Years": "2022",
+                    "Value": 682.0
+                },
+                {
+                    "Years": "2021",
+                    "Value": 612.0
+                }
+            ]
+        },
+        {
+            "Title": "Số lượng nhân viên",
+            "EnTitle": "Number of employees",
+            "Cagr": 66.96,
+            "IndustryValues": [{
+                    "Years": "2023",
+                    "Value": 14655.0
+                },
+                {
+                    "Years": "2022",
+                    "Value": 5498.0
+                },
+                {
+                    "Years": "2021",
+                    "Value": 5257.0
+                }
+            ]
+        },
+        {
+            "Title": "Giá trị nhập khẩu (USD)",
+            "EnTitle": "Import Value (USD)",
+            "Cagr": 28.32,
+            "IndustryValues": [{
+                    "Years": "2023",
+                    "Value": 2489330.4299999997
+                },
+                {
+                    "Years": "2022",
+                    "Value": 1515675.0
+                },
+                {
+                    "Years": "2021",
+                    "Value": 1511845.88
+                }
+            ]
+        },
+        {
+            "Title": "Giá trị xuất khẩu (USD)",
+            "EnTitle": "Export Value (USD)",
+            "Cagr": 255.8,
+            "IndustryValues": [{
+                    "Years": "2023",
+                    "Value": 269900.0
+                },
+                {
+                    "Years": "2022",
+                    "Value": null
+                },
+                {
+                    "Years": "2021",
+                    "Value": 21320.0
+                }
+            ]
+        }
+    ],
+    "FinancialReportResponse": {
+        "Set": 9,
+        "ListBalanceSheet": [
+            [{
+                    "Title": "A. TÀI SẢN NGẮN HẠN (100=110+120+130+140+150)",
+                    "EnTitle": "A – SHORT-TERM ASSETS",
+                    "Code": "100",
+                    "Level": "1",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 236752727676.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 233783590117.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 228100824988.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "I. Tiền và các khoản tương đương tiền",
+                    "EnTitle": "I. Cash and cash equivalents",
+                    "Code": "110",
+                    "Level": "1",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 15401195562.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 7907038372.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 5551542243.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "1.Tiền",
+                    "EnTitle": "1. Cash",
+                    "Code": "111",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 15401195562.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 7907038372.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 5551542243.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "2. Các khoản tương đương tiền",
+                    "EnTitle": "2. Cash equivalents",
+                    "Code": "112",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "II. Đầu tư tài chính ngắn hạn (120 = 121 + 122 + 123)",
+                    "EnTitle": "II. Short-term investments",
+                    "Code": "120",
+                    "Level": "1",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 40000000.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 40000000.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 40000000.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "1. Chứng khoán kinh doanh",
+                    "EnTitle": "1. Trading securities",
+                    "Code": "121",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "2. Dự phòng giảm giá chứng khoán kinh doanh (*) (2)",
+                    "EnTitle": "2. Allowances for decline in value of trading securities",
+                    "Code": "122",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "3. Đầu tư nắm giữ đến ngày đáo hạn",
+                    "EnTitle": "3. Held to maturity investments",
+                    "Code": "123",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 40000000.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 40000000.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 40000000.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "III. Các khoản phải thu ngắn hạn",
+                    "EnTitle": "III. Short-term receivables",
+                    "Code": "130",
+                    "Level": "1",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 199268912787.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 200496861732.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 195477932685.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "1. Phải thu ngắn hạn của khách hàng",
+                    "EnTitle": "1. Short-term trade receivables",
+                    "Code": "131",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 6055440685.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 5968798579.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 12995920595.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "2. Trả trước cho người bán ngắn hạn",
+                    "EnTitle": "2. Short-term prepayments to suppliers",
+                    "Code": "132",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 13000875793.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 15161422572.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 802411390.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "3. Phải thu nội bộ ngắn hạn",
+                    "EnTitle": "3. Short-term intra-company receivables",
+                    "Code": "133",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "4. Phải thu theo tiến độ kế hoạch hợp đồng xây dựng",
+                    "EnTitle": "4. Receivables under schedule of construction contract",
+                    "Code": "134",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "5. Phải thu về cho vay ngắn hạn",
+                    "EnTitle": "5. Short-term loan receivables",
+                    "Code": "135",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "6. Phải thu ngắn hạn khác",
+                    "EnTitle": "6. Other Short-term receivables",
+                    "Code": "136",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 180270797237.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 179455365109.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 181662033990.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "7. Dự phòng phải thu ngắn hạn khó đòi (*)",
+                    "EnTitle": "7. Short-term allowances for doubtful debts",
+                    "Code": "137",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": -74189076.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": -106906576.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "8. Tài sản thiếu chờ xử lý",
+                    "EnTitle": "8. Shortage of assets awaiting resolution",
+                    "Code": "139",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 15988148.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 18182048.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 17566710.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "IV. Hàng tồn kho",
+                    "EnTitle": "IV. Inventories",
+                    "Code": "140",
+                    "Level": "1",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 16752088230.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 18029495158.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 14847750065.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "1. Hàng tồn kho",
+                    "EnTitle": "1. Inventories",
+                    "Code": "141",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 16752088230.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 18029495158.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 14847750065.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "2. Dự phòng giảm giá hàng tồn kho (*)",
+                    "EnTitle": "2. Allowances for decline in value of inventories",
+                    "Code": "149",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "V. Tài sản ngắn hạn khác (150=151+152+…+155)",
+                    "EnTitle": "V. Other current assets",
+                    "Code": "150",
+                    "Level": "1",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 5290531097.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 7310194855.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 12183599995.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "1. Chi phí trả trước ngắn hạn",
+                    "EnTitle": "1. Short-term prepaid expenses",
+                    "Code": "151",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 1896327841.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 2397850035.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 1967513871.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "2. Thuế GTGT được khấu trừ",
+                    "EnTitle": "2. Deductible VAT",
+                    "Code": "152",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 3394203256.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 4912344820.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 10216086124.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "3. Thuế và các khoản khác phải thu Nhà nước",
+                    "EnTitle": "3. Taxes and other receivables from government budget",
+                    "Code": "153",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "4. Giao dịch mua bán lại trái phiếu Chính phủ",
+                    "EnTitle": "4. Government bonds purchased for resale",
+                    "Code": "154",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "5. Tài sản ngắn hạn khác",
+                    "EnTitle": "5. Other current assets",
+                    "Code": "155",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                }
+            ],
+            [{
+                    "Title": "B - TÀI SẢN DÀI HẠN (200=210+220+230+240+250+260)",
+                    "EnTitle": "B – LONG-TERM ASSETS",
+                    "Code": "200",
+                    "Level": "1",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 287200208625.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 295088103559.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 352063934195.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "I- Các khoản phải thu dài hạn (210 = 211 + 212 +….+ 216 + 219)",
+                    "EnTitle": "I. Long-term receivables",
+                    "Code": "210",
+                    "Level": "1",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "1. Phải thu dài hạn của khách hàng",
+                    "EnTitle": "1. Long-term trade receivables",
+                    "Code": "211",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "2. Trả trước cho người bán dài hạn",
+                    "EnTitle": "2. Long-term prepayments to suppliers",
+                    "Code": "212",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "3. Vốn kinh doanh ở đơn vị trực thuộc",
+                    "EnTitle": "3. Working capital provided to sub-units",
+                    "Code": "213",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "4. Phải thu nội bộ dài hạn",
+                    "EnTitle": "4. Long-term intra-company reveivables",
+                    "Code": "214",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "5. Phải thu về cho vay dài hạn",
+                    "EnTitle": "5. Long-term loan receivables",
+                    "Code": "215",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "6. Phải thu dài hạn khác",
+                    "EnTitle": "6. Other long-term receivables",
+                    "Code": "216",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "7. Dự phòng phải thu dài hạn khó đòi (*)",
+                    "EnTitle": "7. Long-term allowances for doubtful debts",
+                    "Code": "219",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "II. Tài sản cố định ( 220 = 221 + 224 + 227)",
+                    "EnTitle": "II. Fixed assets",
+                    "Code": "220",
+                    "Level": "1",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 91751234237.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 97631900167.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 109103931753.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "1. Tài sản cố định hữu hình",
+                    "EnTitle": "1. Tangible fixed assets",
+                    "Code": "221",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 91261939557.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 97075911977.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 108330622133.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "- Nguyên giá",
+                    "EnTitle": "- Historical costs",
+                    "Code": "222",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 142639667430.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 137050840035.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 136511954334.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "- Giá trị hao mòn luỹ kế (*)",
+                    "EnTitle": "- Accumulated depreciation",
+                    "Code": "223",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": -51377727873.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": -39974928058.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": -28181332201.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "2. Tài sản cố định thuê tài chính",
+                    "EnTitle": "2. Finance lease fixed assets",
+                    "Code": "224",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "- Nguyên giá",
+                    "EnTitle": "- Historical costs",
+                    "Code": "225",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "- Giá trị hao mòn luỹ kế (*)",
+                    "EnTitle": "- Accumulated depreciation",
+                    "Code": "226",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "3. Tài sản cố định vô hình",
+                    "EnTitle": "3. Intangible fixed assets",
+                    "Code": "227",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 489294680.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 555988190.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 773309620.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "- Nguyên giá",
+                    "EnTitle": "- Historical costs",
+                    "Code": "228",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 1518981381.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 1429981381.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 1429981381.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "- Giá trị hao mòn luỹ kế (*)",
+                    "EnTitle": "- Accumulated depreciation",
+                    "Code": "229",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": -1029686701.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": -873993191.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": -656671761.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "III. Bất động sản đầu tư (230 = 231 + 232)",
+                    "EnTitle": "III. Investment properties",
+                    "Code": "230",
+                    "Level": "1",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "- Nguyên giá",
+                    "EnTitle": "- Historical costs",
+                    "Code": "231",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "- Giá trị hao mòn lũy kế (*)",
+                    "EnTitle": "- Accumulated depreciation",
+                    "Code": "232",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "IV. Tài sản dang dở dài hạn (240 = 241 + 242)",
+                    "EnTitle": "IV. Long-term assets in progress",
+                    "Code": "240",
+                    "Level": "1",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 1959055686.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 162981333.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 104648000.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "1. Chi phí sản xuất, kinh doanh dở dang dài hạn",
+                    "EnTitle": "1. Long-term work in progress",
+                    "Code": "241",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "2. Chi phí xây dựng cơ bản dở dang",
+                    "EnTitle": "2. Construction in progress",
+                    "Code": "242",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 1959055686.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 162981333.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 104648000.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "V. Đầu tư tài chính dài hạn (250 = 251 + …+ 255)",
+                    "EnTitle": "V. Long-term investments",
+                    "Code": "250",
+                    "Level": "1",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 67710321932.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 67710321932.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 67463764629.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "1. Đầu tư vào công ty con",
+                    "EnTitle": "1. Investment in subsidiaries",
+                    "Code": "251",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "2. Đầu tư vào công ty liên kết, liên doanh",
+                    "EnTitle": "2. Investments in joint ventures and associates",
+                    "Code": "252",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "3. Đầu tư khác vào đơn vị khác",
+                    "EnTitle": "3. Investments in equity of other entities",
+                    "Code": "253",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 70000000000.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 70000000000.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 70000000000.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "4. Dự phòng đầu tư tài chính dài hạn (*)",
+                    "EnTitle": "4. Allowances for long-term investments",
+                    "Code": "254",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": -2289678068.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": -2289678068.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": -2536235371.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "5. Đầu tư nắm giữ đến ngày đáo hạn",
+                    "EnTitle": "5. Held to maturity investments",
+                    "Code": "255",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "V. Tài sản dài hạn khác (260 = 261 + 262 + 263 + 268)",
+                    "EnTitle": "VI. Other long-term assets",
+                    "Code": "260",
+                    "Level": "1",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 125779596770.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 129582900127.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 175391589813.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "1. Chi phí trả trước dài hạn",
+                    "EnTitle": "1. Long-term prepaid expenses",
+                    "Code": "261",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 125779596770.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 129582900127.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 175391589813.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "2. Tài sản thuế thu nhập hoãn lại",
+                    "EnTitle": "2. Deferred income tax assets",
+                    "Code": "262",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "3. Thiết bị, vật tư, phụ tùng thay thế dài hạn",
+                    "EnTitle": "3. Long-term equipment and spare parts for replacement",
+                    "Code": "263",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "4. Tài sản dài hạn khác",
+                    "EnTitle": "4. Other long-term assets",
+                    "Code": "268",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "TỔNG CỘNG TÀI SẢN (270 = 100 + 200)",
+                    "EnTitle": "TOTAL ASSETS",
+                    "Code": "270",
+                    "Level": "1",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 523952936301.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 528871693676.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 580164759183.0
+                        }
+                    ]
+                }
+            ],
+            [{
+                    "Title": "C - NỢ PHẢI TRẢ (300= 310 + 330)",
+                    "EnTitle": "C – LIABILITIES",
+                    "Code": "300",
+                    "Level": "1",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 274444609713.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 220452117583.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 232244896242.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "I. Nợ ngắn hạn",
+                    "EnTitle": "I. Short-term liabilities",
+                    "Code": "310",
+                    "Level": "1",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 222786008840.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 171528609012.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 191795505476.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "1. Phải trả người bán ngắn hạn",
+                    "EnTitle": "1. Short-term Trade payables",
+                    "Code": "311",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 112195349122.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 121627817701.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 152951291276.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "2. Người mua trả tiền trước ngắn hạn",
+                    "EnTitle": "2. Short-term prepayments from customers",
+                    "Code": "312",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 7206060812.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 7554961875.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 5952689698.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "3. Thuế và các khoản phải nộp Nhà nước",
+                    "EnTitle": "3. Taxes and other payables to government budget",
+                    "Code": "313",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 7263134171.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 7917520984.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 5705750684.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "4. Phải trả người lao động",
+                    "EnTitle": "4. Payables to employees",
+                    "Code": "314",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 11883128243.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 10095010342.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 10451565209.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "5. Chi phí phải trả ngắn hạn",
+                    "EnTitle": "5. Short-term accrued expenses",
+                    "Code": "315",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 70829612042.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 10101421947.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 739975211.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "6. Phải trả nội bộ ngắn hạn",
+                    "EnTitle": "6. Short-term intra-company payables",
+                    "Code": "316",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "7. Phải trả theo tiến độ kế hoạch hợp đồng xây dựng",
+                    "EnTitle": "7. Payables under schedule of construction contract",
+                    "Code": "317",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "8. Doanh thu chưa thực hiện ngắn hạn",
+                    "EnTitle": "8. Short-term unearned revenues",
+                    "Code": "318",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 7103610336.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 8158415918.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 7389158098.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "9. Phải trả ngắn hạn khác",
+                    "EnTitle": "9. Other Short-term payments",
+                    "Code": "319",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 6305114114.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 6073460245.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 8605075300.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "10. Vay và nợ thuê tài chính ngắn hạn",
+                    "EnTitle": "10. Short-term borrowings and finance lease liabilities",
+                    "Code": "320",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "11. Dự phòng phải trả ngắn hạn",
+                    "EnTitle": "11. Short-term provisions",
+                    "Code": "321",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "12. Quỹ khen thưởng, phúc lợi",
+                    "EnTitle": "12. Bonus and welfare fund",
+                    "Code": "322",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "13. Quỹ bình ổn giá",
+                    "EnTitle": "13. Price stabilization fund",
+                    "Code": "323",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "14. Giao dịch mua bán lại trái phiếu Chính phủ",
+                    "EnTitle": "14. Governmant bond purchased for resale",
+                    "Code": "324",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "II. Nợ dài hạn",
+                    "EnTitle": "II. Long-term liabilities",
+                    "Code": "330",
+                    "Level": "1",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 51658600873.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 48923508571.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 40449390766.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "1. Phải trả người bán dài hạn",
+                    "EnTitle": "1. Long-term trade payables",
+                    "Code": "331",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "2. Người mua trả tiền trước dài hạn",
+                    "EnTitle": "2. Long-term prepayments from customers",
+                    "Code": "332",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "3. Chi phí phải trả dài hạn",
+                    "EnTitle": "3. Long-term accrued expenses",
+                    "Code": "333",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "4. Phải trả nội bộ về vốn kinh doanh",
+                    "EnTitle": "4. Intra-company payables for operating capital received",
+                    "Code": "334",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "5. Phải trả nội bộ dài hạn",
+                    "EnTitle": "5. Long-term intra-company payables",
+                    "Code": "335",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "6. Doanh thu chưa thực hiện dài hạn",
+                    "EnTitle": "6. Long-term unearned revenues",
+                    "Code": "336",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 51658600873.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 48923508571.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 40449390766.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "7. Phải trả dài hạn khác",
+                    "EnTitle": "7. Other Long-term payables",
+                    "Code": "337",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "8. Vay và nợ thuê tài chính dài hạn",
+                    "EnTitle": "8. Long-term borrowings and finance lease liabilities",
+                    "Code": "338",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "9. Trái phiếu chuyển đổi",
+                    "EnTitle": "9. Convertible bonds",
+                    "Code": "339",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "10. Cổ phiếu ưu đãi",
+                    "EnTitle": "10. Preference shares",
+                    "Code": "340",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "11. Thuế thu nhập hoãn lại phải trả",
+                    "EnTitle": "11. Deferred income tax payables",
+                    "Code": "341",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "12. Dự phòng phải trả dài hạn",
+                    "EnTitle": "12. Long-term provisions",
+                    "Code": "342",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "13. Quỹ phát triển khoa học và công nghệ",
+                    "EnTitle": "13. Science and technology development fund",
+                    "Code": "343",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                }
+            ],
+            [{
+                    "Title": "D - VỐN CHỦ SỞ HỮU (400=410+430)",
+                    "EnTitle": "D – OWNER'S EQUITY",
+                    "Code": "400",
+                    "Level": "1",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 249508326588.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 308419576093.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 347919862941.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "I. Vốn chủ sở hữu",
+                    "EnTitle": "I. Owner’'s equity",
+                    "Code": "410",
+                    "Level": "1",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 249508326588.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 308419576093.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 347919862941.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "1. Vốn góp của chủ sở hữu (411 = 411a + 411b)",
+                    "EnTitle": "1. Contributed capital",
+                    "Code": "411",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 500000000000.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 500000000000.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 500000000000.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "- Cổ phiếu phổ thông có quyền biểu quyết",
+                    "EnTitle": "- Ordinary shares with voting rights",
+                    "Code": "411a",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 500000000000.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 500000000000.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 500000000000.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "- Cổ phiếu ưu đãi",
+                    "EnTitle": "- Preference shares",
+                    "Code": "411b",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "2. Thặng dư vốn cổ phần",
+                    "EnTitle": "2. Capital surplus",
+                    "Code": "412",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "3. Quyền chọn chuyển đổi trái phiếu",
+                    "EnTitle": "3. Conversion options on convertible bonds",
+                    "Code": "413",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "4. Vốn khác của chủ sở hữu",
+                    "EnTitle": "4. Other capital",
+                    "Code": "414",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "5. Cổ phiếu quỹ (*)",
+                    "EnTitle": "5. Treasury shares",
+                    "Code": "415",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "6. Chênh lệch đánh giá lại tài sản",
+                    "EnTitle": "6. Differences upon asset revaluation",
+                    "Code": "416",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "7. Chênh lệch tỷ giá hối đoái",
+                    "EnTitle": "7. Exchange rate differences",
+                    "Code": "417",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "8. Quỹ đầu tư phát triển",
+                    "EnTitle": "8. Development and investment funds",
+                    "Code": "418",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "9. Quỹ hỗ trợ sắp xếp doanh nghiệp",
+                    "EnTitle": "9. Enterprise reorganization assistance fund",
+                    "Code": "419",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "10. Quỹ khác thuộc vốn chủ sở hữu",
+                    "EnTitle": "10. Other equity funds",
+                    "Code": "420",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "11. Lợi nhuận sau thuế chưa phân phối (421 =421a + 421b)",
+                    "EnTitle": "11. Undistributed profit after tax",
+                    "Code": "421",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": -250491673412.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": -191580423907.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": -152080137059.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "- LNST chưa phân phối lũy kế đến cuối kỳ trước",
+                    "EnTitle": "- Undistributed profit after tax brought forward",
+                    "Code": "421a",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": -191580423907.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": -149543901688.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": -66105891261.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "- LNST chưa phân phối kỳ này",
+                    "EnTitle": "- Undistributed profit after tax for the current year",
+                    "Code": "421b",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": -58911249505.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": -42036522219.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": -85974245798.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "12. Nguồn vốn đầu tư XDCB",
+                    "EnTitle": "12. Capital expenditure funds",
+                    "Code": "422",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "II. Nguồn kinh phí và quỹ khác",
+                    "EnTitle": "II. Funding sources and other funds",
+                    "Code": "430",
+                    "Level": "1",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "1. Nguồn kinh phí",
+                    "EnTitle": "1. Funding sources",
+                    "Code": "431",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "2. Nguồn kinh phí đó hình thành TSCĐ",
+                    "EnTitle": "2. Funds used for fixed asset acquisition",
+                    "Code": "432",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "TỔNG CỘNG NGUỒN VỐN (440 = 300 + 400)",
+                    "EnTitle": "TOTAL RESOURCES",
+                    "Code": "440",
+                    "Level": "1",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 523952936301.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 528871693676.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 580164759183.0
+                        }
+                    ]
+                }
+            ]
+        ],
+        "ListIncomeStatement": [
+            [{
+                    "Title": "1. Doanh thu bán hàng và cung cấp dịch vụ",
+                    "EnTitle": "1. Revenues from sales and services rendered",
+                    "Code": "01",
+                    "Level": "1",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 282671590020.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 251553481488.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 159434800404.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "2. Các khoản giảm trừ doanh thu",
+                    "EnTitle": "2. Revenue deductions",
+                    "Code": "02",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "3. Doanh thu thuần về bán hàng và cung cấp dịch vụ (10=01-02)",
+                    "EnTitle": "3. Net revenues from sales and services rendered",
+                    "Code": "10",
+                    "Level": "1",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 282671590020.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 251553481488.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 159434800404.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "4. Giá vốn hàng bán",
+                    "EnTitle": "4. Cost of goods sold",
+                    "Code": "11",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 272830237737.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 235701251247.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 199724906952.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ (20=10-11)",
+                    "EnTitle": "5. Gross profit from sales and services rendered",
+                    "Code": "20",
+                    "Level": "1",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 9841352283.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 15852230241.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": -40290106548.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "6. Doanh thu hoạt động tài chính",
+                    "EnTitle": "6. Financial income",
+                    "Code": "21",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 30194871.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 15286056.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 7186182.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "7. Chi phí tài chính",
+                    "EnTitle": "7. Financial expenses",
+                    "Code": "22",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 2289678068.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "- Trong đó: Chi phí lãi vay",
+                    "EnTitle": "- In which: Interest expenses",
+                    "Code": "23",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "8. Chi phí bán hàng",
+                    "EnTitle": "8. Selling expenses",
+                    "Code": "25",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 16533055902.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 17792496543.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 16197677490.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "9. Chi phí quản lý doanh nghiệp",
+                    "EnTitle": "9. General and administration expenses",
+                    "Code": "26",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 47064659166.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 40121558695.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 30831100839.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "10. Lợi nhuận thuần từ hoạt động kinh doanh {30 = 20 + (21 - 22) - (25 + 26)}",
+                    "EnTitle": "10. Net revenue from operation activities",
+                    "Code": "30",
+                    "Level": "1",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": -53726167914.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": -44336217009.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": -87311698695.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "11. Thu nhập khác",
+                    "EnTitle": "11. Other incomes",
+                    "Code": "31",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 3066982933.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 2402122337.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 2390911855.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "12. Chi phí khác",
+                    "EnTitle": "12. Other expenses",
+                    "Code": "32",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 8252064524.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 102427547.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 1053458958.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "13. Lợi nhuận khác (40 = 31 - 32)",
+                    "EnTitle": "13. Other profits/(loss)",
+                    "Code": "40",
+                    "Level": "1",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": -5185081591.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 2299694790.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 1337452897.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "14. Tổng lợi nhuận kế toán trước thuế (50 = 30 + 40)",
+                    "EnTitle": "14. Total net profit before tax",
+                    "Code": "50",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": -58911249505.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": -42036522219.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": -85974245798.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "15. Chi phí thuế TNDN hiện hành",
+                    "EnTitle": "15. Current corporate income tax expenses",
+                    "Code": "51",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "16. Chi phí thuế TNDN hoãn lại",
+                    "EnTitle": "16. Deferred corporate income tax expenses",
+                    "Code": "52",
+                    "Level": "",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "17. Lợi nhuận sau thuế thu nhập doanh nghiệp (60 = 50 – 51 - 52)",
+                    "EnTitle": "17. Profits after enterprise income tax",
+                    "Code": "60",
+                    "Level": "1",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": -58911249505.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": -42036522219.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": -85974245798.0
+                        }
+                    ]
+                },
+                {
+                    "Title": "19. Lãi suy giảm trên cổ phiếu",
+                    "EnTitle": "18. Diluted earnings per share",
+                    "Code": "71",
+                    "Level": "1",
+                    "ListValues": [{
+                            "Name": "31/12/2023",
+                            "NameEn": "31/12/2023",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2022",
+                            "NameEn": "31/12/2022",
+                            "Value": 0.0
+                        },
+                        {
+                            "Name": "31/12/2021",
+                            "NameEn": "31/12/2021",
+                            "Value": 0.0
+                        }
+                    ]
+                }
+            ]
+        ],
+        "CashFlowStatement": {
+            "ListDirectMethod": null,
+            "ListIndirectMethod": [
+                [{
+                        "Title": "I. Lưu chuyển tiền từ hoạt động kinh doanh",
+                        "EnTitle": "I. Cash Flows From Operating Activities",
+                        "Code": "",
+                        "Level": "1",
+                        "ListValues": [{
+                                "Name": "31/12/2023",
+                                "NameEn": "31/12/2023",
+                                "Value": null
+                            },
+                            {
+                                "Name": "31/12/2022",
+                                "NameEn": "31/12/2022",
+                                "Value": null
+                            },
+                            {
+                                "Name": "31/12/2021",
+                                "NameEn": "31/12/2021",
+                                "Value": null
+                            }
+                        ]
+                    },
+                    {
+                        "Title": "1. Lợi nhuận trước thuế",
+                        "EnTitle": "1. Profit before tax",
+                        "Code": "01",
+                        "Level": "1",
+                        "ListValues": [{
+                                "Name": "31/12/2023",
+                                "NameEn": "31/12/2023",
+                                "Value": -58911249505.0
+                            },
+                            {
+                                "Name": "31/12/2022",
+                                "NameEn": "31/12/2022",
+                                "Value": -42036522219.0
+                            },
+                            {
+                                "Name": "31/12/2021",
+                                "NameEn": "31/12/2021",
+                                "Value": -85974245798.0
+                            }
+                        ]
+                    },
+                    {
+                        "Title": "2. Điều chỉnh cho các khoản",
+                        "EnTitle": "2. Adjustment for",
+                        "Code": "",
+                        "Level": "1",
+                        "ListValues": [{
+                                "Name": "31/12/2023",
+                                "NameEn": "31/12/2023",
+                                "Value": null
+                            },
+                            {
+                                "Name": "31/12/2022",
+                                "NameEn": "31/12/2022",
+                                "Value": null
+                            },
+                            {
+                                "Name": "31/12/2021",
+                                "NameEn": "31/12/2021",
+                                "Value": null
+                            }
+                        ]
+                    },
+                    {
+                        "Title": "- Khấu hao TSCĐ và BĐSĐT",
+                        "EnTitle": "- Depreciation of fixed assets and investment properties",
+                        "Code": "02",
+                        "Level": "",
+                        "ListValues": [{
+                                "Name": "31/12/2023",
+                                "NameEn": "31/12/2023",
+                                "Value": 11558493325.0
+                            },
+                            {
+                                "Name": "31/12/2022",
+                                "NameEn": "31/12/2022",
+                                "Value": 12010917287.0
+                            },
+                            {
+                                "Name": "31/12/2021",
+                                "NameEn": "31/12/2021",
+                                "Value": 11229123901.0
+                            }
+                        ]
+                    },
+                    {
+                        "Title": "- Các khoản dự phòng",
+                        "EnTitle": "- Provisions",
+                        "Code": "03",
+                        "Level": "",
+                        "ListValues": [{
+                                "Name": "31/12/2023",
+                                "NameEn": "31/12/2023",
+                                "Value": -32717500.0
+                            },
+                            {
+                                "Name": "31/12/2022",
+                                "NameEn": "31/12/2022",
+                                "Value": 2396584644.0
+                            },
+                            {
+                                "Name": "31/12/2021",
+                                "NameEn": "31/12/2021",
+                                "Value": 0.0
+                            }
+                        ]
+                    },
+                    {
+                        "Title": "- Lãi, lỗ chênh lệch tỷ giá hối đoái do đánh giá lại các khoản mục tiền tệ có gốc ngoại tệ",
+                        "EnTitle": "- Gain (losses) on exchange rate differences from revaluation of accounts derived from foreign currencies",
+                        "Code": "04",
+                        "Level": "",
+                        "ListValues": [{
+                                "Name": "31/12/2023",
+                                "NameEn": "31/12/2023",
+                                "Value": 0.0
+                            },
+                            {
+                                "Name": "31/12/2022",
+                                "NameEn": "31/12/2022",
+                                "Value": 0.0
+                            },
+                            {
+                                "Name": "31/12/2021",
+                                "NameEn": "31/12/2021",
+                                "Value": 0.0
+                            }
+                        ]
+                    },
+                    {
+                        "Title": "- Lãi, lỗ từ hoạt động đầu tư",
+                        "EnTitle": "- Gain (losses) from investing activities",
+                        "Code": "05",
+                        "Level": "",
+                        "ListValues": [{
+                                "Name": "31/12/2023",
+                                "NameEn": "31/12/2023",
+                                "Value": -30194871.0
+                            },
+                            {
+                                "Name": "31/12/2022",
+                                "NameEn": "31/12/2022",
+                                "Value": -15286056.0
+                            },
+                            {
+                                "Name": "31/12/2021",
+                                "NameEn": "31/12/2021",
+                                "Value": -125827154.0
+                            }
+                        ]
+                    },
+                    {
+                        "Title": "- Chi phí lãi vay",
+                        "EnTitle": "- Interest expenses",
+                        "Code": "06",
+                        "Level": "",
+                        "ListValues": [{
+                                "Name": "31/12/2023",
+                                "NameEn": "31/12/2023",
+                                "Value": 0.0
+                            },
+                            {
+                                "Name": "31/12/2022",
+                                "NameEn": "31/12/2022",
+                                "Value": 0.0
+                            },
+                            {
+                                "Name": "31/12/2021",
+                                "NameEn": "31/12/2021",
+                                "Value": 0.0
+                            }
+                        ]
+                    },
+                    {
+                        "Title": "- Các khoản điều chỉnh khác",
+                        "EnTitle": "- Other adjustments",
+                        "Code": "07",
+                        "Level": "",
+                        "ListValues": [{
+                                "Name": "31/12/2023",
+                                "NameEn": "31/12/2023",
+                                "Value": 0.0
+                            },
+                            {
+                                "Name": "31/12/2022",
+                                "NameEn": "31/12/2022",
+                                "Value": 0.0
+                            },
+                            {
+                                "Name": "31/12/2021",
+                                "NameEn": "31/12/2021",
+                                "Value": 0.0
+                            }
+                        ]
+                    },
+                    {
+                        "Title": "3. Lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động",
+                        "EnTitle": "3. Operating Profit Before Changes In Working Capital",
+                        "Code": "08",
+                        "Level": "1",
+                        "ListValues": [{
+                                "Name": "31/12/2023",
+                                "NameEn": "31/12/2023",
+                                "Value": -47415668551.0
+                            },
+                            {
+                                "Name": "31/12/2022",
+                                "NameEn": "31/12/2022",
+                                "Value": -27644306344.0
+                            },
+                            {
+                                "Name": "31/12/2021",
+                                "NameEn": "31/12/2021",
+                                "Value": -74870949051.0
+                            }
+                        ]
+                    },
+                    {
+                        "Title": "- Tăng, giảm các khoản phải thu",
+                        "EnTitle": "- Increase (decrease) in receivables",
+                        "Code": "09",
+                        "Level": "",
+                        "ListValues": [{
+                                "Name": "31/12/2023",
+                                "NameEn": "31/12/2023",
+                                "Value": 2778808009.0
+                            },
+                            {
+                                "Name": "31/12/2022",
+                                "NameEn": "31/12/2022",
+                                "Value": 177905681.0
+                            },
+                            {
+                                "Name": "31/12/2021",
+                                "NameEn": "31/12/2021",
+                                "Value": -127520305083.0
+                            }
+                        ]
+                    },
+                    {
+                        "Title": "- Tăng, giảm hàng tồn kho",
+                        "EnTitle": "- Increase (decrease) in inventories",
+                        "Code": "10",
+                        "Level": "",
+                        "ListValues": [{
+                                "Name": "31/12/2023",
+                                "NameEn": "31/12/2023",
+                                "Value": 1277406928.0
+                            },
+                            {
+                                "Name": "31/12/2022",
+                                "NameEn": "31/12/2022",
+                                "Value": -3181745093.0
+                            },
+                            {
+                                "Name": "31/12/2021",
+                                "NameEn": "31/12/2021",
+                                "Value": 6823562730.0
+                            }
+                        ]
+                    },
+                    {
+                        "Title": "- Tăng, giảm các khoản phải trả (Không kể lãi vay phải trả, thuế thu nhập doanh nghiệp phải nộp)",
+                        "EnTitle": "- Increase (decrease) in payables (exclusive of interest payables, enterprise income tax payables)",
+                        "Code": "11",
+                        "Level": "",
+                        "ListValues": [{
+                                "Name": "31/12/2023",
+                                "NameEn": "31/12/2023",
+                                "Value": 53992492130.0
+                            },
+                            {
+                                "Name": "31/12/2022",
+                                "NameEn": "31/12/2022",
+                                "Value": -11792778659.0
+                            },
+                            {
+                                "Name": "31/12/2021",
+                                "NameEn": "31/12/2021",
+                                "Value": -62839359236.0
+                            }
+                        ]
+                    },
+                    {
+                        "Title": "- Tăng, giảm chi phí trả trước",
+                        "EnTitle": "- Increase (decrease) in prepaid expenses",
+                        "Code": "12",
+                        "Level": "",
+                        "ListValues": [{
+                                "Name": "31/12/2023",
+                                "NameEn": "31/12/2023",
+                                "Value": 4304825551.0
+                            },
+                            {
+                                "Name": "31/12/2022",
+                                "NameEn": "31/12/2022",
+                                "Value": 45378353522.0
+                            },
+                            {
+                                "Name": "31/12/2021",
+                                "NameEn": "31/12/2021",
+                                "Value": -40134246739.0
+                            }
+                        ]
+                    },
+                    {
+                        "Title": "- Tăng, giảm chứng khoán kinh doanh",
+                        "EnTitle": "- Increase (decrease) in trading securities",
+                        "Code": "13",
+                        "Level": "",
+                        "ListValues": [{
+                                "Name": "31/12/2023",
+                                "NameEn": "31/12/2023",
+                                "Value": 0.0
+                            },
+                            {
+                                "Name": "31/12/2022",
+                                "NameEn": "31/12/2022",
+                                "Value": 0.0
+                            },
+                            {
+                                "Name": "31/12/2021",
+                                "NameEn": "31/12/2021",
+                                "Value": 0.0
+                            }
+                        ]
+                    },
+                    {
+                        "Title": "- Tiền lãi vay đã trả",
+                        "EnTitle": "- Interest paid",
+                        "Code": "14",
+                        "Level": "",
+                        "ListValues": [{
+                                "Name": "31/12/2023",
+                                "NameEn": "31/12/2023",
+                                "Value": 0.0
+                            },
+                            {
+                                "Name": "31/12/2022",
+                                "NameEn": "31/12/2022",
+                                "Value": 0.0
+                            },
+                            {
+                                "Name": "31/12/2021",
+                                "NameEn": "31/12/2021",
+                                "Value": 0.0
+                            }
+                        ]
+                    },
+                    {
+                        "Title": "- Thuế thu nhập doanh nghiệp đã nộp",
+                        "EnTitle": "- Enterprise income tax paid",
+                        "Code": "15",
+                        "Level": "",
+                        "ListValues": [{
+                                "Name": "31/12/2023",
+                                "NameEn": "31/12/2023",
+                                "Value": 0.0
+                            },
+                            {
+                                "Name": "31/12/2022",
+                                "NameEn": "31/12/2022",
+                                "Value": 0.0
+                            },
+                            {
+                                "Name": "31/12/2021",
+                                "NameEn": "31/12/2021",
+                                "Value": 0.0
+                            }
+                        ]
+                    },
+                    {
+                        "Title": "- Tiền thu khác từ hoạt động kinh doanh",
+                        "EnTitle": "- Other receipts from operating activities",
+                        "Code": "16",
+                        "Level": "",
+                        "ListValues": [{
+                                "Name": "31/12/2023",
+                                "NameEn": "31/12/2023",
+                                "Value": 0.0
+                            },
+                            {
+                                "Name": "31/12/2022",
+                                "NameEn": "31/12/2022",
+                                "Value": 0.0
+                            },
+                            {
+                                "Name": "31/12/2021",
+                                "NameEn": "31/12/2021",
+                                "Value": 0.0
+                            }
+                        ]
+                    },
+                    {
+                        "Title": "- Tiền chi khác cho hoạt động kinh doanh",
+                        "EnTitle": "- Other payments on operating activities",
+                        "Code": "17",
+                        "Level": "",
+                        "ListValues": [{
+                                "Name": "31/12/2023",
+                                "NameEn": "31/12/2023",
+                                "Value": 0.0
+                            },
+                            {
+                                "Name": "31/12/2022",
+                                "NameEn": "31/12/2022",
+                                "Value": 0.0
+                            },
+                            {
+                                "Name": "31/12/2021",
+                                "NameEn": "31/12/2021",
+                                "Value": 0.0
+                            }
+                        ]
+                    },
+                    {
+                        "Title": "Lưu chuyển tiền thuần từ hoạt động kinh doanh",
+                        "EnTitle": "Net cash flows from operating activities",
+                        "Code": "20",
+                        "Level": "1",
+                        "ListValues": [{
+                                "Name": "31/12/2023",
+                                "NameEn": "31/12/2023",
+                                "Value": 14937864067.0
+                            },
+                            {
+                                "Name": "31/12/2022",
+                                "NameEn": "31/12/2022",
+                                "Value": 2937429107.0
+                            },
+                            {
+                                "Name": "31/12/2021",
+                                "NameEn": "31/12/2021",
+                                "Value": -298541297379.0
+                            }
+                        ]
+                    },
+                    {
+                        "Title": "II. Lưu chuyển tiền từ hoạt động đầu tư",
+                        "EnTitle": "II. Cash Flows From Investing Activities",
+                        "Code": "",
+                        "Level": "1",
+                        "ListValues": [{
+                                "Name": "31/12/2023",
+                                "NameEn": "31/12/2023",
+                                "Value": null
+                            },
+                            {
+                                "Name": "31/12/2022",
+                                "NameEn": "31/12/2022",
+                                "Value": null
+                            },
+                            {
+                                "Name": "31/12/2021",
+                                "NameEn": "31/12/2021",
+                                "Value": null
+                            }
+                        ]
+                    },
+                    {
+                        "Title": "1.Tiền chi để mua sắm, xây dựng TSCĐ và các tài sản dài hạn khác",
+                        "EnTitle": "1. Expenditures on purchase and construction of fixed assets and long-term assets",
+                        "Code": "21",
+                        "Level": "",
+                        "ListValues": [{
+                                "Name": "31/12/2023",
+                                "NameEn": "31/12/2023",
+                                "Value": -7473901748.0
+                            },
+                            {
+                                "Name": "31/12/2022",
+                                "NameEn": "31/12/2022",
+                                "Value": -597219034.0
+                            },
+                            {
+                                "Name": "31/12/2021",
+                                "NameEn": "31/12/2021",
+                                "Value": -638084960.0
+                            }
+                        ]
+                    },
+                    {
+                        "Title": "2.Tiền thu từ thanh lý, nhượng bán TSCĐ và các tài sản dài hạn khác",
+                        "EnTitle": "2. Proceeds from disposal or transfer of fixed assets and other long-term assets",
+                        "Code": "22",
+                        "Level": "",
+                        "ListValues": [{
+                                "Name": "31/12/2023",
+                                "NameEn": "31/12/2023",
+                                "Value": 0.0
+                            },
+                            {
+                                "Name": "31/12/2022",
+                                "NameEn": "31/12/2022",
+                                "Value": 0.0
+                            },
+                            {
+                                "Name": "31/12/2021",
+                                "NameEn": "31/12/2021",
+                                "Value": 0.0
+                            }
+                        ]
+                    },
+                    {
+                        "Title": "3.Tiền chi cho vay, mua các công cụ nợ của đơn vị khác",
+                        "EnTitle": "3. Expenditures on loans and purchase of debt instruments from other entities",
+                        "Code": "23",
+                        "Level": "",
+                        "ListValues": [{
+                                "Name": "31/12/2023",
+                                "NameEn": "31/12/2023",
+                                "Value": 0.0
+                            },
+                            {
+                                "Name": "31/12/2022",
+                                "NameEn": "31/12/2022",
+                                "Value": 0.0
+                            },
+                            {
+                                "Name": "31/12/2021",
+                                "NameEn": "31/12/2021",
+                                "Value": 0.0
+                            }
+                        ]
+                    },
+                    {
+                        "Title": "4.Tiền thu hồi cho vay, bán lại các công cụ nợ của đơn vị khác",
+                        "EnTitle": "4. Proceeds from lending or repurchase of debt instruments from other entities",
+                        "Code": "24",
+                        "Level": "",
+                        "ListValues": [{
+                                "Name": "31/12/2023",
+                                "NameEn": "31/12/2023",
+                                "Value": 0.0
+                            },
+                            {
+                                "Name": "31/12/2022",
+                                "NameEn": "31/12/2022",
+                                "Value": 0.0
+                            },
+                            {
+                                "Name": "31/12/2021",
+                                "NameEn": "31/12/2021",
+                                "Value": 0.0
+                            }
+                        ]
+                    },
+                    {
+                        "Title": "5.Tiền chi đầu tư góp vốn vào đơn vị khác",
+                        "EnTitle": "5. Expenditures on equity investments in other entities",
+                        "Code": "25",
+                        "Level": "",
+                        "ListValues": [{
+                                "Name": "31/12/2023",
+                                "NameEn": "31/12/2023",
+                                "Value": 0.0
+                            },
+                            {
+                                "Name": "31/12/2022",
+                                "NameEn": "31/12/2022",
+                                "Value": 0.0
+                            },
+                            {
+                                "Name": "31/12/2021",
+                                "NameEn": "31/12/2021",
+                                "Value": 0.0
+                            }
+                        ]
+                    },
+                    {
+                        "Title": "6.Tiền thu hồi đầu tư góp vốn vào đơn vị khác",
+                        "EnTitle": "6. Proceeds from equity investment in other entities",
+                        "Code": "26",
+                        "Level": "",
+                        "ListValues": [{
+                                "Name": "31/12/2023",
+                                "NameEn": "31/12/2023",
+                                "Value": 0.0
+                            },
+                            {
+                                "Name": "31/12/2022",
+                                "NameEn": "31/12/2022",
+                                "Value": 0.0
+                            },
+                            {
+                                "Name": "31/12/2021",
+                                "NameEn": "31/12/2021",
+                                "Value": 0.0
+                            }
+                        ]
+                    },
+                    {
+                        "Title": "7.Tiền thu lãi cho vay, cổ tức và lợi nhuận được chia",
+                        "EnTitle": "7. Proceeds from interests, dividends and distributed profits",
+                        "Code": "27",
+                        "Level": "",
+                        "ListValues": [{
+                                "Name": "31/12/2023",
+                                "NameEn": "31/12/2023",
+                                "Value": 30194871.0
+                            },
+                            {
+                                "Name": "31/12/2022",
+                                "NameEn": "31/12/2022",
+                                "Value": 15286056.0
+                            },
+                            {
+                                "Name": "31/12/2021",
+                                "NameEn": "31/12/2021",
+                                "Value": 7186182.0
+                            }
+                        ]
+                    },
+                    {
+                        "Title": "Lưu chuyển tiền thuần từ hoạt động đầu tư",
+                        "EnTitle": "Net cash flows from investing activities",
+                        "Code": "30",
+                        "Level": "1",
+                        "ListValues": [{
+                                "Name": "31/12/2023",
+                                "NameEn": "31/12/2023",
+                                "Value": -7443706877.0
+                            },
+                            {
+                                "Name": "31/12/2022",
+                                "NameEn": "31/12/2022",
+                                "Value": -581932978.0
+                            },
+                            {
+                                "Name": "31/12/2021",
+                                "NameEn": "31/12/2021",
+                                "Value": -630898778.0
+                            }
+                        ]
+                    }
+                ],
+                [{
+                        "Title": "III. Lưu chuyển tiền từ hoạt động tài chính",
+                        "EnTitle": "III. Cash Flows From Financial Activities",
+                        "Code": "",
+                        "Level": "1",
+                        "ListValues": [{
+                                "Name": "31/12/2023",
+                                "NameEn": "31/12/2023",
+                                "Value": null
+                            },
+                            {
+                                "Name": "31/12/2022",
+                                "NameEn": "31/12/2022",
+                                "Value": null
+                            },
+                            {
+                                "Name": "31/12/2021",
+                                "NameEn": "31/12/2021",
+                                "Value": null
+                            }
+                        ]
+                    },
+                    {
+                        "Title": "1.Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu",
+                        "EnTitle": "1. Proceeds from issuance of shares and receipt of contributed capital",
+                        "Code": "31",
+                        "Level": "",
+                        "ListValues": [{
+                                "Name": "31/12/2023",
+                                "NameEn": "31/12/2023",
+                                "Value": 0.0
+                            },
+                            {
+                                "Name": "31/12/2022",
+                                "NameEn": "31/12/2022",
+                                "Value": 0.0
+                            },
+                            {
+                                "Name": "31/12/2021",
+                                "NameEn": "31/12/2021",
+                                "Value": 300000000000.0
+                            }
+                        ]
+                    },
+                    {
+                        "Title": "2.Tiền chi trả vốn góp cho các chủ sở hữu, mua lại cổ phiếu của doanh nghiệp đã phát hành",
+                        "EnTitle": "2. Repayment of contributed capital and repurchase of stock issued",
+                        "Code": "32",
+                        "Level": "",
+                        "ListValues": [{
+                                "Name": "31/12/2023",
+                                "NameEn": "31/12/2023",
+                                "Value": 0.0
+                            },
+                            {
+                                "Name": "31/12/2022",
+                                "NameEn": "31/12/2022",
+                                "Value": 0.0
+                            },
+                            {
+                                "Name": "31/12/2021",
+                                "NameEn": "31/12/2021",
+                                "Value": 0.0
+                            }
+                        ]
+                    },
+                    {
+                        "Title": "3.Tiền thu từ đi vay",
+                        "EnTitle": "3. Proceeds from borrowings",
+                        "Code": "33",
+                        "Level": "",
+                        "ListValues": [{
+                                "Name": "31/12/2023",
+                                "NameEn": "31/12/2023",
+                                "Value": 0.0
+                            },
+                            {
+                                "Name": "31/12/2022",
+                                "NameEn": "31/12/2022",
+                                "Value": 0.0
+                            },
+                            {
+                                "Name": "31/12/2021",
+                                "NameEn": "31/12/2021",
+                                "Value": 0.0
+                            }
+                        ]
+                    },
+                    {
+                        "Title": "4.Tiền trả nợ gốc vay",
+                        "EnTitle": "4. Repayment of principal",
+                        "Code": "34",
+                        "Level": "",
+                        "ListValues": [{
+                                "Name": "31/12/2023",
+                                "NameEn": "31/12/2023",
+                                "Value": 0.0
+                            },
+                            {
+                                "Name": "31/12/2022",
+                                "NameEn": "31/12/2022",
+                                "Value": 0.0
+                            },
+                            {
+                                "Name": "31/12/2021",
+                                "NameEn": "31/12/2021",
+                                "Value": 0.0
+                            }
+                        ]
+                    },
+                    {
+                        "Title": "5.Tiền trả nợ gốc thuê tài chính",
+                        "EnTitle": "5. Repayment of financial principal",
+                        "Code": "35",
+                        "Level": "",
+                        "ListValues": [{
+                                "Name": "31/12/2023",
+                                "NameEn": "31/12/2023",
+                                "Value": 0.0
+                            },
+                            {
+                                "Name": "31/12/2022",
+                                "NameEn": "31/12/2022",
+                                "Value": 0.0
+                            },
+                            {
+                                "Name": "31/12/2021",
+                                "NameEn": "31/12/2021",
+                                "Value": 0.0
+                            }
+                        ]
+                    },
+                    {
+                        "Title": "6. Cổ tức, lợi nhuận đã trả cho chủ sở hữu",
+                        "EnTitle": "6. Dividends or profits paid to owners",
+                        "Code": "36",
+                        "Level": "",
+                        "ListValues": [{
+                                "Name": "31/12/2023",
+                                "NameEn": "31/12/2023",
+                                "Value": 0.0
+                            },
+                            {
+                                "Name": "31/12/2022",
+                                "NameEn": "31/12/2022",
+                                "Value": 0.0
+                            },
+                            {
+                                "Name": "31/12/2021",
+                                "NameEn": "31/12/2021",
+                                "Value": 0.0
+                            }
+                        ]
+                    },
+                    {
+                        "Title": "Lưu chuyển tiền thuần từ hoạt động tài chính",
+                        "EnTitle": "Net cash flows from financial activities",
+                        "Code": "40",
+                        "Level": "1",
+                        "ListValues": [{
+                                "Name": "31/12/2023",
+                                "NameEn": "31/12/2023",
+                                "Value": 0.0
+                            },
+                            {
+                                "Name": "31/12/2022",
+                                "NameEn": "31/12/2022",
+                                "Value": 0.0
+                            },
+                            {
+                                "Name": "31/12/2021",
+                                "NameEn": "31/12/2021",
+                                "Value": 300000000000.0
+                            }
+                        ]
+                    },
+                    {
+                        "Title": "Lưu chuyển tiền thuần trong kỳ (50=20+30+40)",
+                        "EnTitle": "Net cash flows during the fiscal year",
+                        "Code": "50",
+                        "Level": "1",
+                        "ListValues": [{
+                                "Name": "31/12/2023",
+                                "NameEn": "31/12/2023",
+                                "Value": 7494157190.0
+                            },
+                            {
+                                "Name": "31/12/2022",
+                                "NameEn": "31/12/2022",
+                                "Value": 2355496129.0
+                            },
+                            {
+                                "Name": "31/12/2021",
+                                "NameEn": "31/12/2021",
+                                "Value": 827803843.0
+                            }
+                        ]
+                    },
+                    {
+                        "Title": "Tiền và tương đương tiền đầu kỳ",
+                        "EnTitle": "Cash and cash equivalents at the beginning of fiscal year",
+                        "Code": "60",
+                        "Level": "1",
+                        "ListValues": [{
+                                "Name": "31/12/2023",
+                                "NameEn": "31/12/2023",
+                                "Value": 7907038372.0
+                            },
+                            {
+                                "Name": "31/12/2022",
+                                "NameEn": "31/12/2022",
+                                "Value": 5551542243.0
+                            },
+                            {
+                                "Name": "31/12/2021",
+                                "NameEn": "31/12/2021",
+                                "Value": 4723738400.0
+                            }
+                        ]
+                    },
+                    {
+                        "Title": "Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ",
+                        "EnTitle": "Effect of exchange rate fluctuations",
+                        "Code": "61",
+                        "Level": "",
+                        "ListValues": [{
+                                "Name": "31/12/2023",
+                                "NameEn": "31/12/2023",
+                                "Value": 0.0
+                            },
+                            {
+                                "Name": "31/12/2022",
+                                "NameEn": "31/12/2022",
+                                "Value": 0.0
+                            },
+                            {
+                                "Name": "31/12/2021",
+                                "NameEn": "31/12/2021",
+                                "Value": 0.0
+                            }
+                        ]
+                    },
+                    {
+                        "Title": "Tiền và tương đương tiền cuối kỳ (70=50+60+61)",
+                        "EnTitle": "Cash and cash equivalents at the end of fiscal year",
+                        "Code": "70",
+                        "Level": "1",
+                        "ListValues": [{
+                                "Name": "31/12/2023",
+                                "NameEn": "31/12/2023",
+                                "Value": 15401195562.0
+                            },
+                            {
+                                "Name": "31/12/2022",
+                                "NameEn": "31/12/2022",
+                                "Value": 7907038372.0
+                            },
+                            {
+                                "Name": "31/12/2021",
+                                "NameEn": "31/12/2021",
+                                "Value": 5551542243.0
+                            }
+                        ]
+                    }
+                ]
+            ]
+        },
+        "FinancialHighlight": {
+            "ContributedCapital": 249508326588.0,
+            "NetRevenue": 282671590020.0,
+            "NetProfit": -53726167914.0,
+            "TotalAssets": 523952936301.0,
+            "OwnerEquity": 249508326588.0,
+            "ROE": -21.12,
+            "ROA": -11.19,
+            "UpdatePeriod": "31/12/2023",
+            "CompanyPerformanceReview": [{
+                    "DataChart": [{
+                            "OtherData": null,
+                            "Label": "2021",
+                            "EnLabel": "2021",
+                            "Y": 159434800404.0
+                        },
+                        {
+                            "OtherData": null,
+                            "Label": "2022",
+                            "EnLabel": "2022",
+                            "Y": 251553481488.0
+                        },
+                        {
+                            "OtherData": null,
+                            "Label": "2023",
+                            "EnLabel": "2023",
+                            "Y": 282671590020.0
+                        }
+                    ],
+                    "Title": "Doanh thu thuần",
+                    "EnTitle": "Net revenue",
+                    "ChartType": "N/A"
+                },
+                {
+                    "DataChart": [{
+                            "OtherData": null,
+                            "Label": "2021",
+                            "EnLabel": "2021",
+                            "Y": 199724906952.0
+                        },
+                        {
+                            "OtherData": null,
+                            "Label": "2022",
+                            "EnLabel": "2022",
+                            "Y": 235701251247.0
+                        },
+                        {
+                            "OtherData": null,
+                            "Label": "2023",
+                            "EnLabel": "2023",
+                            "Y": 272830237737.0
+                        }
+                    ],
+                    "Title": "Giá vốn hàng hóa",
+                    "EnTitle": "Cost of goods sold",
+                    "ChartType": "N/A"
+                },
+                {
+                    "DataChart": [{
+                            "OtherData": null,
+                            "Label": "2021",
+                            "EnLabel": "2021",
+                            "Y": -40290106548.0
+                        },
+                        {
+                            "OtherData": null,
+                            "Label": "2022",
+                            "EnLabel": "2022",
+                            "Y": 15852230241.0
+                        },
+                        {
+                            "OtherData": null,
+                            "Label": "2023",
+                            "EnLabel": "2023",
+                            "Y": 9841352283.0
+                        }
+                    ],
+                    "Title": "Lợi nhuận gộp",
+                    "EnTitle": "Gross profit",
+                    "ChartType": "N/A"
+                },
+                {
+                    "DataChart": [{
+                            "OtherData": null,
+                            "Label": "2021",
+                            "EnLabel": "2021",
+                            "Y": -53.92
+                        },
+                        {
+                            "OtherData": null,
+                            "Label": "2022",
+                            "EnLabel": "2022",
+                            "Y": -16.71
+                        },
+                        {
+                            "OtherData": null,
+                            "Label": "2023",
+                            "EnLabel": "2023",
+                            "Y": -20.84
+                        }
+                    ],
+                    "Title": "Biên lợi nhuận thuần",
+                    "EnTitle": "Net profit margin",
+                    "ChartType": "N/A"
+                }
+            ],
+            "AssetBreakdown": [{
+                    "DataChart": [{
+                            "OtherData": 33.69,
+                            "Label": "",
+                            "EnLabel": "Receivables",
+                            "Y": 33.69
+                        },
+                        {
+                            "OtherData": 2.56,
+                            "Label": "",
+                            "EnLabel": "Inventories",
+                            "Y": 2.56
+                        },
+                        {
+                            "OtherData": 18.82,
+                            "Label": "",
+                            "EnLabel": "Fixed assets and Assets in progress",
+                            "Y": 18.82
+                        },
+                        {
+                            "OtherData": 44.93,
+                            "Label": "Khác",
+                            "EnLabel": "Other",
+                            "Y": 44.93
+                        }
+                    ],
+                    "Title": "2021",
+                    "EnTitle": "2021",
+                    "ChartType": "N/A"
+                },
+                {
+                    "DataChart": [{
+                            "OtherData": 37.91,
+                            "Label": "",
+                            "EnLabel": "Receivables",
+                            "Y": 37.91
+                        },
+                        {
+                            "OtherData": 3.41,
+                            "Label": "",
+                            "EnLabel": "Inventories",
+                            "Y": 3.41
+                        },
+                        {
+                            "OtherData": 18.49,
+                            "Label": "",
+                            "EnLabel": "Fixed assets and Assets in progress",
+                            "Y": 18.49
+                        },
+                        {
+                            "OtherData": 40.19,
+                            "Label": "Khác",
+                            "EnLabel": "Other",
+                            "Y": 40.19
+                        }
+                    ],
+                    "Title": "2022",
+                    "EnTitle": "2022",
+                    "ChartType": "N/A"
+                },
+                {
+                    "DataChart": [{
+                            "OtherData": 38.03,
+                            "Label": "",
+                            "EnLabel": "Receivables",
+                            "Y": 38.03
+                        },
+                        {
+                            "OtherData": 3.2,
+                            "Label": "",
+                            "EnLabel": "Inventories",
+                            "Y": 3.2
+                        },
+                        {
+                            "OtherData": 17.89,
+                            "Label": "",
+                            "EnLabel": "Fixed assets and Assets in progress",
+                            "Y": 17.89
+                        },
+                        {
+                            "OtherData": 40.88,
+                            "Label": "Khác",
+                            "EnLabel": "Other",
+                            "Y": 40.88
+                        }
+                    ],
+                    "Title": "2023",
+                    "EnTitle": "2023",
+                    "ChartType": "N/A"
+                }
+            ],
+            "ExpenseBreakdown": [{
+                    "DataChart": [{
+                            "OtherData": 64.12,
+                            "Label": "",
+                            "EnLabel": "General & Administrative Expense",
+                            "Y": 64.12
+                        },
+                        {
+                            "OtherData": 0.0,
+                            "Label": "",
+                            "EnLabel": "Financial Expense",
+                            "Y": 0.0
+                        },
+                        {
+                            "OtherData": 33.69,
+                            "Label": "",
+                            "EnLabel": "Selling Expense",
+                            "Y": 33.69
+                        },
+                        {
+                            "OtherData": 2.1899999999999977,
+                            "Label": "Khác",
+                            "EnLabel": "Other",
+                            "Y": 2.1899999999999977
+                        }
+                    ],
+                    "Title": "2021",
+                    "EnTitle": "2021",
+                    "ChartType": "N/A"
+                },
+                {
+                    "DataChart": [{
+                            "OtherData": 66.53,
+                            "Label": "",
+                            "EnLabel": "General & Administrative Expense",
+                            "Y": 66.53
+                        },
+                        {
+                            "OtherData": 3.8,
+                            "Label": "",
+                            "EnLabel": "Financial Expense",
+                            "Y": 3.8
+                        },
+                        {
+                            "OtherData": 29.5,
+                            "Label": "",
+                            "EnLabel": "Selling Expense",
+                            "Y": 29.5
+                        },
+                        {
+                            "OtherData": 0.1700000000000017,
+                            "Label": "Khác",
+                            "EnLabel": "Other",
+                            "Y": 0.1700000000000017
+                        }
+                    ],
+                    "Title": "2022",
+                    "EnTitle": "2022",
+                    "ChartType": "N/A"
+                },
+                {
+                    "DataChart": [{
+                            "OtherData": 65.5,
+                            "Label": "",
+                            "EnLabel": "General & Administrative Expense",
+                            "Y": 65.5
+                        },
+                        {
+                            "OtherData": 0.0,
+                            "Label": "",
+                            "EnLabel": "Financial Expense",
+                            "Y": 0.0
+                        },
+                        {
+                            "OtherData": 23.01,
+                            "Label": "",
+                            "EnLabel": "Selling Expense",
+                            "Y": 23.01
+                        },
+                        {
+                            "OtherData": 11.489999999999995,
+                            "Label": "Khác",
+                            "EnLabel": "Other",
+                            "Y": 11.489999999999995
+                        }
+                    ],
+                    "Title": "2023",
+                    "EnTitle": "2023",
+                    "ChartType": "N/A"
+                }
+            ]
+        },
+        "FinancialAnalysis": {
+            "FinancialHealthRatios": [{
+                    "DataChart": [{
+                            "OtherData": null,
+                            "Label": "2021",
+                            "EnLabel": "2021",
+                            "Y": 0.0
+                        },
+                        {
+                            "OtherData": null,
+                            "Label": "2022",
+                            "EnLabel": "2022",
+                            "Y": 0.0
+                        },
+                        {
+                            "OtherData": null,
+                            "Label": "2023",
+                            "EnLabel": "2023",
+                            "Y": 0.0
+                        }
+                    ],
+                    "Title": " (%)",
+                    "EnTitle": "Debt/Equity (%)",
+                    "ChartType": "N/A"
+                },
+                {
+                    "DataChart": [{
+                            "OtherData": null,
+                            "Label": "2021",
+                            "EnLabel": "2021",
+                            "Y": 0.0
+                        },
+                        {
+                            "OtherData": null,
+                            "Label": "2022",
+                            "EnLabel": "2022",
+                            "Y": 0.0
+                        },
+                        {
+                            "OtherData": null,
+                            "Label": "2023",
+                            "EnLabel": "2023",
+                            "Y": 0.0
+                        }
+                    ],
+                    "Title": " (%)",
+                    "EnTitle": "Debt/Total Assets (%)",
+                    "ChartType": "N/A"
+                }
+            ],
+            "ManagementEfficiencyRatios": [{
+                    "DataChart": [{
+                            "OtherData": null,
+                            "Label": "2021",
+                            "EnLabel": "2021",
+                            "Y": -35.69
+                        },
+                        {
+                            "OtherData": null,
+                            "Label": "2022",
+                            "EnLabel": "2022",
+                            "Y": -12.81
+                        },
+                        {
+                            "OtherData": null,
+                            "Label": "2023",
+                            "EnLabel": "2023",
+                            "Y": -21.12
+                        }
+                    ],
+                    "Title": "ROE (%)",
+                    "EnTitle": "ROE (%)",
+                    "ChartType": "N/A"
+                },
+                {
+                    "DataChart": [{
+                            "OtherData": null,
+                            "Label": "2021",
+                            "EnLabel": "2021",
+                            "Y": -17.04
+                        },
+                        {
+                            "OtherData": null,
+                            "Label": "2022",
+                            "EnLabel": "2022",
+                            "Y": -7.58
+                        },
+                        {
+                            "OtherData": null,
+                            "Label": "2023",
+                            "EnLabel": "2023",
+                            "Y": -11.19
+                        }
+                    ],
+                    "Title": "ROA (%)",
+                    "EnTitle": "ROA (%)",
+                    "ChartType": "N/A"
+                },
+                {
+                    "DataChart": [{
+                            "OtherData": null,
+                            "Label": "2021",
+                            "EnLabel": "2021",
+                            "Y": -85974.25
+                        },
+                        {
+                            "OtherData": null,
+                            "Label": "2022",
+                            "EnLabel": "2022",
+                            "Y": -42036.52
+                        },
+                        {
+                            "OtherData": null,
+                            "Label": "2023",
+                            "EnLabel": "2023",
+                            "Y": -58911.25
+                        }
+                    ],
+                    "Title": "EBIT (Mil VND)",
+                    "EnTitle": "EBIT (Mil VND)",
+                    "ChartType": "N/A"
+                }
+            ],
+            "ProfitabilityRatios": [{
+                    "DataChart": [{
+                            "OtherData": null,
+                            "Label": "2021",
+                            "EnLabel": "2021",
+                            "Y": -25.27
+                        },
+                        {
+                            "OtherData": null,
+                            "Label": "2022",
+                            "EnLabel": "2022",
+                            "Y": 6.3
+                        },
+                        {
+                            "OtherData": null,
+                            "Label": "2023",
+                            "EnLabel": "2023",
+                            "Y": 3.48
+                        }
+                    ],
+                    "Title": "Biên lợi nhuận gộp (%)",
+                    "EnTitle": "Gross Profit Margin (%)",
+                    "ChartType": "N/A"
+                },
+                {
+                    "DataChart": [{
+                            "OtherData": null,
+                            "Label": "2021",
+                            "EnLabel": "2021",
+                            "Y": -54.76
+                        },
+                        {
+                            "OtherData": null,
+                            "Label": "2022",
+                            "EnLabel": "2022",
+                            "Y": -17.62
+                        },
+                        {
+                            "OtherData": null,
+                            "Label": "2023",
+                            "EnLabel": "2023",
+                            "Y": -19.01
+                        }
+                    ],
+                    "Title": " (%)",
+                    "EnTitle": "Operating Profit Margin (%)",
+                    "ChartType": "N/A"
+                },
+                {
+                    "DataChart": [{
+                            "OtherData": null,
+                            "Label": "2021",
+                            "EnLabel": "2021",
+                            "Y": -53.92
+                        },
+                        {
+                            "OtherData": null,
+                            "Label": "2022",
+                            "EnLabel": "2022",
+                            "Y": -16.71
+                        },
+                        {
+                            "OtherData": null,
+                            "Label": "2023",
+                            "EnLabel": "2023",
+                            "Y": -20.84
+                        }
+                    ],
+                    "Title": "Biên lợi nhuận thuần (%)",
+                    "EnTitle": "Net profit margin (%)",
+                    "ChartType": "N/A"
+                }
+            ],
+            "GrowthRatios": [{
+                    "DataChart": [{
+                            "OtherData": null,
+                            "Label": "2021",
+                            "EnLabel": "2021",
+                            "Y": 39.33
+                        },
+                        {
+                            "OtherData": null,
+                            "Label": "2022",
+                            "EnLabel": "2022",
+                            "Y": -49.62
+                        },
+                        {
+                            "OtherData": null,
+                            "Label": "2023",
+                            "EnLabel": "2023",
+                            "Y": 40.14
+                        }
+                    ],
+                    "Title": "Tỷ lệ tăng trưởng lợi nhuận thuần (%)",
+                    "EnTitle": "Net Profit Growth Rate (%)",
+                    "ChartType": "N/A"
+                },
+                {
+                    "DataChart": [{
+                            "OtherData": null,
+                            "Label": "2021",
+                            "EnLabel": "2021",
+                            "Y": -20.45
+                        },
+                        {
+                            "OtherData": null,
+                            "Label": "2022",
+                            "EnLabel": "2022",
+                            "Y": 57.78
+                        },
+                        {
+                            "OtherData": null,
+                            "Label": "2023",
+                            "EnLabel": "2023",
+                            "Y": 12.37
+                        }
+                    ],
+                    "Title": " (%)",
+                    "EnTitle": "Sale Growth Rate (%)",
+                    "ChartType": "N/A"
+                },
+                {
+                    "DataChart": [{
+                            "OtherData": null,
+                            "Label": "2021",
+                            "EnLabel": "2021",
+                            "Y": 120.2
+                        },
+                        {
+                            "OtherData": null,
+                            "Label": "2022",
+                            "EnLabel": "2022",
+                            "Y": -139.35
+                        },
+                        {
+                            "OtherData": null,
+                            "Label": "2023",
+                            "EnLabel": "2023",
+                            "Y": -37.92
+                        }
+                    ],
+                    "Title": "Tỷ lệ tăng trưởng lợi nhuận gộp (%)",
+                    "EnTitle": "Gross Profit Growth Rate (%)",
+                    "ChartType": "N/A"
+                }
+            ]
+        }
+    }
+}
