@@ -1098,119 +1098,167 @@
             ) : (
             <span class="text-danger text_italic mt-3 ml-3 ">No Data</span> )}
         </div>
-        {/* Financial Highlight - Trang 2*/} {financialReportResponse && financialReportResponse.financialHighlight && financialReportResponse.financialHighlight.assetBreakdown !== null && (
-        <div class="background_page asset-breakdown-section">
+        
+        <div class="page-break-before"></div>
+        <div>
+        <div class="background_page a">
             <h3 class="text_h2_blue" style="margin-bottom: 10px;">Asset Breakdown</h3>
 
-            {{#if AssetBreakdownChart}}
-            <div class="chart-container" style="margin-top: 0; padding-top: 0;">
-                <img src="{{AssetBreakdownChart}}" alt="Asset Breakdown" style="width: 100%; max-width: 400px; margin: 0 auto;">
+            {{#if AssetBreakdownChart1}}
+            <div class="chart-container" style="margin-top: 0; padding-top: 0; text-align: center;">
+                <h3 class="text_h2_blue" >2021</h3>
+                <img src="{{AssetBreakdownChart1}}" alt="Asset Breakdown" style="width: 43%;  margin: 0 auto; height: 43%;">
+            </div>
+            <div style="border-bottom: 1px solid #ddd;"></div>
+            {{else}}
+            <div class="text-danger">No data available for Asset Breakdown</div>
+            {{/if}}
+        </div>
+        <div class="background_page asset-breakdown-section">
+          
+
+            {{#if AssetBreakdownChart2}}
+            <div class="chart-container" style="margin-top: 0; padding-top: 0; text-align: center;">
+                <h3 class="text_h2_blue" >2022</h3>
+                <img src="{{AssetBreakdownChart2}}" alt="Asset Breakdown" style="width: 43%;  margin: 0 auto; height: 43%;">
+                
+            <div style="border-bottom: 1px solid #ddd;"></div>
             </div>
             {{else}}
             <div class="text-danger">No data available for Asset Breakdown</div>
             {{/if}}
         </div>
-        <div class="page-break-before"></div>
+        <div class="background_page asset-breakdown-section">
+           
 
-        )} {/* Financial Highlight - Trang 3*/} {financialReportResponse && financialReportResponse.financialHighlight && financialReportResponse.financialHighlight.expenseBreakdown !== null && (
-        <div class="background_page ">
-            {/* Expense Breakdown */}
-
-            <div class="row mb-3 ">
-                <div class="col-lg-12 col-xl-12 ">
-                    <div class="card-item ">
-                        <div class="text_left text-bold font-s-18 title-color mb-2 ">
-                            Expense Breakdown
-                        </div>
-                        <div class="card_content ">
-                            <div class="row ">
-                                {financialReportResponse.financialHighlight .expenseBreakdown && financialReportResponse.financialHighlight .expenseBreakdown.length ? ( financialReportResponse.financialHighlight.expenseBreakdown.map( (props, index) => { return (
-                                <div key={index} class="col-lg-12 col-xl-12 font-s-18 mb-3 ">
-                                    <div class="text_center text-color-blue ">
-                                        {props.enTitle}
-                                    </div>
-                                    <div class="chart-law ">
-                                        <div class="cover-pie-chart ">
-                                            <PieChartOwner customFontColor="#0953a8 " labelFontSize={16} showSourceEn={true} noSource={ index !==f inancialReportResponse .financialHighlight .expenseBreakdown.length - 1 ? true : false } dataChartStructure={this.formatPieCharts( props.dataChart )}
-                                            />
-                                        </div>
-                                    </div>
-                                </div>
-                                ); } ) ) : (
-                                <div class="text-danger text_italic text_left mt-3 ml-3 ">
-                                    No data.
-                                </div>
-                                )}
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            {{#if AssetBreakdownChart3}}
+            <div class="chart-container" style="margin-top: 0; padding-top: 0; text-align: center;">
+                <h3 class="text_h2_blue" >2023</h3>
+                <img src="{{AssetBreakdownChart3}}" alt="Asset Breakdown" style="width: 43%;  margin: 0 auto; height: 43%;">
+                
+            <div style="border-bottom: 1px solid #ddd;"></div>
             </div>
+            {{else}}
+            <div class="text-danger">No data available for Asset Breakdown</div>
+            {{/if}}
         </div>
-        )} {/* Financial Analysis - Financial Health Ratios + Management Efficiency Ratios*/}
-        <div class="background_page ">
-            <div class="title_content mb-2 mt-2 ">Financial Analysis</div>
-            {financialReportResponse && financialReportResponse.financialAnalysis ? (
-            <div>
-                {/* Financial Health Ratios */} {financialReportResponse.financialAnalysis .financialHealthRatios !== null ? (
-                <div class="row mb-3 ">
-                    <div class="col-lg-12 col-xl-12 ">
-                        <div class="card-item ">
-                            <div class="text_left text-bold font-s-18 title-color mb-3 ">
-                                Financial Health Ratios
-                            </div>
-                            <div class="card_content ">
-                                {financialReportResponse.financialAnalysis && financialReportResponse.financialAnalysis .financialHealthRatios && financialReportResponse.financialAnalysis .financialHealthRatios.length ? (
-                                <div class="row ">
-                                    <div class="col-lg-6 col-xl-6 ">
-                                        <div class="table-custom ">
-                                            <Table responsive>
-                                                <thead>
-                                                    <tr>
-                                                        <th class="text_left ">Year</th>
-                                                        {financialReportResponse.financialAnalysis.financialHealthRatios[0].dataChart.map( (props, index) => { return (
-                                                        <th key={index} class="text_right ">
-                                                            {props.label ? props.label : " "}
-                                                        </th>
-                                                        ); } )}
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    {financialReportResponse.financialAnalysis.financialHealthRatios.map( (props, index) => { return (
-                                                    <tr key={index}>
-                                                        <td class="text_left width-col-300 ">
-                                                            {" "} {props.enTitle ? props.enTitle : " "}
-                                                        </td>
-                                                        {props.dataChart.map( (subProps, index) => { return (
-                                                        <td key={index} class="text_right ">
-                                                            {subProps.y !== null && subProps.y !== " " ? formatMoney( subProps.y, 2 ) : " "}
-                                                        </td>
-                                                        ); } )}
-                                                    </tr>
-                                                    ); } )}
-                                                </tbody>
-                                            </Table>
-                                        </div>
-                                    </div>
 
-                                    <div class="col-lg-6 col-xl-6 ">
-                                        <div class="chart-info chart-multi ">
-                                            <LinechartTabRatio customFontColor="#0953a8 " backgroundColor={ "#fff "} title={ " "} xType="label
-                                                " suf={true} percent={true} dataChart={this.formatDataCharts( financialReportResponse.financialAnalysis .financialHealthRatios )} dataSuf="% " enabledToolTip={ roles && (roles===_ Standard_ || roles===_
-                                                Premium_) } sourceEn={true} />
-                                        </div>
-                                    </div>
+       </div>
+
+    
+   <div class="page-break-before"></div>
+        <div>
+        <div class="background_page a">
+            <h3 class="text_h2_blue" style="margin-bottom: 10px;">Expense Breakdown</h3>
+
+            {{#if ExpenseBreakdownChart1}}
+            <div class="chart-container" style="margin-top: 0; padding-top: 0; text-align: center;">
+                <h3 class="text_h2_blue" >2021</h3>
+                <img src="{{ExpenseBreakdownChart1}}" alt="Asset Breakdown" style="width: 43%;  margin: 0 auto; height: 43%;">
+            </div>
+            <div style="border-bottom: 1px solid #ddd;"></div>
+            {{else}}
+            <div class="text-danger">No data available for Expense Breakdown</div>
+            {{/if}}
+        </div>
+        <div class="background_page asset-breakdown-section">
+          
+
+            {{#if ExpenseBreakdownChart2}}
+            <div class="chart-container" style="margin-top: 0; padding-top: 0; text-align: center;">
+                <h3 class="text_h2_blue" >2022</h3>
+                <img src="{{ExpenseBreakdownChart2}}" alt="Asset Breakdown" style="width: 43%;  margin: 0 auto; height: 43%;">
+                
+            <div style="border-bottom: 1px solid #ddd;"></div>
+            </div>
+            {{else}}
+            <div class="text-danger">No data available for Expense Breakdown</div>
+            {{/if}}
+        </div>
+        <div class="background_page asset-breakdown-section">
+           
+
+            {{#if ExpenseBreakdownChart3}}
+            <div class="chart-container" style="margin-top: 0; padding-top: 0; text-align: center;">
+                <h3 class="text_h2_blue" >2023</h3>
+                <img src="{{ExpenseBreakdownChart3}}" alt="Asset Breakdown" style="width: 43%;  margin: 0 auto; height: 43%;">
+                
+            <div style="border-bottom: 1px solid #ddd;"></div>
+            </div>
+            {{else}}
+            <div class="text-danger">No data available for Expense Breakdown</div>
+            {{/if}}
+        </div>
+
+       </div>
+
+   <div class="page-break-before"></div>
+           
+        </div>
+       
+        <div class="background_page ">
+            <h1 class="text_h1_blue">Financial Analysis</h1>
+            
+            <div>
+                <div>
+<h3 class="text_h2_blue">Financial Health Ratios</h3>
+
+<table style="width: 100%; border-collapse: collapse; margin-bottom: 20px; margin-top: 20px">
+            <tr>
+                <td style="width: 50%; vertical-align: top; padding-right: 15px">
+
+                    {{#if FinancialHealthRatios.length}}
+                                <div class="table-custom">
+                                    <table class="corporate-table" style="width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 14px;">
+                                        <thead>
+                                            <tr style="background-color: #0047AB; color: white;">
+                                                <th style="padding: 10px 13px; border: 1px solid #ddd; text-align: left; width: 40%;">Year</th>
+                                                <th style="padding: 10px 13px; border: 1px solid #ddd; text-align: right; width: 20%;">2021</th>
+                                                <th style="padding: 10px 13px; border: 1px solid #ddd; text-align: right; width: 20%;">2022 </th>
+                                                <th style="padding: 10px 13px; border: 1px solid #ddd; text-align: right; width: 20%;">2023</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {{#each FinancialHealthRatios}}
+                                            <tr>
+                                                <td style="padding: 10px 13px; border: 1px solid #ddd; text-align: left; 
+                                               ">
+                                                    {{this.EnTitle}}
+                                                </td>
+                                                <td style="padding: 10px 13px; border: 1px solid #ddd; text-align: right;">
+                                                    {{formatMoney this.DataChart.0.Y}}
+                                                </td>
+                                                <td style="padding: 10px 13px; border: 1px solid #ddd; text-align: right;">
+                                                    {{formatMoney this.DataChart.1.Y}}
+                                                </td>
+                                                <td style="padding: 12px 15px; border: 1px solid #ddd; text-align: right;">
+                                                    {{formatMoney this.DataChart.2.Y}}
+                                                </td>
+                                            </tr>
+                                            {{/each}}
+                                        </tbody>
+                                    </table>
                                 </div>
-                                ) : (
-                                <div class="text-danger text_italic text_left mt-3 ml-3 ">
-                                    No data.
+                                {{else}}
+                                <div class="text-danger text_italic mt-3 ml-3 ">
+                                    The company's financial data has not been updated.
                                 </div>
-                                )}
-                            </div>
-                        </div>
-                    </div>
+                                {{/if}}
+                   <!-- làm ở đây -->
+                </td>
+
+                <td style="width: 50%; vertical-align: top; padding-left: 15px">
+                    <img src="{{FinancialHealthRatiosChart}}" alt="Financial Health Ratios" style="width: 100%; height: 100%;">
+                </td>
+            </tr>
+        </table>
+
+
+
+
+
                 </div>
-                ) : ( " " )} {/* Management Efficiency Ratios */}
+
                 <div class="row mb-3 ">
                     <div class="col-lg-12 col-xl-12 ">
                         <div class="card-item ">

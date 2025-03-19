@@ -10,18 +10,13 @@ Handlebars.registerHelper("formatMoney", function (value) {
   }).format(value);
 });
 
-
 Handlebars.registerHelper("formatDate", function (dateString) {
   if (!dateString) return "";
   return moment(dateString).format("DD/MM/YYYY");
 });
 
-
 Handlebars.registerHelper("eq", function (v1, v2) {
   return v1 === v2;
 });
-
-
-
 
 export default Handlebars;

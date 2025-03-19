@@ -186,7 +186,7 @@ export interface FinancialReportResponse {
   ListIncomeStatement: ListIncomeStatement[][];
   CashFlowStatement: CashFlowStatement;
   FinancialHighlight: FinancialHighlight;
-  financialAnalysis: financialAnalysis;
+  FinancialAnalysis: FinancialAnalysis;
 }
 export interface ListBalanceSheet {
   Title: string;
@@ -200,35 +200,35 @@ export interface Value {
   NameEn: string;
   Value: number;
 }
-export interface financialAnalysis {
-  financialHealthRatios: FinancialHealthRatios[];
-  managementEfficiencyRatios: ManagementEfficiencyRatios[];
-  profitabilityRatios: ProfitabilityRatios[];
-  growthRatios: GrowthRatios[];
+export interface FinancialAnalysis {
+  FinancialHealthRatios: FinancialHealthRatios[];
+  ManagementEfficiencyRatios: ManagementEfficiencyRatios[];
+  ProfitabilityRatios: ProfitabilityRatios[];
+  GrowthRatios: GrowthRatios[];
 }
 export interface GrowthRatios {
-  dataChart: DataChart[];
-  title: string;
-  enTitle: string;
-  chartType: string;
+  DataChart: DataChart[];
+  Title: string;
+  EnTitle: string;
+  ChartType: string;
 }
 export interface FinancialHealthRatios {
-  dataChart: DataChart[];
-  title: string;
-  enTitle: string;
-  chartType: string;
+  DataChart: DataChart[];
+  Title: string;
+  EnTitle: string;
+  ChartType: string;
 }
 export interface ManagementEfficiencyRatios {
-  dataChart: DataChart[];
-  title: string;
-  enTitle: string;
-  chartType: string;
+  DataChart: DataChart[];
+  Title: string;
+  EnTitle: string;
+  ChartType: string;
 }
 export interface ProfitabilityRatios {
-  dataChart: DataChart[];
-  title: string;
-  enTitle: string;
-  chartType: string;
+  DataChart: DataChart[];
+  Title: string;
+  EnTitle: string;
+  ChartType: string;
 }
 export interface FinancialHighlight {
   ContributedCapital: number;
