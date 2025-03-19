@@ -81,8 +81,8 @@ export const ChartOutlabeledPie = (data: any) => {
   };
 
   ChartOutlabeledPie.setConfig(chartConfig)
-    .setWidth(400)
-    .setHeight(300)
+    .setWidth(300)
+    .setHeight(230)
     .setBackgroundColor("white");
 
   return ChartOutlabeledPie.getUrl();
@@ -160,7 +160,7 @@ export const ChartOutlabeledPi2 = (data: any) => {
 
   ChartOutlabeledPie.setConfig(chartConfig)
     .setWidth(200)
-    .setHeight(150)
+    .setHeight(200)
     .setBackgroundColor("transparent");
 
   return ChartOutlabeledPie.getUrl();
@@ -193,8 +193,9 @@ export const ChartLine = (data: any) => {
       data: ratio.DataChart.map((item: any) => item.Y),
       fill: false,
       tension: 0.1,
-      pointRadius: 5,
-      borderWidth: 2,
+      pointRadius: 2,
+      pointStyle: "circle",
+      borderWidth: 1,
     };
   });
   const chartConfig = {
@@ -209,35 +210,44 @@ export const ChartLine = (data: any) => {
       legend: {
         position: "bottom",
         align: "center",
+        
         labels: {
           usePointStyle: true,
-          boxWidth: 12,
-          padding: 8,
-          fontSize: 8,
+          boxWidth: 8 ,
+          padding: 6,
+          fontSize: 6,
           fontColor: "#666",
         },
       },
       scales: {
-        y: {
-          beginAtZero: true,
-          max: maxValue,
-          ticks: {
-            callback: function (value: any) {
-              return value.toLocaleString("vi-VN", {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              });
+     
+        xAxes: [
+          {
+            gridLines: {
+              display: false,
+            },
+            ticks: {
+              fontSize:8,
             },
           },
-          grid: {
-            color: "rgba(200, 200, 200, 0.3)",
+        ],
+        yAxes: [
+          {
+            gridLines: {
+              color: "#E0E0E0",
+              zeroLineColor: "#E0E0E0",
+            },
+            ticks: {
+              callback: function (value: any) {
+                return value.toLocaleString("vi-VN", {
+                  minimumFractionDigits: 2,
+                  maximumFractionDigits: 2,
+                });
+              },
+              fontSize: 8,
+            },
           },
-        },
-        x: {
-          grid: {
-            color: "rgba(200, 200, 200, 0.3)",
-          },
-        },
+        ],
       },
       plugins: {
         tooltip: {
@@ -246,7 +256,7 @@ export const ChartLine = (data: any) => {
           bodyColor: "#000",
           borderColor: "#ddd",
           borderWidth: 1,
-          padding: 10,
+          padding: 7,
           callbacks: {
             label: function (context: any) {
               let label = context.dataset.label || "";
@@ -266,12 +276,184 @@ export const ChartLine = (data: any) => {
     },
   };
   ChartLine.setConfig(chartConfig)
-    .setWidth(400)
-    .setHeight(300)
+    .setWidth(150)
+    .setHeight(250)
     .setBackgroundColor("white");
 
   return ChartLine.getUrl();
 };
+
+export const ChartCompanyPerformance = (data: any) => {
+  if (!data || !Array.isArray(data) || data.length === 0) {
+    console.error("Missing or invalid data for company performance chart");
+    return null;
+  }
+
+  // Trích xuất dữ liệu từ đầu vào
+  const revenueItem = data.find((item: any) => 
+    item.EnTitle?.toLowerCase().includes("Net revenue") || 
+    item.Title?.toLowerCase().includes("Doanh thu thuần"));
+  
+  const cogsItem = data.find((item: any) => 
+    item.EnTitle?.toLowerCase().includes("Cost of goods sold") || 
+
+    item.Title?.toLowerCase().includes("Giá vốn hàng hóa"));
+  
+  const grossProfitItem = data.find((item: any) => 
+    item.EnTitle?.toLowerCase().includes("Gross profit") || 
+    item.Title?.toLowerCase().includes("Lợi nhuận gộp"));
+  
+  const netProfitMarginItem = data.find((item: any) => 
+    item.EnTitle?.toLowerCase().includes("Net profit margin") || 
+    item.Title?.toLowerCase().includes("Biên lợi nhuận ròng"));
+
+  const labels = ["2021", "2022", "2023"];
+  
+  const revenueData = revenueItem?.DataChart?.map((item: any) => item.Y) || [150000, 250000, 280000];
+  const cogsData = cogsItem?.DataChart?.map((item: any) => item.Y) || [200000, 230000, 260000];
+  const grossProfitData = grossProfitItem?.DataChart?.map((item: any) => item.Y) || [-50000, 20000, 20000];
+  const netProfitMarginData = netProfitMarginItem?.DataChart?.map((item: any) => item.Y) || [1.5, 2.0, 2.2];
+
+  const chart = new QuickChart();
+
+  const chartConfig = {
+    type: "bar",
+    data: {
+      labels: labels,
+      datasets: [
+        {
+          type: "bar",
+          label: "Net revenue",
+          backgroundColor: "rgb(32, 201, 202)",
+          data: revenueData,
+          yAxisID: "y-left",
+          order: 1,
+          barPercentage: 0.7,
+          categoryPercentage: 0.8,
+        },
+        {
+          type: "bar",
+          label: "Cost of goods sold",
+          backgroundColor: "rgb(156, 138, 215)",
+          data: cogsData,
+          yAxisID: "y-left",
+          order: 1,
+          barPercentage: 0.7,
+          categoryPercentage: 0.8,
+        },
+        {
+          type: "bar",
+          label: "Gross profit",
+          backgroundColor: "rgb(255, 169, 49)",
+          data: grossProfitData,
+          yAxisID: "y-left",
+          order: 1,
+          barPercentage: 0.7,
+          categoryPercentage: 0.8,
+        },
+        {
+          type: "line",
+          label: "Net profit margin",
+          borderColor: "rgb(255, 59, 59)",
+          backgroundColor: "rgb(255, 59, 59)",
+          pointBackgroundColor: "rgb(255, 59, 59)",
+          data: netProfitMarginData,
+          yAxisID: "y-right",
+          fill: false,
+          pointRadius: 3,
+          borderWidth: 2,
+          lineTension: 0,
+          order: 0,
+        }
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      legend: {
+        display: true,
+        position: "bottom",
+        labels: {
+          usePointStyle: true,   
+          fontSize: 8,
+          boxWidth: 12,
+          padding: 8,
+          color: "#666",
+        },
+      },
+      tooltips: { 
+        mode: "index",
+        intersect: false,
+        callbacks: {
+          label: function(context: any) {
+            let label = context.dataset.label || '';
+            let value = context.raw;
+            return context.datasetIndex === 3 
+              ? `${label}: ${value}%` 
+              : `${label}: ${value.toLocaleString()} Million VND`;
+          }
+        }
+      },
+      scales: {
+        xAxes: [
+          {
+            gridLines: {
+              display: true,
+              color: "rgba(200, 200, 200, 0.3)",
+            },
+            ticks: {
+              fontSize: 8,
+            },
+          },
+        ],
+        yAxes: [
+          {
+            id: "y-left",
+            type: "linear",
+            position: "left",
+            beginAtZero: true,
+            gridLines: {
+              color: "rgba(200, 200, 200, 0.3)",
+            },
+            ticks: {
+              fontSize: 8,
+              callback: function(value: any) {
+                return `${value.toLocaleString()}M VND`;
+              },
+            },
+          },
+          {
+            id: "y-right",
+            type: "linear",
+            position: "right",
+            beginAtZero: true,
+            gridLines: {
+              drawOnChartArea: false,
+            },
+            ticks: {
+              fontSize: 8,
+              color: "rgb(255, 59, 59)",
+              callback: function(value: any) {
+                return value + "%";
+              },
+            },
+          },
+        ],
+      },
+    },
+  };
+
+  chart.setConfig(chartConfig)
+    .setWidth(600)
+    .setHeight(400)
+    .setBackgroundColor("white");
+
+  return chart.getUrl();
+};
+
+
+
+
 export const ChartTwoColumn = (data: any) => {
   const ChartTwoColumn = new QuickChart();
   const exportData = data[0];
@@ -431,96 +613,99 @@ export const ChartTwoColumn = (data: any) => {
   return ChartTwoColumn.getUrl();
 };
 export const ChartBarLineChart = (data: any) => {
-  if (
-    !data ||
-    !data.labels ||
-    !data.barData1 ||
-    !data.barData2 ||
-    !data.lineData
-  ) {
-    console.error("Missing required data for bar-line chart");
+  if (!data || !Array.isArray(data) || data.length === 0) {
+    console.error("Missing or invalid data for bar-line chart");
     return null;
   }
+
+  const labels = ["2021", "2022", "2023"];
+
+  const ebitItem = data.find((item: any) => item.EnTitle?.includes("EBIT") || item.Title?.includes("EBIT"));
+  const roeItem = data.find((item: any) => item.EnTitle?.includes("ROE") || item.Title?.includes("ROE"));
+  const roaItem = data.find((item: any) => item.EnTitle?.includes("ROA") || item.Title?.includes("ROA"));
+
+  const ebitData = ebitItem?.DataChart?.map((item: any) => item.Y) || [32500000, 39200000, 39900000];
+  const roeData = roeItem?.DataChart?.map((item: any) => item.Y) || [16, 18, 17];
+  const roaData = roaItem?.DataChart?.map((item: any) => item.Y) || [12, 13.5, 13];
+
+  // Xác định phạm vi giá trị cho cả giá trị dương và âm
+  const maxEbit = Math.max(...ebitData);
+  const minEbit = Math.min(...ebitData);
+  const maxRoe = Math.max(...roeData);
+  const minRoe = Math.min(...roeData);
+  const maxRoa = Math.max(...roaData);
+  const minRoa = Math.min(...roaData);
 
   const ChartBarLineChart = new QuickChart();
 
   const chartConfig = {
     type: "bar",
     data: {
-      labels: data.labels,
+      labels: labels,
       datasets: [
         {
           type: "bar",
-          label: data.barLabel1 || "Bar Data 1",
-          backgroundColor: "rgb(54, 210, 210)",
-          data: data.barData1,
+          label: "EBIT (Mil VND)",
+          backgroundColor: "rgb(32, 201, 202)",
+          data: ebitData,
           yAxisID: "y",
           order: 2,
-        },
-        {
-          type: "bar",
-          label: data.barLabel2 || "Bar Data 2",
-          backgroundColor: "rgb(255, 159, 64)",
-          data: data.barData2,
-          yAxisID: "y",
-          order: 2,
-        },
-        {
-          type: "bar",
-          label: data.barLabel3 || "Bar Data 3",
-          backgroundColor: "rgb(252, 83, 218)",
-          data: data.barData3,
-          yAxisID: "y",
-          order: 2,
+          barPercentage: 0.6,
+          categoryPercentage: 0.7,
         },
         {
           type: "line",
-          label: data.lineLabel || "Line Data",
-          borderColor: "rgb(255, 0, 0)",
-          backgroundColor: "rgba(255, 0, 0, 0.1)",
-          data: data.lineData,
+          label: "ROE (%)",
+          borderColor: "rgb(255, 59, 59)",
+          backgroundColor: "rgb(255, 59, 59)",
+          data: roeData,
           yAxisID: "y1",
           fill: false,
           pointRadius: 3,
-          borderWidth: 2,
+          pointStyle: "circle",
+          borderWidth: 2.5,
+          lineTension: 0,
           order: 1,
         },
+        {
+          type: "line",
+          label: "ROA (%)",
+          borderColor: "rgb(156, 39, 176)",
+          backgroundColor: "rgb(156, 39, 176)",
+          data: roaData,
+          yAxisID: "y1",
+          fill: false,
+          pointRadius: 3,
+          pointStyle: "circle",
+          borderWidth: 2.5,
+          lineTension: 0,
+          order: 1,
+        }
       ],
     },
     options: {
+      stacked: false,
       responsive: true,
       maintainAspectRatio: false,
       title: {
         display: true,
-        text: data.title || "Bar and Line Chart",
+        text: "Management Efficiency Ratios"
       },
       tooltips: {
         mode: "index",
         intersect: false,
       },
       scales: {
-        xAxes: [
-          {
-            stacked: false,
-            gridLines: {
-              display: false,
-            },
-          },
-        ],
         yAxes: [
           {
             id: "y",
             type: "linear",
             display: true,
             position: "left",
-            scaleLabel: {
-              display: true,
-              labelString: data.yLabel || "Tỷ VNĐ",
-            },
             ticks: {
-              beginAtZero: true,
+          
               callback: function (value: any) {
-                return value + " Tỷ VNĐ";
+                return Math.floor(value).toLocaleString();
               },
             },
           },
@@ -529,12 +714,8 @@ export const ChartBarLineChart = (data: any) => {
             type: "linear",
             display: true,
             position: "right",
-            scaleLabel: {
-              display: true,
-              labelString: data.y1Label || "%",
-            },
             gridLines: {
-              drawOnChartArea: false,
+              drawOnChartArea: false
             },
             ticks: {
               callback: function (value: any) {
@@ -546,14 +727,20 @@ export const ChartBarLineChart = (data: any) => {
       },
       legend: {
         position: "bottom",
+        labels: {
+          usePointStyle: true,
+          boxWidth: 12,
+          padding: 15,
+          fontColor: "#666",
+        }
       },
     },
   };
 
   ChartBarLineChart.setConfig(chartConfig)
-    .setWidth(800)
-    .setHeight(500)
-    .setBackgroundColor("#041e49"); // Background màu xanh đậm như hình mẫu
+    .setWidth(600)
+    .setHeight(400)
+    .setBackgroundColor("white");
 
   return ChartBarLineChart.getUrl();
 };

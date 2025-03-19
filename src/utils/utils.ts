@@ -8,6 +8,10 @@ import type {
   Subsidiaries,
   Affiliates,
   FinancialHealthRatios,
+  ProfitabilityRatios,
+  GrowthRatios,
+  ManagementEfficiencyRatios,
+  CompanyPerformanceReview,
 } from "../models/pdf.model";
 
 export function processDataChart(data: any): any {
@@ -66,6 +70,20 @@ export function processBalanceSheetItem(item: ListBalanceSheet): any {
     },
   };
 }
+export function processManagementEfficiencyRatios(item: ManagementEfficiencyRatios): any {
+  const handleNullValue = (value: any) => {
+    return value === null || value === undefined ? "N/A" : value;
+  };
+  return {
+    ...item,
+    title: item.EnTitle || item.Title,
+    values: {
+      year2021: handleNullValue(item.DataChart?.[0]?.Y),
+      year2022: handleNullValue(item.DataChart?.[1]?.Y),
+      year2023: handleNullValue(item.DataChart?.[2]?.Y),
+    },
+  };
+}   
 export function processIncomeStatementItem(item: ListIncomeStatement): any {
   const Level = parseInt(item.Level || "0");
   return {
@@ -127,6 +145,55 @@ export function processFinancialHealthRatios(item: FinancialHealthRatios): any {
     },
   };
 }
+
+
+
+export function processGrowthRatios(item: GrowthRatios): any {
+    const handleNullValue = (value: any) => {
+      return value === null || value === undefined ? "N/A" : value;
+    };
+    return {
+      ...item,
+      title: item.EnTitle || item.Title,
+      values: {
+        year2021: handleNullValue(item.DataChart?.[0]?.Y),
+        year2022: handleNullValue(item.DataChart?.[1]?.Y),
+        year2023: handleNullValue(item.DataChart?.[2]?.Y),
+      },
+    };
+  }
+
+
+
+  export function processProfitabilityRatios(item: ProfitabilityRatios): any {
+    const handleNullValue = (value: any) => {
+      return value === null || value === undefined ? "N/A" : value;
+    };
+    return {
+      ...item,
+      title: item.EnTitle || item.Title,
+      values: {
+        year2021: handleNullValue(item.DataChart?.[0]?.Y),
+        year2022: handleNullValue(item.DataChart?.[1]?.Y),
+        year2023: handleNullValue(item.DataChart?.[2]?.Y),
+      },
+    };
+  }
+  export function processCompanyPerformanceReview(item: CompanyPerformanceReview): any {
+    const handleNullValue = (value: any) => {
+      return value === null || value === undefined ? "N/A" : value;
+    };
+    return {
+      ...item,
+      title: item.EnTitle || item.Title,
+      values: {
+        year2021: handleNullValue(item.DataChart?.[0]?.Y),
+        year2022: handleNullValue(item.DataChart?.[1]?.Y),
+        year2023: handleNullValue(item.DataChart?.[2]?.Y),
+      },
+    };
+  }
+
 export function processTopCompanyByNetRevenue(
   item: TopCompanyByNetRevenueModel
 ): any {
@@ -187,11 +254,4 @@ export function processAffiliates(affiliates: Affiliates[]): any {
     };
   });
 }
-export function processDataChartForArrObj(data: any[]): any {
-  return data
-    .flatMap((group: any) => group)
-    .map((item: any) => ({
-      value: item.DataChart,
-      label: item.EnLabel || item.EnTitle || "Unknown",
-    }));
-}
+

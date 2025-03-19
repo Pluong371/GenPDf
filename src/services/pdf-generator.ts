@@ -3,16 +3,23 @@ import fs from "fs";
 import pdf from "pdf-creator-node";
 import type {
   CompanyProfile,
+  GrowthRatios,
   IndustryDataModel,
   ListBalanceSheet,
   ListIncomeStatement,
   ListIndirectMethod,
+  ManagementEfficiencyRatios,
+  ProfitabilityRatios,
+  CompanyPerformanceReview,
+  
 } from "../models/pdf.model";
 import {
   ChartOutlabeledPi2,
   ChartOutlabeledPie,
   ChartTwoColumn,
   ChartLine,
+  ChartBarLineChart,
+  ChartCompanyPerformance
 } from "../templates/chart-templates";
 import Handlebars from "../utils/helper";
 import {
@@ -25,6 +32,10 @@ import {
   processSubsidiaries,
   processAffiliates,
   processFinancialHealthRatios,
+  processProfitabilityRatios,
+  processGrowthRatios,
+  processManagementEfficiencyRatios,
+  processCompanyPerformanceReview,
 } from "../utils/utils";
 
 export const generatePDF = async (profile: CompanyProfile): Promise<string> => {
@@ -80,11 +91,11 @@ export const generatePDF = async (profile: CompanyProfile): Promise<string> => {
     TotalImportExportValue: ChartTwoColumn(
       profile.CompanyImportExportResponse.ImportAndExportData.ChartModels
     ),
-    ImportChart: ChartOutlabeledPi2(
+    ImportChart: ChartOutlabeledPie(
       profile.CompanyImportExportResponse.ImportAndExportData.ChartModels[0]
         ?.DataChart
     ),
-    ExportChart: ChartOutlabeledPi2(
+    ExportChart: ChartOutlabeledPie(
       profile.CompanyImportExportResponse.ImportAndExportData.ChartModels[1]
         ?.DataChart
     ),
@@ -127,7 +138,28 @@ export const generatePDF = async (profile: CompanyProfile): Promise<string> => {
     rank: profile.GeneralInformationResponse.Rank,
     Subsidiaries: profile.CompanyProfileResponse.Subsidiaries,
     Affiliates: profile.CompanyProfileResponse.Affiliates,
+    ProfitabilityRatios: profile.FinancialReportResponse.FinancialAnalysis.ProfitabilityRatios,
+    ProfitabilityRatiosChart: ChartLine(profile.FinancialReportResponse.FinancialAnalysis.ProfitabilityRatios),
+    GrowthRatios: profile.FinancialReportResponse.FinancialAnalysis.GrowthRatios,
+    GrowthRatiosChart: ChartLine(profile.FinancialReportResponse.FinancialAnalysis.GrowthRatios),
+    ManagementEficiencyRatios: profile.FinancialReportResponse.FinancialAnalysis.ManagementEfficiencyRatios,
+    
+    
+    
+    ManagementEficiencyChart: ChartBarLineChart(profile.FinancialReportResponse.FinancialAnalysis.ManagementEfficiencyRatios),
+    FinancialHighlight: profile.FinancialReportResponse.FinancialHighlight,
+    ContributedCapital: profile.FinancialReportResponse.FinancialHighlight.ContributedCapital,
+    NetRevenue: profile.FinancialReportResponse.FinancialHighlight.NetRevenue,
+    NetProfit: profile.FinancialReportResponse.FinancialHighlight.NetProfit,
+    TotalAssets: profile.FinancialReportResponse.FinancialHighlight.TotalAssets,
+    OwnerEquity: profile.FinancialReportResponse.FinancialHighlight.OwnerEquity,
+    ROE: profile.FinancialReportResponse.FinancialHighlight.ROE,
+    ROA: profile.FinancialReportResponse.FinancialHighlight.ROA,
+    UpdatePeriod: profile.FinancialReportResponse.FinancialHighlight.UpdatePeriod,
+    CompanyPerformanceReview: profile.FinancialReportResponse.FinancialHighlight.CompanyPerformanceReview,
+    CompanyPerformanceReviewChart: ChartCompanyPerformance(profile.FinancialReportResponse.FinancialHighlight.CompanyPerformanceReview),
   };
+console.log("data.GrowthRatios",data.ContributedCapital);
 
   // console.log("profile.Financđáqưe12312312312tatement",profile.FinancialReportResponse.CashFlowStatement.ListIndirectMethod);
   // console.log("data.ListIndirectMethod",profile.CompanyImportExportResponse.ImportAndExportData.ChartModels);
@@ -143,6 +175,19 @@ export const generatePDF = async (profile: CompanyProfile): Promise<string> => {
       processBalanceSheetItem
     );
   }
+  if(profile.FinancialReportResponse.FinancialAnalysis.ProfitabilityRatios && Array.isArray(profile.FinancialReportResponse.FinancialAnalysis.ProfitabilityRatios)){
+    data.ProfitabilityRatios = flattenAndProcess<ProfitabilityRatios, any>(
+      profile.FinancialReportResponse.FinancialAnalysis.ProfitabilityRatios,
+      processProfitabilityRatios
+    );
+  }
+  if(profile.FinancialReportResponse.FinancialHighlight.CompanyPerformanceReview && Array.isArray(profile.FinancialReportResponse.FinancialHighlight.CompanyPerformanceReview)){
+    data.CompanyPerformanceReview = flattenAndProcess<CompanyPerformanceReview, any>(
+      profile.FinancialReportResponse.FinancialHighlight.CompanyPerformanceReview,
+      processCompanyPerformanceReview
+    );
+  }
+
   if (
     profile.FinancialReportResponse.ListIncomeStatement &&
     Array.isArray(profile.FinancialReportResponse.ListIncomeStatement)
@@ -150,6 +195,12 @@ export const generatePDF = async (profile: CompanyProfile): Promise<string> => {
     data.ListIncomeStatement = flattenAndProcess<ListIncomeStatement, any>(
       profile.FinancialReportResponse.ListIncomeStatement,
       processIncomeStatementItem
+    );
+  }
+  if(profile.FinancialReportResponse.FinancialAnalysis.GrowthRatios && Array.isArray(profile.FinancialReportResponse.FinancialAnalysis.GrowthRatios)){
+    data.GrowthRatios = flattenAndProcess<GrowthRatios, any>(
+      profile.FinancialReportResponse.FinancialAnalysis.GrowthRatios,
+      processGrowthRatios
     );
   }
   if (
@@ -190,6 +241,12 @@ export const generatePDF = async (profile: CompanyProfile): Promise<string> => {
   ) {
     data.Affiliates = processAffiliates(
       profile.CompanyProfileResponse.Affiliates
+    );
+  }
+  if(profile.FinancialReportResponse.FinancialAnalysis.ManagementEfficiencyRatios && Array.isArray(profile.FinancialReportResponse.FinancialAnalysis.ManagementEfficiencyRatios)){
+    data.ManagementEficiencyRatios = flattenAndProcess<ManagementEfficiencyRatios, any>(
+      profile.FinancialReportResponse.FinancialAnalysis.ManagementEfficiencyRatios,
+      processManagementEfficiencyRatios
     );
   }
 
